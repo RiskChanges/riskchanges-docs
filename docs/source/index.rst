@@ -6,7 +6,7 @@
 SDSS documentation
 ===================
 
-Welcome to SDSS documentation!!!
+Welcome to SDSS documentation!
 
 .. toctree::
    :maxdepth: 2
