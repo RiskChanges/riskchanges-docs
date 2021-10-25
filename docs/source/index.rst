@@ -9,9 +9,12 @@ SDSS documentation
 Welcome to SDSS documentation!
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 5
    :caption: Contents:
 
+   general_intro
+   tutorials_gui
+   
 
 
 Indices and tables

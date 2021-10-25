@@ -19,7 +19,7 @@ import sphinx_rtd_theme
 
 project = 'SDSS'
 copyright = '2021, Tek Kshetri'
-author = 'Tek Kshetri, Sahara Sedhain'
+author = 'Tek Kshetri, , Anish Ratna Shakya, Sahara Sedhain'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0.0'
