@@ -24,6 +24,15 @@ author = 'Anish Ratna Shakya, Sahara Sedhain, Tek Kshetri'
 # The full version, including alpha/beta/rc tags
 release = '1.0.0'
 
+# These folders are copied to the documentation's HTML output
+html_static_path = ['_static']
+
+# These paths are either relative to html_static_path
+# or fully qualified paths (eg. https://...)
+html_css_files = [
+    'css/style.css',
+]
+
 
 # -- General configuration ---------------------------------------------------
 
