@@ -17,9 +17,9 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'SDSS'
-copyright = '2021, Tek Kshetri'
-author = 'Tek Kshetri, , Anish Ratna Shakya, Sahara Sedhain'
+project = 'RiskChanges'
+copyright = '2021, RiskChanges'
+author = 'Anish Ratna Shakya, Sahara Sedhain, Tek Kshetri'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0.0'
