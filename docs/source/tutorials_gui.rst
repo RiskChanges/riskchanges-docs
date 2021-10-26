@@ -64,7 +64,7 @@ all your calculations will take place. Also note that all the fields with ‘*�
 
 
 Elements at Risk (EAR)
-^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In this section you will be able to define the elements at risk in reference to the chosen hazards. 
 Building footprints, land parcels, linear features (road, railway, powerline) and point data are the 
@@ -98,7 +98,7 @@ column is what links the EAR with the vulnerability curve section and without th
 make the selection of value or population, then you will also have to define the metrics and units for it. 
 
 .. image:: /images/col_sel.png
-   :scale: 60%
+   :scale: 65%
 
 Once you submit this, there is another pop-up where you can define the linkage with vulnerability. First, select the hazard 
 type you are working with in your project from this drop-down menu. Here in the EAR class, you will see the categories that 
@@ -126,3 +126,139 @@ database, Local host name, User and password, the port, Schema and finally the n
 on ‘Test Connection’. Once the connection is successful you will see a pop-up message informing that your chosen layer was 
 found. With this you can then proceed with defining other parameters the same way as in File upload. 
 
+
+Hazard
+^^^^^^^^^^^^^^
+
+In this section you will define one or more hazard types and its parameters for risk calculation. The data can be added through 
+two different methods: through **File Upload** and **OGC service**. Database connection is not possible since the layer is in raster format. 
+
+**File Upload**: Through this section you can upload the data by simply by selecting a raster layer (Geotiff format) that represents your 
+chosen element at risk. Make sure your file is in a zipped format. Under ‘name’ you will have to define a unique name for your uploaded hazard data.
+It is recommended to maintain a naming convention which is easy to follow within your organization. Then select the type of hazard you have uploaded 
+from the drop-down list. Also select what intensity type of hazard is represented in your uploaded data and its unit. 
+
+.. image:: /images/hazard.png
+   :scale: 65%
+
+A hazard map can either have an intensity value or a susceptibility value depending on its type. If your chosen hazard has intensity value, 
+then you will have to define the base value and intensity interval. To get these values you can refer to the hazard layer which you have uploaded and 
+open it in a GIS platform. Here the base value which is the minimum value is 0 m. Evaluate the range of values then you can define a suitable intensity 
+interval. After that you have to define the average return period of your chosen hazard.
+
+.. image:: /images/flood.png
+   :scale: 65%
+
+If your chosen hazard type has a susceptibility value (for example in case of landslide), then select susceptibility from the drop-down list in intensity. 
+Then you can leave the section on return period empty. 
+
+.. image:: /images/landslide.png
+   :scale: 65%
+
+When you submit this a pop-up will appear. Here you must define the spatial probability for each susceptibility class.
+
+.. image:: /images/spa_prob.png
+   :scale: 65%
+
+Under the section of risk reduction alternatives and future scenario, you will see that by default it will select the current scenario. 
+If you want to select otherwise, do it from the drop-down list. This list is based on Alternative and Scenarios defined by the user for the specific project. 
+You can add more than one alternative or scenario, but this section is completely optional.
+
+However, please note that the section on Alternative and Scenario is only for the purpose of documentation and does not make any changes in the risk calculation.
+
+Before proceeding, please check that all information you have filled here is for the same hazard type you have uploaded. Once you have confirmed that, you can 
+click the submit button. Once uploaded, the layer will be shown in the list below from where you can also visualize it, edit the information, or delete it. 
+
+**OGC service**: You can also add your hazard layer through OGC services for web map. For this the system needs to first make a connection with your GeoServer. 
+In the URL section enter the link for you server. Since our data comes from open web service, we are going to replace the web with ows. Now you need to enter
+the exact name for your layer. Look for your hazard layer in your geoserver and make sure the data is in raster format. Then copy the name and paste it in the 
+‘Layer name’. Then click on ‘test connection’.  Once the connection is successful you will see a pop up message informing that your chosen layer was found. 
+With this you can then proceed with defining other parameters the same way as in File upload. 
+
+
+
+Vulnerability
+^^^^^^^^^^^^^^^^^^^^^^
+
+The vulnerability curves are openly accessible, and any user of the system will be able to view the functions uploaded by any organization. At the bottom you can
+see the list of all the vulnerability curves that has been created or used by any organization within the system.
+
+.. image:: /images/vulnlist.png
+   :scale: 65%
+
+If you click on the view button |view|, you can see the details of the curve such as the range of intensity, average and standard deviation values and other values. You also have 
+an option to compare two vulnerability curves.
+
+.. |view| image:: /images/view.png
+          :scale: 85%
+
+.. image:: /images/comp_vuln.png
+   :scale: 65% 
+
+You can check if the vulnerability curve for your desired area and hazard type are on this list which then can be used directly. If not, you can upload your own vulnerability curve. 
+Under vulnerability name, give a unique name for your curve. It is recommended to maintain a naming convention that is easy to search from the list. Now from the drop-down list, first 
+select the vulnerability type, then select the hazard type. Also select the intensity value you have in your data. Then select the type of element at risk. For building footprints, you 
+will also have to further select the class of EAR based on the typology and number of floors. The source of these curves and the region can be selected from the drop-down list. However, 
+these two fields are not mandatory. You can also add a description for more detailed documentation of the curve. 
+
+Finally, you can upload the table for your vulnerability curve in a csv format. This csv must follow a fixed format which you can also view by downloading the template that is provided.
+
+.. image:: /images/vulntemp.png
+   :scale: 85% 
+
+
+Please note that the names of the header should not be changed. Here you can list down, the minimum value of intensity, the maximum value of intensity, the average value of vulnerability and 
+also the standard deviation. If the standard deviation value is unknown, you can leave the value as ‘0’ instead. After you have added all the required parameters, press the submit button. 
+The curve will then be added in the list below from where you can view it, edit the information, or delete the curve.  
+
+
+
+Administrative Unit
+^^^^^^^^^^^^^^^^^^^^^^
+
+In this section, the administrative unit map having name, description, and related shapefile are uploaded in a zipped format. The input data should be uploaded as shapefiles of polygons.
+The administrative unit level is divided into four classes which  are national level, state/province level,  district level and smaller administrative unit level. The polygons are required 
+by the system to aggregate the exposure, losses, and risk. For instance, if 60% of a land parcel is located in one administrative unit and 40% of the land parcel fall in the other admin unit, 
+then RiskChanges will calculate the loss and risk based on their relative proportion.
+
+.. image:: /images/adminunit.png
+   :scale: 65% 
+
+
+
+Alternative
+^^^^^^^^^^^^^^
+
+This section is to define the alternatives that are implemented and how it affects different components of risk assessment that is Hazard, Element at Risk and Vulnerability.
+Here you have to first define the name of the alternative which can be based on its kind for example Relocation. Then make selection for a code for each alternative you create. 
+The same code has to be selected later when you add the alternative parameters in Hazard and Element at Risk section. You can create a maximum of 4 alternatives within one project. 
+For each alternative you will have to define, the changes in each of the three risk component. You can select one or more parameters in each. For each selection, you will see a message 
+reminding you to upload the new data according to the changes you have specified. You can also add brief description for the alternative you have added. 
+
+.. image:: /images/alternative.png
+   :scale: 65% 
+
+If you click this button “MORE” you can add more details to your alternative for reference. These are mainly financial information for cost-benefit analysis. It is however not 
+mandatory to add this detail. Once the name and parameters are defined, you will have to then upload a document here in word or pdf format which is a written explanation of 
+changes caused by this particular alternative. This is a mandatory field in order to save. Once all the details are filled in, you can then click the submit button. You can then 
+see the new alternative added to this list below.
+
+.. image:: /images/altmore.png
+   :scale: 65% 
+
+
+However, please note that this section is only for the purpose of documentation and does not make any changes in the risk calculation part.
+
+
+
+Scenario
+^^^^^^^^^^^^^
+
+This section is to define the scenarios that are implemented and how it affects different components of risk assessment that is Hazard, Element at Risk and Vulnerability.
+Here you have to first define the name of the future scenario which can be based on its kind for example Climate change, Land use change, Population change. Then make selection for a code for each scenario you create. 
+The same code has to be selected later when you add the scenario parameters in Hazard and Element at Risk section. You can create a maximum of 4 scenarios within one project. 
+For each scenario you will have to define, the changes in each of the three risk component. You can select one or more parameters in each. For each selection, you will see a message 
+reminding you to upload the new data according to the changes you have specified. You can also add brief description for the scenarios you have added. 
+
+.. image:: /images/scenario.png
+   :scale: 65% 

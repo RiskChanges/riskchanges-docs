@@ -17,9 +17,4 @@ Welcome to SDSS documentation!
    
 
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
