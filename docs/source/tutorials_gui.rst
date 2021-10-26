@@ -25,6 +25,7 @@ Before performing any further step for risk calculations, you will need to first
 
 .. image:: /images/dashboard.png
    :scale: 80%
+   :align: center
 
 Under User profile, you need to add your **Personal Information** which includes your name, email, phone, date of birth, role in the project and address of the organization or individual.
 In **Organization Information**, you need to create an organization and give details such as name of the organization, acronym, contact address and description of the organization.
@@ -32,6 +33,7 @@ If you are an individual consultant, then you can add your individual details. O
 
 .. image:: /images/createorg.png
    :scale: 60%
+   :align: center
 
 You will be able to create multiple projects within the organization where different calculations can be run. Give a desirable name for the project, 
 chosen study area and type of project and submit. Once created, you can even edit the project details or delete it. Please note that, if you delete the 
@@ -39,6 +41,7 @@ project, all the data and calculations associated with it will also be lost.
 
 .. image:: /images/projectdash.png
    :scale: 60%
+   :align: center
 
 When you have an admin account, you will also have the access to assign new users to the organization. Under this section, you can add a new staff by creating necessary 
 credentials such as username, email, and password. Once submitted, the user will then be added to the organization and will have access to view all the projects within 
@@ -47,6 +50,7 @@ That access is provided only for an admin account.
 
 .. image:: /images/staffdashboard.png
    :scale: 60%
+   :align: center
 
 
 Data Management
@@ -61,6 +65,7 @@ all your calculations will take place. Also note that all the fields with ‘*�
 
 .. image:: /images/datamgm.png  
    :scale: 80%
+   :align: center
 
 
 Elements at Risk (EAR)
@@ -77,6 +82,7 @@ different methods: through **File Upload**, **OGC service** and **Database conne
 
 .. image:: /images/ear.png
    :scale: 60%
+   :align: center
 
 **File Upload**: Through this section you can upload the data by simply by selecting a shape file that represents 
 your chosen element at risk. Make sure your file is in a zipped format. Under ‘name’ you will have to define a 
@@ -99,6 +105,7 @@ make the selection of value or population, then you will also have to define the
 
 .. image:: /images/col_sel.png
    :scale: 65%
+   :align: center
 
 Once you submit this, there is another pop-up where you can define the linkage with vulnerability. First, select the hazard 
 type you are working with in your project from this drop-down menu. Here in the EAR class, you will see the categories that 
@@ -111,6 +118,7 @@ for multiple hazard type. For that you must simply select a different hazard and
 
 .. image:: /images/vulnconnect.png
    :scale: 50%
+   :align: center
 
 **OGC service**: You can also add your elements at risk through OGC services for web map. For this the system needs to first 
 make a connection with your GeoServer. In the URL section enter the link for you server. Since our data comes from open web 
@@ -140,6 +148,7 @@ from the drop-down list. Also select what intensity type of hazard is represente
 
 .. image:: /images/hazard.png
    :scale: 65%
+   :align: center
 
 A hazard map can either have an intensity value or a susceptibility value depending on its type. If your chosen hazard has intensity value, 
 then you will have to define the base value and intensity interval. To get these values you can refer to the hazard layer which you have uploaded and 
@@ -148,17 +157,20 @@ interval. After that you have to define the average return period of your chosen
 
 .. image:: /images/flood.png
    :scale: 65%
+   :align: center
 
 If your chosen hazard type has a susceptibility value (for example in case of landslide), then select susceptibility from the drop-down list in intensity. 
 Then you can leave the section on return period empty. 
 
 .. image:: /images/landslide.png
    :scale: 65%
+   :align: center
 
 When you submit this a pop-up will appear. Here you must define the spatial probability for each susceptibility class.
 
 .. image:: /images/spa_prob.png
    :scale: 65%
+   :align: center
 
 Under the section of risk reduction alternatives and future scenario, you will see that by default it will select the current scenario. 
 If you want to select otherwise, do it from the drop-down list. This list is based on Alternative and Scenarios defined by the user for the specific project. 
@@ -185,6 +197,7 @@ see the list of all the vulnerability curves that has been created or used by an
 
 .. image:: /images/vulnlist.png
    :scale: 65%
+   :align: center
 
 If you click on the view button |view|, you can see the details of the curve such as the range of intensity, average and standard deviation values and other values. You also have 
 an option to compare two vulnerability curves.
@@ -194,6 +207,7 @@ an option to compare two vulnerability curves.
 
 .. image:: /images/comp_vuln.png
    :scale: 65% 
+   :align: center
 
 You can check if the vulnerability curve for your desired area and hazard type are on this list which then can be used directly. If not, you can upload your own vulnerability curve. 
 Under vulnerability name, give a unique name for your curve. It is recommended to maintain a naming convention that is easy to search from the list. Now from the drop-down list, first 
@@ -205,6 +219,7 @@ Finally, you can upload the table for your vulnerability curve in a csv format. 
 
 .. image:: /images/vulntemp.png
    :scale: 85% 
+   :align: center
 
 
 Please note that the names of the header should not be changed. Here you can list down, the minimum value of intensity, the maximum value of intensity, the average value of vulnerability and 
@@ -223,6 +238,7 @@ then RiskChanges will calculate the loss and risk based on their relative propor
 
 .. image:: /images/adminunit.png
    :scale: 65% 
+   :align: center
 
 
 
@@ -237,6 +253,7 @@ reminding you to upload the new data according to the changes you have specified
 
 .. image:: /images/alternative.png
    :scale: 65% 
+   :align: center
 
 If you click this button “MORE” you can add more details to your alternative for reference. These are mainly financial information for cost-benefit analysis. It is however not 
 mandatory to add this detail. Once the name and parameters are defined, you will have to then upload a document here in word or pdf format which is a written explanation of 
@@ -245,10 +262,10 @@ see the new alternative added to this list below.
 
 .. image:: /images/altmore.png
    :scale: 65% 
+   :align: center
 
 
 However, please note that this section is only for the purpose of documentation and does not make any changes in the risk calculation part.
-
 
 
 Scenario
@@ -262,3 +279,4 @@ reminding you to upload the new data according to the changes you have specified
 
 .. image:: /images/scenario.png
    :scale: 65% 
+   :align: center
