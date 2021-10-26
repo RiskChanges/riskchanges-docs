@@ -23,35 +23,44 @@ dashboard. You can find this under your name in the top right corner.
 Once logged in, you can now access all the functions within this platform. You can find the details of each individual section below. 
 Before performing any further step for risk calculations, you will need to first set-up your user profile. You can find this under your name in the top right corner. 
 
-.. image:: /images/dashboard.png
+.. figure:: /images/dashboard.png
    :scale: 80%
    :align: center
+
+   *User profile and log out options below the username/email*
 
 Under User profile, you need to add your **Personal Information** which includes your name, email, phone, date of birth, role in the project and address of the organization or individual.
 In **Organization Information**, you need to create an organization and give details such as name of the organization, acronym, contact address and description of the organization.
 If you are an individual consultant, then you can add your individual details. Once the organization is created, you can have access to add projects and staffs under organization dashboard under your name in top right corner.
 
-.. image:: /images/createorg.png
+.. figure:: /images/createorg.png
    :scale: 60%
    :align: center
+
+   *Create organization interface*
 
 You will be able to create multiple projects within the organization where different calculations can be run. Give a desirable name for the project, 
 chosen study area and type of project and submit. Once created, you can even edit the project details or delete it. Please note that, if you delete the 
 project, all the data and calculations associated with it will also be lost. 
 
-.. image:: /images/projectdash.png
+.. figure:: /images/projectdash.png
    :scale: 60%
    :align: center
+
+   *Project overview interface*
 
 When you have an admin account, you will also have the access to assign new users to the organization. Under this section, you can add a new staff by creating necessary 
 credentials such as username, email, and password. Once submitted, the user will then be added to the organization and will have access to view all the projects within 
 that organization and use its data for risk calculation. However, please note that the user account will not be able to view this organizational dashboard or make any changes to it. 
 That access is provided only for an admin account. 
 
-.. image:: /images/staffdashboard.png
+.. figure:: /images/staffdashboard.png
    :scale: 60%
    :align: center
 
+   *Staff overview interface*
+
+|
 
 Data Management
 -----------------
@@ -63,9 +72,11 @@ You will need to first define the **Alternative**, **Scenario** and **Vulnerabil
 parameters in each section, make sure you have selected the project from the top right corner under which 
 all your calculations will take place. Also note that all the fields with ‘*’ symbol are mandatory fields. 
 
-.. image:: /images/datamgm.png  
+.. figure:: /images/datamgm.png  
    :scale: 80%
    :align: center
+
+   *Data management drop-down contents*
 
 
 Elements at Risk (EAR)
@@ -80,9 +91,11 @@ the organizational dashboard. Also ensure that you have already defined Vulnerab
 Scenario before moving forward in this section. The data on elements at risk can be added through three 
 different methods: through **File Upload**, **OGC service** and **Database connection**.
 
-.. image:: /images/ear.png
+.. figure:: /images/ear.png
    :scale: 60%
    :align: center
+
+   *Elements at risk data input interface*
 
 **File Upload**: Through this section you can upload the data by simply by selecting a shape file that represents 
 your chosen element at risk. Make sure your file is in a zipped format. Under ‘name’ you will have to define a 
@@ -103,9 +116,11 @@ value, population, geometry, or class. Please note that each element at risk lay
 column is what links the EAR with the vulnerability curve section and without this the calculation cannot be performed. If you 
 make the selection of value or population, then you will also have to define the metrics and units for it. 
 
-.. image:: /images/col_sel.png
+.. figure:: /images/col_sel.png
    :scale: 65%
    :align: center
+
+   *Column selection tab where attributes of EAR are connected to different columns that they represent*
 
 Once you submit this, there is another pop-up where you can define the linkage with vulnerability. First, select the hazard 
 type you are working with in your project from this drop-down menu. Here in the EAR class, you will see the categories that 
@@ -116,9 +131,11 @@ chosen hazard type (even outside your organization). If you wish to create a new
 that vulnerability function.  For the same element at risk, it is possible to make this connection of vulnerability function 
 for multiple hazard type. For that you must simply select a different hazard and repeat the same process. 
 
-.. image:: /images/vulnconnect.png
+.. figure:: /images/vulnconnect.png
    :scale: 50%
    :align: center
+
+   *Vulnerability connection tab for connecting vulnerability curves with EAR classes exposed to certain hazard*
 
 **OGC service**: You can also add your elements at risk through OGC services for web map. For this the system needs to first 
 make a connection with your GeoServer. In the URL section enter the link for you server. Since our data comes from open web 
@@ -146,31 +163,36 @@ chosen element at risk. Make sure your file is in a zipped format. Under ‘name
 It is recommended to maintain a naming convention which is easy to follow within your organization. Then select the type of hazard you have uploaded 
 from the drop-down list. Also select what intensity type of hazard is represented in your uploaded data and its unit. 
 
-.. image:: /images/hazard.png
-   :scale: 65%
+.. figure:: /images/hazard.png
    :align: center
+
+   *Hazard data input interface*
 
 A hazard map can either have an intensity value or a susceptibility value depending on its type. If your chosen hazard has intensity value, 
 then you will have to define the base value and intensity interval. To get these values you can refer to the hazard layer which you have uploaded and 
 open it in a GIS platform. Here the base value which is the minimum value is 0 m. Evaluate the range of values then you can define a suitable intensity 
 interval. After that you have to define the average return period of your chosen hazard.
 
-.. image:: /images/flood.png
-   :scale: 65%
+.. figure:: /images/flood.png
    :align: center
+
+   *Flood map with intensity shown in a QGIS platform*
 
 If your chosen hazard type has a susceptibility value (for example in case of landslide), then select susceptibility from the drop-down list in intensity. 
 Then you can leave the section on return period empty. 
 
-.. image:: /images/landslide.png
-   :scale: 65%
+.. figure:: /images/landslide.png
    :align: center
+
+   *Intensity drop-down list for various hazards*
 
 When you submit this a pop-up will appear. Here you must define the spatial probability for each susceptibility class.
 
-.. image:: /images/spa_prob.png
-   :scale: 65%
+.. figure:: /images/spa_prob.png
    :align: center
+
+   *Spatial probability value assignment interface*
+
 
 Under the section of risk reduction alternatives and future scenario, you will see that by default it will select the current scenario. 
 If you want to select otherwise, do it from the drop-down list. This list is based on Alternative and Scenarios defined by the user for the specific project. 
@@ -195,9 +217,10 @@ Vulnerability
 The vulnerability curves are openly accessible, and any user of the system will be able to view the functions uploaded by any organization. At the bottom you can
 see the list of all the vulnerability curves that has been created or used by any organization within the system.
 
-.. image:: /images/vulnlist.png
-   :scale: 65%
+.. figure:: /images/vulnlist.png
    :align: center
+
+   *List of vulnerability data*
 
 If you click on the view button |view|, you can see the details of the curve such as the range of intensity, average and standard deviation values and other values. You also have 
 an option to compare two vulnerability curves.
@@ -205,9 +228,10 @@ an option to compare two vulnerability curves.
 .. |view| image:: /images/view.png
           :scale: 85%
 
-.. image:: /images/comp_vuln.png
-   :scale: 65% 
+.. figure:: /images/comp_vuln.png
    :align: center
+
+   *Comparing two vulnerability curves*
 
 You can check if the vulnerability curve for your desired area and hazard type are on this list which then can be used directly. If not, you can upload your own vulnerability curve. 
 Under vulnerability name, give a unique name for your curve. It is recommended to maintain a naming convention that is easy to search from the list. Now from the drop-down list, first 
@@ -217,9 +241,11 @@ these two fields are not mandatory. You can also add a description for more deta
 
 Finally, you can upload the table for your vulnerability curve in a csv format. This csv must follow a fixed format which you can also view by downloading the template that is provided.
 
-.. image:: /images/vulntemp.png
+.. figure:: /images/vulntemp.png
    :scale: 85% 
    :align: center
+
+   *Two csv templates for adding vulnerability data*
 
 
 Please note that the names of the header should not be changed. Here you can list down, the minimum value of intensity, the maximum value of intensity, the average value of vulnerability and 
@@ -236,9 +262,10 @@ The administrative unit level is divided into four classes which  are national l
 by the system to aggregate the exposure, losses, and risk. For instance, if 60% of a land parcel is located in one administrative unit and 40% of the land parcel fall in the other admin unit, 
 then RiskChanges will calculate the loss and risk based on their relative proportion.
 
-.. image:: /images/adminunit.png
-   :scale: 65% 
+.. figure:: /images/adminunit.png 
    :align: center
+
+   *Administrative unit data input interface*
 
 
 
@@ -251,18 +278,20 @@ The same code has to be selected later when you add the alternative parameters i
 For each alternative you will have to define, the changes in each of the three risk component. You can select one or more parameters in each. For each selection, you will see a message 
 reminding you to upload the new data according to the changes you have specified. You can also add brief description for the alternative you have added. 
 
-.. image:: /images/alternative.png
-   :scale: 65% 
+.. figure:: /images/alternative.png
    :align: center
+
+   *Alternatives data input interface*
 
 If you click this button “MORE” you can add more details to your alternative for reference. These are mainly financial information for cost-benefit analysis. It is however not 
 mandatory to add this detail. Once the name and parameters are defined, you will have to then upload a document here in word or pdf format which is a written explanation of 
 changes caused by this particular alternative. This is a mandatory field in order to save. Once all the details are filled in, you can then click the submit button. You can then 
 see the new alternative added to this list below.
 
-.. image:: /images/altmore.png
-   :scale: 65% 
+.. figure:: /images/altmore.png
    :align: center
+
+   *Additional alternatives data input interface*
 
 
 However, please note that this section is only for the purpose of documentation and does not make any changes in the risk calculation part.
@@ -277,6 +306,7 @@ The same code has to be selected later when you add the scenario parameters in H
 For each scenario you will have to define, the changes in each of the three risk component. You can select one or more parameters in each. For each selection, you will see a message 
 reminding you to upload the new data according to the changes you have specified. You can also add brief description for the scenarios you have added. 
 
-.. image:: /images/scenario.png
-   :scale: 65% 
+.. figure:: /images/scenario.png
    :align: center
+
+   *Future scenario data input interface*
