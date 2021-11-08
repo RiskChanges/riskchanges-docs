@@ -9,12 +9,14 @@ SDSS documentation
 Welcome to SDSS documentation!
 
 .. toctree::
-   :maxdepth: 5
+   :maxdepth: 10
    :caption: Contents:
 
    general_intro
    tutorials_gui
-   
+   datamgmt
+   model
+   visualize
 
 
 
