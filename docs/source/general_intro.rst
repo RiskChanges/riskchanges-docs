@@ -11,5 +11,3 @@ can be compared using this feature. And by using the spatial analysis feature th
 multi-hazard risk assessment: data management, analysis, and visualization component. 
 
 
-Setup and technicalities
---------------------------
