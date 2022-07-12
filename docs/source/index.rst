@@ -14,7 +14,7 @@ Welcome to SDSS documentation!
 
    general_intro
    tutorials_gui
-   license
+   license.md
    
 
 
