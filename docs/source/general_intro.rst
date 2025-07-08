@@ -42,12 +42,6 @@ RiskChanges can be used in different ways:
 
 Components, Users, and Workflow of RiskChanges
 ----------------------------
-.. figure:: /images/components-users.jpg
-   :scale: 80%
-   :align: center
-
-   *RiskChanges system components and the envisaged users*
-
 RiskChanges system is composed of a number of modules, which can be subdivided into:
 
 1. **Data input:** this module prepares the input data required for the loss estimation
@@ -60,6 +54,14 @@ RiskChanges system is composed of a number of modules, which can be subdivided i
 8. **Multi-Criteria Evaluation:** this module aims at providing support for decision makers in choosing the optimal risk reduction alternative.
 9. **Scenario definition:** this module is comarable with the alternative definition module. This is casically a user interface which aims at the defiition of one or more future development scenarios for a given study area.
 10. **Visualization:** this module is integrated in almost all the components above, as visualization is required in most of those.
+
+.. figure:: /images/components-users.jpg
+   :scale: 80%
+   :align: center
+
+   *RiskChanges system components and the envisaged users*
+
+The following figure illustrates on the workflow of the system.
 
 .. figure:: /images/workflow.jpg
    :scale: 80%
