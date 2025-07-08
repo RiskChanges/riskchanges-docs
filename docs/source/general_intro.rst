@@ -1,7 +1,7 @@
 General Introduction
 =====================
 
-Background of RiskChanges
+Background of the RiskChanges
 --------------------------
 RiskChanges aim to analyses multi-hazard risk in risk prone area. The tool includes several major features: multi-hazard, multiple assets, vulnerability database, multi-user, compare risk and spatial analysis. 
 The multi-hazard feature performs the risk assessment for multiple natural and manmade hazards. Multiple assets feature allows to analyze the risk of multiple asset type with different spatial characteristic. 
