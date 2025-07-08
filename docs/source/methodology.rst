@@ -5,23 +5,42 @@ Input Data
 ^^^^^^^^^^^^^
 The system supports various types of input data required for risk assessment. These include spatial data (raster and vector formats) and non-spatial tables (e.g., vulnerability and cost information). All input data must be organized properly to ensure accurate risk calculations.
 
-+-----------------------------+-----------------------+-------------------------------+--------------------------------------------------------------------------------+
-| **Data Type**               | **Format**            | **Attributes**                | **Notes**                                                                      |
-+=============================+=======================+===============================+================================================================================+
-| Hazard maps                 | Raster / Vector       | No (Raster), Yes (Vector)     | Represent hazard intensity or susceptibility for different return periods.     |
-+-----------------------------+-----------------------+-------------------------------+--------------------------------------------------------------------------------+
-| Building footprints         | Vector                | Yes                           | Includes type, use, value, and population attributes.                          |
-+-----------------------------+-----------------------+-------------------------------+--------------------------------------------------------------------------------+
-| Points, Lines, Polygons     | Vector                | Yes                           | Represents various elements-at-risk such as infrastructure, land parcels, etc.|
-+-----------------------------+-----------------------+-------------------------------+--------------------------------------------------------------------------------+
-| Grid maps                   | Raster                | No                            | Often used to represent exposure or hazard intensity in grid format.          |
-+-----------------------------+-----------------------+-------------------------------+--------------------------------------------------------------------------------+
-| Vulnerability tables        | Table (non-spatial)   | Yes                           | Defines vulnerability per hazard intensity class.                              |
-+-----------------------------+-----------------------+-------------------------------+--------------------------------------------------------------------------------+
-| Administrative units        | Vector                | Yes                           | Defines zones for aggregating results and decision-making.                     |
-+-----------------------------+-----------------------+-------------------------------+--------------------------------------------------------------------------------+
-| Cost / Score information    | Table (non-spatial)   | Yes                           | Contains alternative construction costs and performance scoring.               |
-+-----------------------------+-----------------------+-------------------------------+--------------------------------------------------------------------------------+
+.. list-table:: **Overview of Input Data**
+   :widths: 20 20 20 40
+   :header-rows: 1
+
+   * - **Data Type**
+     - **Format**
+     - **Attributes**
+     - **Notes**
+   * - Hazard maps
+     - Raster / Vector
+     - No (Raster), Yes (Vector)
+     - Represent hazard intensity or susceptibility for different return periods.
+   * - Building footprints
+     - Vector
+     - Yes
+     - Includes type, use, value, and population attributes.
+   * - Points, Lines, Polygons
+     - Vector
+     - Yes
+     - Represents various elements-at-risk such as infrastructure, land parcels, etc.
+   * - Grid maps
+     - Raster
+     - No
+     - Often used to represent exposure or hazard intensity in grid format.
+   * - Vulnerability tables
+     - Table (non-spatial)
+     - Yes
+     - Defines vulnerability per hazard intensity class.
+   * - Administrative units
+     - Vector
+     - Yes
+     - Defines zones for aggregating results and decision-making.
+   * - Cost / Score information
+     - Table (non-spatial)
+     - Yes
+     - Contains alternative construction costs and performance scoring.
 
 
 Hazard Maps
