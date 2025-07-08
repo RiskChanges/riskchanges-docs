@@ -5,6 +5,7 @@ Input Data
 ^^^^^^^^^^^^^
 The system supports various types of input data required for risk assessment. These include spatial data (raster and vector formats) and non-spatial tables (e.g., vulnerability and cost information). All input data must be organized properly to ensure accurate risk calculations.
 
+
 +---------------------------+---------------------+-----------------------------+--------------------------------------------------------------------------------+
 | **Data Type**             | **Format**          | **Attributes**              | **Notes**                                                                       |
 +===========================+=====================+=============================+================================================================================+
@@ -22,6 +23,7 @@ The system supports various types of input data required for risk assessment. Th
 +---------------------------+---------------------+-----------------------------+--------------------------------------------------------------------------------+
 | Cost / Score information  | Table (non-spatial) | Yes                         | Contains alternative construction costs and performance scoring.                |
 +---------------------------+---------------------+-----------------------------+--------------------------------------------------------------------------------+
+
 
 Hazard Maps
 --------------
@@ -75,6 +77,8 @@ Types:
 *If a required vulnerability table is missing, the system can apply a default value (e.g., 1 = total loss) to proceed with analysis. This ensures the calculations are still possible, albeit with reduced precision.*
 
 **Vulnerability Table Structure Example**
+
+
 +-------------------+------------------+------------------+------------------+
 | **Intensity (m)** | **V_P_T_AVG**    | **V_P_S_AVG**    | **V_P_C_AVG**    |
 +===================+==================+==================+==================+
@@ -86,6 +90,7 @@ Types:
 +-------------------+------------------+------------------+------------------+
 | 3–4               | 1.00             | 1.00             | 1.00             |
 +-------------------+------------------+------------------+------------------+
+
 
 Exposure Calculation
 ^^^^^^^^^^^^^^^^^^^^^^^
