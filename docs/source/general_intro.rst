@@ -20,19 +20,19 @@ Concept of the Platform
 RiskChanges is built upon the concept of SDSS (Spatial Decision Support System). Stakeholders are the central component of RiskChanges. The envisaged users of the platform are organizations involved in planning of risk reduction measures. 
 
 .. figure:: /images/conceptual-design.jpg
-   :scale: 80%
+   :scale: 30%
    :align: center
 
    *Conceptual design of RiskChanges (adapted from: CHANGES platform)*
 
 RiskChanges can be used in different ways:
-1. Analyze the risk of the current situation
-2. Analyze the risk of the current situation for different alternatives of risk reduction
-3. Analyze the different scenarios through time, in order to evaluate the effect of changes
-4. Analyze the change in hazards for different scenarios through time
-5. Analyze the change in assets for different scenarios through time
-6. Analyze the change in risk for different scenarios through time
-7. Analyze the effect of different alternatives in risk reduction for different scenarios through time
+* Analyze the risk of the current situation
+* Analyze the risk of the current situation for different alternatives of risk reduction
+* Analyze the different scenarios through time, in order to evaluate the effect of changes
+* Analyze the change in hazards for different scenarios through time
+* Analyze the change in assets for different scenarios through time
+* Analyze the change in risk for different scenarios through time
+* Analyze the effect of different alternatives in risk reduction for different scenarios through time
 
 .. figure:: /images/analysis-riskchanges.jpg
    :scale: 80%
@@ -49,16 +49,16 @@ Components, Users, and Workflow of RiskChanges
    *RiskChanges system components and the envisaged users*
 
 RiskChanges system is composed of a number of modules, which can be subdivided into:
-1. **Data input:** this module prepares the input data required for the loss estimation.
-2. **Exposure calculation:** this module quantifies the extent to which elements-at-risk are exposed to a specific hazard.
-3. **Loss estimation:** this module calculates the losses for specific combinations of exposure calculation results and vulnerability curves.
-4. **Risk analysis:** in this module the user can select specific combinations of losses (calculated in the loss estimation module for specific combinations of hazards and elements-at-risk).
-5. **Alternative definition:** a user interface aims to define risk reduction alternatives for a given study area. 
-6. **Cost-Benefit Analysis:** this module calculates the Internal Rate of Return for the cost-benefit analysis of risk reduction measures.
-7. **Cost-Effectiveness Analysis:** this module evaluates the cost of different risk reduction alternatives in relation to their effectiveness, partiularly when the benefits are intangible or cannot be easily expressed in monetary terms.
-8. **Multi-Criteria Evaluation:** this module aims at providing support for decision makers in choosing the optimal risk reduction alternative.
-9. **Scenario definition:** this module is comarable with the alternative definition module. This is casically a user interface which aims at the defiition of one or more future development scenarios for a given study area.
-10. **Visualization:** this module is integrated in almost all the components above, as visualization is required in most of those.
+* **Data input:** this module prepares the input data required for the loss estimation
+* **Exposure calculation:** this module quantifies the extent to which elements-at-risk are exposed to a specific hazard.
+* **Loss estimation:** this module calculates the losses for specific combinations of exposure calculation results and vulnerability curves.
+* **Risk analysis:** in this module the user can select specific combinations of losses (calculated in the loss estimation module for specific combinations of hazards and elements-at-risk).
+* **Alternative definition:** a user interface aims to define risk reduction alternatives for a given study area. 
+* **Cost-Benefit Analysis:** this module calculates the Internal Rate of Return for the cost-benefit analysis of risk reduction measures.
+* **Cost-Effectiveness Analysis:** this module evaluates the cost of different risk reduction alternatives in relation to their effectiveness, partiularly when the benefits are intangible or cannot be easily expressed in monetary terms.
+* **Multi-Criteria Evaluation:** this module aims at providing support for decision makers in choosing the optimal risk reduction alternative.
+* **Scenario definition:** this module is comarable with the alternative definition module. This is casically a user interface which aims at the defiition of one or more future development scenarios for a given study area.
+* **Visualization:** this module is integrated in almost all the components above, as visualization is required in most of those.
 
 .. figure:: /images/workflow.jpg
    :scale: 80%
