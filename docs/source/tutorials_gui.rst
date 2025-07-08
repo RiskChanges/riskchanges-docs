@@ -1,4 +1,4 @@
-Tutorials on GUI
+User Guide
 ==================
 
 Getting Started
