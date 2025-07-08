@@ -1,7 +1,7 @@
 version: 2
 
 sphinx:
-  configuration: docs/source/conf.py  # adjust this path if your conf.py is elsewhere
+  configuration: docs/source/conf.py 
 
 build:
   os: "ubuntu-22.04"
