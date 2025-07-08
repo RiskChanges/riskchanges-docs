@@ -13,8 +13,8 @@ Welcome to SDSS documentation!
    :caption: Contents:
 
    general_intro
-   tutorials_gui
    methodology
+   tutorials_gui
    License <license>
    
 
