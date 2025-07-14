@@ -3,10 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-SDSS documentation
+RiskChanges documentation
 ===================
 
-Welcome to SDSS documentation!
+Welcome to RiskChanges documentation!
 
 .. toctree::
    :maxdepth: 10
