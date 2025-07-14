@@ -118,13 +118,13 @@ Loss Estimation
 Risk Assessment
 ^^^^^^^^^^^^^^^^^^
 
-Alternatives
+.. dropdown:: Alternatives
 ^^^^^^^^^^^^^^^
 
-Scenarios
+.. dropdown:: Scenarios
 ^^^^^^^^^^^^
 
-Data Visualization
+.. dropdown:: Data Visualization
 ^^^^^^^^^^^^^^^^^^^^^
 Overview and User Needs
 --------------------------
