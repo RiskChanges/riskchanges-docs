@@ -14,7 +14,7 @@ Welcome to RiskChanges documentation!
 
    general_intro
    methodology
-   tutorials_gui
+   tutorials
    License <license>
    
 
