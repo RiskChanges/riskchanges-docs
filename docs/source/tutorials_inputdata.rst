@@ -4,17 +4,20 @@ Input Data
 RiskChanges Dashboard and Modules
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`RiskChanges <http://riskchanges.org/>` consists of several dashboard and modules:
+`|RiskChanges| <http://riskchanges.org/>`__ consists of several dashboard and modules:
+
+.. |RiskChanges| image:: /images/RiskChanges.png
+           :scale: 65% 
 
 1. User Profile
 -----------------
 User profile displays personal information of the user including name and profile photo. Users can edit their details. If the users want to change the password of the account, they can do it from the Change Password option.
 
-2. Project Dashboard
+1. Project Dashboard
 ----------------------
 In this dashboard, users can create, manage, and filter project. For creating a project, the users can enter the project name, deadline date, study area, a brief description of a project, as well as uploading documents related to the project. Afterwards, the project coordinator can invite the staff to the project and assign a role for each staff. The staff must approve the invitation that will automatically be sent through email before working on the project. The Alternatives and Scenarios will be defined in this dashboard as well (if any).
 
-3. Project Page
+1. Project Page
 -----------------
 This page is where the users can process data management, exposure, loss, and risk analysis. In this page, the Admin Level, Hazard, Elements-at-Risk, Exposure, Vulnerability, Loss, and Risk modules are available. For each module, the users can define and manage the input datasets as well as the results.
 
@@ -34,20 +37,65 @@ A visualization panel will be displayed on the right side of the page. Everytime
 Register an Account and Setup the Profile
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To register an account, go to the landing page and click the Explore RiskChanges button on the top-right corner of the website. Click Register Here on the bottom part below the Login form. Fill in the Register form with your name, email address, and password, then click Register.
+To register an account, go to the landing page and click the |Explore RiskChanges| button on the top-right corner of the website. Click |Register Here| on the bottom part below the Login form. Fill in the Register form with your name, email address, and password, then click Register.
+
+.. |Explore RiskChanges| image:: /images/tutorials_inputdata/explore_rc.png
+           :scale: 65% 
+
+.. |Register Here| image:: /images/tutorials_inputdata/register_here.png
+           :scale: 65% 
+
+.. figure:: /images/tutorials_inputdata/registration.png
+   :scale: 60%
+   :align: center
+
+   *Register to RiskChanges*
 
 Check your email and verify your account. In cas no email comes to your inbox from RiskChanges, check your spam folder. Login to your new account with your email and created password. It will take you to the main dashbard of your RiskChanges Accounts, the Project Dashboard. Make sure your name shows up on the top-right corner, indicating you are already logged in.
 
 Click the name and three options will be shown which are Update profile, Change Password, and Logout. By clicking each of those, you can update your profile, change your password, and logout.
+
+.. figure:: /images/tutorials_inputdata/update_profile.png
+   :scale: 60%
+   :align: center
+
+   *Update your RiskChanges profile*
 
 
 Create a Project
 ^^^^^^^^^^^^^^^^^^^
 The Project Dashboard consists of the list of projects that the users have created or have been assigned to. Aside from that, in this dashboard users can also flter and search a specific project by name, study type, hazard type, or sorting the project.
 
-To create a project, click New Project to be redirected to the Add New Project page. There are four pages to be filled related to the project, which are Generl, Staff, Alternatives, and Scenario. Ony the General page is compulsory to be filled in order to create a project. In the General page, users need to enter related details about the project. The Staff page allows users to invite and assign the team members in the associated project.
+To create a project, click |New Project| to be redirected to the Add New Project page. There are four pages to be filled related to the project, which are |General|, |Staff|, |Alternatives|, and |Scenarios|. Ony the |General| page is compulsory to be filled in order to create a project. In the |General| page, users need to enter related details about the project. The |Staff| page allows users to invite and assign the team members in the associated project.
+
+.. |New Project| image:: /images/tutorials_inputdata/new_project.png
+           :scale: 65% 
+
+.. |General| image:: /images/tutorials_inputdata/general.png
+           :scale: 65% 
+
+.. |Staff| image:: /images/tutorials_inputdata/staff.png
+           :scale: 65% 
+
+.. |Alternatives| image:: /images/tutorials_inputdata/alternatives.png
+           :scale: 65% 
+
+.. |Scenarios| image:: /images/tutorials_inputdata/scenarios.png
+           :scale: 65% 
+
+.. figure:: /images/tutorials_inputdata/newproject_general.png
+   :scale: 60%
+   :align: center
+
+   *Create a New Project*
 
 The project that are created or assigned to the user are displayed as cards in the Project Dashboard and can be filtered easily through the filter functions.
+
+.. figure:: /images/tutorials_inputdata/project_dashboard.png
+   :scale: 60%
+   :align: center
+
+   *Project Dashboard*
 
 
 Upload Administrative Boundary
