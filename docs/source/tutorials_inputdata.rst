@@ -107,6 +107,12 @@ From Project Dashboard, choose the project you will work on and click on the pro
 * The administrative boundary will be automatically loaded in the map canvas with a single symbol styling. 
 * Users can change the visualization style and symbology of the map view. 
 
+.. figure:: /images/tutorials_inputdata/admin_bound.png
+   :scale: 60%
+   :align: center
+
+   *Upload Administrative Boundary File*
+
 
 Upload Hazard Data
 ^^^^^^^^^^^^^^^^^^^^^
@@ -117,12 +123,24 @@ Go to Hazard and click Add Hazard. In the General section, upload your hazard da
 * Click Save and the hazard layer will be automatically displayed in the map canvas.
 * The default styling is a Single Symbol for raster data. Whereas for vector (shapefile) dataset, if the hazard intensity type is Susceptibility, the default style is Categorized.
 
+.. figure:: /images/tutorials_inputdata/hazard_upload.png
+   :scale: 60%
+   :align: center
+
+   *Upload Hazard Data*
+
 The Style section is used to adjust the settings for the layer's visualizatino. Additionally, the chosen style will also be applied as the base classes for Exposure assessment. Users can also go to the Symbology section to adjust the layer's labels.
 
 * Select the Style Mode whether it is Single Symbol, Graduated, or Categorized.
 * For Single Symbol, users need to select the dataset's Field which will be used as well as the Minimum Value to be displayed. Then. a Color Map will be selected for the visualization. 
 * For Graduated, after selecting the dataset's Field, Minimum Value, and Maximum Value, Total Class needs to be defined as well as the Classification Method (optionis available are equal interval, quantile, natural breaks, standard equation, geometric interval, logarithmic scale, and percentile). A Color Map needs to be selected as well for visualization.
 * Click Save.
+
+.. figure:: /images/tutorials_inputdata/hazard_symbology.png
+   :scale: 60%
+   :align: center
+
+   *Hazard Symbology Settings*
 
 
 Upload Elements-at-Risk (EaR) Data
@@ -132,6 +150,12 @@ Go to EaR and click Add EaR. In the General section, upload your EaR data. The d
 * Click to Upload or drag and drop the EaR data to upload the data.
 * Type in the Layer Name, Element-at-Risk type, Element-at-Risk subtype, Representation Year, Risk Reduction Alternative (if appicable), and Scenario (if applicable).
 * Click Save and the uploaded EaR layer will be automatically displayed in the map canvas. The default styling is single symbol.
+
+.. figure:: /images/tutorials_inputdata/ear_upload.png
+   :scale: 60%
+   :align: center
+
+   *Upload Elements-at-Risk Data*
 
 The Style section is used to adjust the setting for the layer's visualization. Additionally, the chosen style will also be applied as the base classes for Exposure assessment. There are three options for the Style Mode, which are Single Symbol, Graduated, or Categorized. Users can also go to the Symbology section to adjust the layer's labels.
 
@@ -147,6 +171,12 @@ The Style section is used to adjust the setting for the layer's visualization. A
 * For Graduated, after selecting the dataset's Field, Minimum Value, and Maximum Value, Total Class needs to be defined as well as the Classification Method (options available are equal interval, quantile, natural breaks, standard deviation, geometric interval, logarithmic scale, and percentile).
 * A Color Map needs to be selected as well for visualization.
 
+.. figure:: /images/tutorials_inputdata/ear_symbology.png
+   :scale: 60%
+   :align: center
+
+   *Elements-at-Risk Symbology Settings*
+
 Please note that the Vulnerability data is necessary for Loss and Risk calculation. The Exposure calculation does not require Vulnerability input. Therefore, if users only need to do Exposure assessment, entering Vulnerability data is not compulsory.
 
 
@@ -158,7 +188,19 @@ Users can upload a CSV file under the General section to add a record automatica
 
 Before uploading the record, users need to fill out some details regarding the data which are the Vulnerability Region, Vulnerability Type, Hazard Type, Hazard Subtype, Hazard Intensity Mode, Hazard Intensity, Hazard Intensity Unit, EaR Type, EaR Subtype, EaR Class, Source, Description, and Is Public. The Is Public column defines whether the Vulnerability record will be available to all users of RiskChanges or whether it will be kept under the user's personal project.
 
+.. figure:: /images/tutorials_inputdata/vul_upload.png
+   :scale: 60%
+   :align: center
+
+   *Upload Vulnerability Table*
+
 Notice that there are two categories of My Vulnerability and All Vulnerability. If users chose Yes as a public vulnerability, the record will be stored under All Vulnerability. On the other hand, the record will be stored in My Vulnerability if the users chose No as a public vulnerability.
+
+.. figure:: /images/tutorials_inputdata/vul_viz.png
+   :scale: 60%
+   :align: center
+
+   *Vulnerability Table Data*
 
 Please note that the visualization of hazard, Elements-at-Risk, and Exposure will affect the calculation of the next steps. For example, the classes or value ranges chosen for Hazard and Elements-at-Risk will be applied to calculate exposure. The same combination which results in the Exposure calculation will then be applied to calculate Loss.
 
