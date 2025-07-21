@@ -14,6 +14,12 @@ The Loss module computes the **economic or physical losses** resulting from haza
 - Vulnerability curve
 - Value of the exposed elements
 
+.. figure:: /images/tutorials_lossandscenario/losscalculation.png
+   :scale: 60%
+   :align: center
+
+   *Loss calculation settings*
+
 **Steps to Calculate Loss:**
 
 1. **Open the Loss Module**
@@ -39,15 +45,16 @@ The Loss module computes the **economic or physical losses** resulting from haza
    A table will appear showing the **classes of Elements-at-Risk** (e.g., building types).
    
    For each class:
+
    - Choose an appropriate **Vulnerability Curve** from the dropdown list.
    - You can select from **All Vulnerability** (public records) or **My Vulnerability** (project-specific).
 
-   After assigning all classes:
-   - Click **Save**.
+   After assigning all classes, click **Save**.
 
-5. **View Results**
+1. **View Results**
 
    Once calculated:
+   
    - A **Loss Layer** will be displayed on the map.
    - The results table will show extended details, including:
      - Damage Ratio
@@ -55,10 +62,30 @@ The Loss module computes the **economic or physical losses** resulting from haza
      - Loss Area or Length
      - Loss Number of Floors
 
+.. figure:: /images/tutorials_lossandscenario/resulttable.png
+   :scale: 60%
+   :align: center
+
+   *Loss calculation result table*
+
+Similarly, results summary and chart are also provided in RiskChanges.
+
+.. figure:: /images/tutorials_lossandscenario/summarychart.png
+   :scale: 60%
+   :align: center
+
+   *Loss result summary and chart*
+
 6. **Adjust Map Visualization**
 
    - Use the **Style** section to customize the appearance of the Loss Layer.
    - Users can set classification methods, color ramps, and labels to enhance interpretation.
+
+.. figure:: /images/tutorials_lossandscenario/mapvis.png
+   :scale: 60%
+   :align: center
+
+   *Loss result visualized in a map*
 
 Create Scenario
 ^^^^^^^^^^^^^^^^^^
@@ -80,11 +107,23 @@ Scenarios are used to model **how risk evolves over time**.
    - Go to the **Scenarios** tab.
    - Click **Add Scenario**.
 
+.. figure:: /images/tutorials_lossandscenario/newscenario.png
+   :scale: 60%
+   :align: center
+
+   *Create a scenario*
+
 3. **Fill Scenario Details**
    - **Scenario Name**: Provide a meaningful name (e.g., "2050 Climate Change").
    - **Risk Component Affected**: Select which component changes (Hazard, EaR, Vulnerability).
    - **Description** (optional): Brief explanation of the scenario.
    - **Upload File(s)**: Attach supporting documents (if any).
+
+.. figure:: /images/tutorials_lossandscenario/scenariodetails.png
+   :scale: 60%
+   :align: center
+
+   *Fill scenario details*
 
 4. **Save the Scenario**
    - The scenario will appear in the **Scenario Table**.
@@ -98,6 +137,12 @@ Once a scenario is created, you can calculate Exposure and Loss under that scena
 Repeat the steps from:
 - :ref:`Calculate Exposure <calculate-exposure>` for exposure calculation
 - :ref:`Loss Calculation <loss-calculation>` (this section) for loss calculation
+
+.. figure:: /images/tutorials_lossandscenario/applyscenario.png
+   :scale: 60%
+   :align: center
+
+   *Applying scenario into calculation*
 
 **Important:**  
 When uploading data or calculating exposure/loss under a scenario, make sure to **select the correct Scenario Name** in the data form. This ensures the results are correctly associated.
