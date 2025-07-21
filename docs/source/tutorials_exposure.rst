@@ -12,6 +12,8 @@ There are two modes of calculation:
 - **Individual:** calculates at the feature level (e.g., per building or road segment).
 - **Aggregated:** calculates exposure based on administrative units (e.g., parish level).
 
+**Note:** The aggregated calculation requires a calculated individual exposure layer to be available.
+
 
 Instructions
 ^^^^^^^^^^^^^^^
@@ -43,6 +45,11 @@ Instructions
    - Click **Save** to start the exposure calculation.
    - Once completed, the platform will display the result on the map.
 
+.. figure:: /images/tutorials_exposure/exposurepage.png
+   :scale: 60%
+   :align: center
+
+   *Calculate exposure settings*
 
 Results and Output
 ^^^^^^^^^^^^^^^^^^^^^
@@ -56,6 +63,25 @@ The exposure calculation produces:
 
 Users can inspect and download this data or use it in further modules.
 
+.. figure:: /images/tutorials_exposure/resulttable.png
+   :scale: 60%
+   :align: center
+
+   *Exposure calculation result in a table*
+
+There is also a feature summary table that provides an overview of the exposure results. This feature provides both table and chart views for better understanding.
+
+.. figure:: /images/tutorials_exposure/resultsummary.png
+   :scale: 60%
+   :align: center
+
+   *Exposure calculation result summary*
+
+.. figure:: /images/tutorials_exposure/resultchart.png
+   :scale: 60%
+   :align: center
+
+   *Exposure calculation summary in a chart*
 
 Map Visualization
 ^^^^^^^^^^^^^^^^^^^^
@@ -70,6 +96,12 @@ Once exposure is calculated, the results appear on the **Map Panel** on the righ
 * Center on Current Location
 * Layer Options (for switching basemaps: OpenStreetMap or Satellite)
 
+.. figure:: /images/tutorials_exposure/mapdisplay.png
+   :scale: 60%
+   :align: center
+
+   *Map display in RiskChanges*
+
 **Legend and Layer Settings:**
 
 * When a layer is selected, users can:
@@ -82,6 +114,11 @@ Once exposure is calculated, the results appear on the **Map Panel** on the righ
 
 Users can also *click on features* on the map to view attribute data such as exposure levels, number of floors, or intensity values.
 
+.. figure:: /images/tutorials_exposure/resultmapzoom.png
+   :scale: 60%
+   :align: center
+
+   *Focusing on one feature to see the result details*
 
 Filter and Style the Results
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -89,6 +126,12 @@ Filter and Style the Results
 * Users can choose which *intensity type* (min/avg/max) to show on the map.
 * Style and symbology xan be adjusted to better visualize the data. 
 * Specific *classes or ranges* can be selected for focused viewing. The map will filter accordingly.
+
+.. figure:: /images/tutorials_exposure/resultmap.png
+   :scale: 60%
+   :align: center
+
+   *Exposure result map visualization*
 
 Download the Map
 ^^^^^^^^^^^^^^^^^^^
@@ -101,4 +144,8 @@ The **Download** button allows users to export a map layout:
    - Orientation (portrait or landscape)
    - Output format (e.g., PNG, PDF)
 
+.. figure:: /images/tutorials_exposure/downloadmap.png
+   :scale: 60%
+   :align: center
 
+   *Download map feature*

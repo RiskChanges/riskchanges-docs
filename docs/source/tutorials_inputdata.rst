@@ -4,10 +4,7 @@ Input Data
 RiskChanges Dashboard and Modules
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`|RiskChanges| <http://riskchanges.org/>`__ consists of several dashboard and modules:
-
-.. |RiskChanges| image:: /images/RiskChanges.png
-           :scale: 65% 
+`RiskChanges <http://riskchanges.org/>`__ consists of several dashboard and modules:
 
 1. User Profile
 -----------------
