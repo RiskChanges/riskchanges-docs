@@ -18,11 +18,23 @@ To begin using the Alternative module:
    - Go to the **Alternatives** tab.
    - Click **Add Alternatives**.
 
+.. figure:: /images/tutorials_alternative/createalternative.png
+   :scale: 60%
+   :align: center
+
+   *Create alternative settings*
+
 3. **Fill in the Details**
    - **Alternative Name**: Choose a name that reflects the mitigation strategy (e.g., "Reinforced Roofs", "Flood Barrier", etc.).
    - **Affected Risk Component(s)**: Select the component(s) that change due to the alternative (e.g., Hazard, EaR, Vulnerability).
    - **Description** *(optional)*: Add a brief explanation.
    - **Upload Files** *(optional)*: Attach related documents (e.g., design files, reports, or planning documents).
+
+.. figure:: /images/tutorials_alternative/alternativedetails.png
+   :scale: 60%
+   :align: center
+
+   *Fill in alternative details*
 
 4. **Save the Alternative**
 
