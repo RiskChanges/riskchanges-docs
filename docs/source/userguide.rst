@@ -7,7 +7,7 @@ This section provides detailed step-by-step tutorials to guide users through the
    :maxdepth: 10
    :caption: Methodology:
 
-   tutorials_inputdata
-   tutorials_exposure
-   tutorials_lossandscenario
-   tutorials_alternative
+   userguide_inputdata
+   userguide_exposure
+   userguide_lossandscenario
+   userguide_alternative
