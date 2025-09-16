@@ -1,6 +1,10 @@
 Tutorials
 ==================
 
+.. contents::
+   :local:
+   :depth: 2
+
 This section provides step-by-step instructions on how to use the RiskChanges platform. 
 Each section has a detailed video tutorial for better understanding.
 
@@ -46,13 +50,6 @@ For Alternative and Scenario, please refer to `this document <https://drive.goog
 
 Step-by-step
 ^^^^^^^^^^^^^^^^^
-
-Tutorials
-=========
-
-.. contents::
-   :local:
-   :depth: 2
 
 Register an Account and Setup the Profile
 -----------------------------------------
