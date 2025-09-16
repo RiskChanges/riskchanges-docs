@@ -15,6 +15,7 @@ Welcome to RiskChanges documentation!
    general_intro
    methodology
    userguide
+   tutorials
    License <license>
    
 
