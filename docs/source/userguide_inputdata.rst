@@ -10,11 +10,11 @@ RiskChanges Dashboard and Modules
 -----------------
 User profile displays personal information of the user including name and profile photo. Users can edit their details. If the users want to change the password of the account, they can do it from the Change Password option.
 
-1. Project Dashboard
+2. Project Dashboard
 ----------------------
 In this dashboard, users can create, manage, and filter project. For creating a project, the users can enter the project name, deadline date, study area, a brief description of a project, as well as uploading documents related to the project. Afterwards, the project coordinator can invite the staff to the project and assign a role for each staff. The staff must approve the invitation that will automatically be sent through email before working on the project. The Alternatives and Scenarios will be defined in this dashboard as well (if any).
 
-1. Project Page
+3. Project Page
 -----------------
 This page is where the users can process data management, exposure, loss, and risk analysis. In this page, the Admin Level, Hazard, Elements-at-Risk, Exposure, Vulnerability, Loss, and Risk modules are available. For each module, the users can define and manage the input datasets as well as the results.
 
@@ -53,7 +53,7 @@ Check your email and verify your account. In cas no email comes to your inbox fr
 Click the name and three options will be shown which are Update profile, Change Password, and Logout. By clicking each of those, you can update your profile, change your password, and logout.
 
 .. figure:: /images/tutorials_inputdata/update_profile.png
-   :scale: 60%
+   :scale: 50%
    :align: center
 
    *Update your RiskChanges profile*
@@ -105,7 +105,7 @@ From Project Dashboard, choose the project you will work on and click on the pro
 * Users can change the visualization style and symbology of the map view. 
 
 .. figure:: /images/tutorials_inputdata/admin_bound.png
-   :scale: 60%
+   :scale: 45%
    :align: center
 
    *Upload Administrative Boundary File*
@@ -121,7 +121,7 @@ Go to Hazard and click Add Hazard. In the General section, upload your hazard da
 * The default styling is a Single Symbol for raster data. Whereas for vector (shapefile) dataset, if the hazard intensity type is Susceptibility, the default style is Categorized.
 
 .. figure:: /images/tutorials_inputdata/hazard_upload.png
-   :scale: 60%
+   :scale: 50%
    :align: center
 
    *Upload Hazard Data*
@@ -149,7 +149,7 @@ Go to EaR and click Add EaR. In the General section, upload your EaR data. The d
 * Click Save and the uploaded EaR layer will be automatically displayed in the map canvas. The default styling is single symbol.
 
 .. figure:: /images/tutorials_inputdata/ear_upload.png
-   :scale: 60%
+   :scale: 45%
    :align: center
 
    *Upload Elements-at-Risk Data*
@@ -169,7 +169,7 @@ The Style section is used to adjust the setting for the layer's visualization. A
 * A Color Map needs to be selected as well for visualization.
 
 .. figure:: /images/tutorials_inputdata/ear_symbology.png
-   :scale: 60%
+   :scale: 50%
    :align: center
 
    *Elements-at-Risk Symbology Settings*
@@ -186,7 +186,7 @@ Users can upload a CSV file under the General section to add a record automatica
 Before uploading the record, users need to fill out some details regarding the data which are the Vulnerability Region, Vulnerability Type, Hazard Type, Hazard Subtype, Hazard Intensity Mode, Hazard Intensity, Hazard Intensity Unit, EaR Type, EaR Subtype, EaR Class, Source, Description, and Is Public. The Is Public column defines whether the Vulnerability record will be available to all users of RiskChanges or whether it will be kept under the user's personal project.
 
 .. figure:: /images/tutorials_inputdata/vul_upload.png
-   :scale: 60%
+   :scale: 45%
    :align: center
 
    *Upload Vulnerability Table*
@@ -194,7 +194,7 @@ Before uploading the record, users need to fill out some details regarding the d
 Notice that there are two categories of My Vulnerability and All Vulnerability. If users chose Yes as a public vulnerability, the record will be stored under All Vulnerability. On the other hand, the record will be stored in My Vulnerability if the users chose No as a public vulnerability.
 
 .. figure:: /images/tutorials_inputdata/vul_viz.png
-   :scale: 60%
+   :scale: 50%
    :align: center
 
    *Vulnerability Table Data*

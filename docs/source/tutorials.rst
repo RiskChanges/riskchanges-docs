@@ -48,9 +48,9 @@ Let’s now go through the core tasks you’ll typically perform on the RiskChan
 -----------------------------------------
 
 Start by visiting the official RiskChanges website: http://riskchanges.org/.
-Follow :doc:`this guide <userguide.rst#register-an-account-and-setup-the-profile>` to create your account and set up your profile.
+Follow :doc:`this guide <userguide.rst>` to create your account and set up your profile.
 
-2. Create a Project
+1. Create a Project
 ----------------
 
 To begin working, click the **New Project** button on the Project Dashboard. This opens a form divided into four sections: |General|, |Staff|, |Alternatives|, and |Scenarios|.
@@ -62,31 +62,31 @@ Only the **General** section is required. Let's fill the required fields with ou
    - **Description**: This is a demonstration dataset based on Nocera Inferiore, Italy.
 
 .. figure:: /images/tutorials/new_project.png
-   :scale: 60%
+   :scale: 80%
    :align: center
 
    *Filling General section*
 
 .. |General| image:: /images/tutorials/general.png
-           :scale: 65% 
+           :scale: 80% 
 
 .. |Staff| image:: /images/tutorials/staff.png
-           :scale: 65% 
+           :scale: 80% 
 
 .. |Alternatives| image:: /images/tutorials/alternatives.png
-           :scale: 65% 
+           :scale: 80% 
 
 .. |Scenarios| image:: /images/tutorials/scenarios.png
-           :scale: 65% 
+           :scale: 80% 
 
 If you want to work collaboratively, go to the **Staff** tab and invite your team members. You can skip the Alternatives and Scenarios for now or set them later.
 
 Your project will now appear on the dashboard as a card. Use filters to quickly search or sort through multiple projects.
 
-1. Upload and Visualize Data
+3. Upload and Visualize Data
 -------------------------
 
-As mentioned in :doc:`the user guide <userguide_inputdata.rst#upload-and-visualize-data>`, there are several data inputs required for RiskChanges.These include Administrative Boundaries, Hazard Data, Elements-at-Risk (EaR) Data, and Vulnerability Data. You can upload data in various formats including shapefiles, GeoTIFFs, CSVs, and OGC services, depending on each data input.
+As mentioned in :doc:`the user guide <userguide_inputdata.rst>`, there are several data inputs required for RiskChanges.These include Administrative Boundaries, Hazard Data, Elements-at-Risk (EaR) Data, and Vulnerability Data. You can upload data in various formats including shapefiles, GeoTIFFs, CSVs, and OGC services, depending on each data input.
 
 From your Project Dashboard, click into the project you want to work on. You will see the modules menu on the left side bar. 
 
@@ -106,7 +106,7 @@ RiskChanges automatically displays the boundary on the map with default symbolog
    - Label: *Administrative Unit*
 
 .. figure:: /images/tutorials/admin_unit.png
-   :scale: 60%
+   :scale: 80%
    :align: center
 
    *Uploading Administrative Boundary data*
@@ -151,7 +151,7 @@ For visualization, RiskChanges supports different visual styles. You can adjust 
 +----------------------------------------------+----------------+-----------+---------------+---------------+---------------------------+---------------+
 
 .. figure:: /images/tutorials/hazards.png
-   :scale: 60%
+   :scale: 80%
    :align: center
 
    *Hazard Visualization*
@@ -198,12 +198,12 @@ Similarly, use the **Style** section to adjust the visualization. After adjustin
 +---------------------+----------------+--------------------------+----------------+---------------+-----------------+----------------+------------------+-----------------+----------------+
 
 .. figure:: /images/tutorials/ear.png
-   :scale: 60%
+   :scale: 80%
    :align: center
 
    *Element-at-Risk Visualization*
 
-2. Vulnerability Table
+1. Vulnerability Table
 ---------------------------
 
 In the **Vulnerability** tab, you can add a vulnerability curve either by uploading a **CSV** or filling in data manually. Each record should include: `Hazard Intensity From`, `Hazard Intensity To`, `Vulnerability Value`
@@ -218,13 +218,13 @@ Before uploading, you will be asked to provide metadata like:
 - Public/Private visibility: If marked **Public**, others can use the record. Otherwise, it will stay under **My Vulnerability**.
 
 .. figure:: /images/tutorials/vul_input.png
-   :scale: 60%
+   :scale: 80%
    :align: center
 
    *Vulnerability Table Input*
 
 .. figure:: /images/tutorials/vul_curve.png
-   :scale: 60%
+   :scale: 80%
    :align: center
 
    *Vulnerability Curve*
@@ -234,7 +234,7 @@ The related vulnerability tables have been imported and available to the public.
 .. note::
    Vulnerability data is **not required** for Exposure analysis but is **essential** for Loss and Risk calculations.
 
-3. Running an Exposure Analysis
+5. Running an Exposure Analysis
 ------------------------------------
 
 Go to **Exposure > Add Exposure**. Choose between:
@@ -251,7 +251,7 @@ In the General section, enter:
 - Choose Intensity: **Minimum**, **Average**, or **Maximum**. These options will affect the layer visualization after the calculation. All intensities will still be calculated and users can change the visualization options afterwards.
 
 .. figure:: /images/tutorials/exposure.png
-   :scale: 60%
+   :scale: 80%
    :align: center
 
    *Exposure*
@@ -263,7 +263,7 @@ Once calculated, a table will show metrics like:
 - Minimum, average, maximum intensity
 
 .. figure:: /images/tutorials/exposure_table.png
-   :scale: 60%
+   :scale: 80%
    :align: center
 
    *Exposure Table Result*
@@ -271,7 +271,7 @@ Once calculated, a table will show metrics like:
 You can configure how the results are visualized on the map. You can also click individual features to see their attributes.
 
 .. figure:: /images/tutorials/exposure_viz.png
-   :scale: 60%
+   :scale: 80%
    :align: center
 
    *Exposure Visualization*
