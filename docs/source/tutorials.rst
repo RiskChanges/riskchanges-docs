@@ -50,7 +50,7 @@ Let’s now go through the core tasks you’ll typically perform on the RiskChan
 Start by visiting the official RiskChanges website: http://riskchanges.org/.
 Follow :doc:`this guide <userguide.rst>` to create your account and set up your profile.
 
-1. Create a Project
+2. Create a Project
 ----------------
 
 To begin working, click the **New Project** button on the Project Dashboard. This opens a form divided into four sections: |General|, |Staff|, |Alternatives|, and |Scenarios|.
@@ -203,7 +203,7 @@ Similarly, use the **Style** section to adjust the visualization. After adjustin
 
    *Element-at-Risk Visualization*
 
-1. Vulnerability Table
+4. Vulnerability Table
 ---------------------------
 
 In the **Vulnerability** tab, you can add a vulnerability curve either by uploading a **CSV** or filling in data manually. Each record should include: `Hazard Intensity From`, `Hazard Intensity To`, `Vulnerability Value`
