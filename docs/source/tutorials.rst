@@ -34,9 +34,11 @@ Here’s an overview of what’s included in the dataset:
 +-------------------------+--------------------------+--------------------------------------------------------------------------------------------------------+
 | Scenarios               | Land parcel              | Scenarios A0–A3, applied to land parcel layers across different alternatives.                          |
 +-------------------------+--------------------------+--------------------------------------------------------------------------------------------------------+
-| Vulnerability           | Buildings & Land Parcels | Includes both physical and population vulnerability for debris flow, flood, landslide, and tsunami.    |
+| Vulnerability           | Buildings & Land Parcels | Includes both physical and population vulnerability for debris flow, flood, and landslide.    |
 +-------------------------+--------------------------+--------------------------------------------------------------------------------------------------------+
 
+👉 Please refer `here <https://drive.google.com/drive/folders/1akP4cml2kh0KUVrrRsdl_4VB0lTq2qcW?usp=drive_link>`_ to access the dataset for this tutorial.
+👉 Check `this document <https://drive.google.com/file/d/1IsfH36Rf8FNpH6BKvznamGa7G5lAkXqj/view?usp=drive_link>`_ for Input Data tutorial and `this document <https://drive.google.com/file/d/1uEzD2gpP1F74lgw0qXaFjzTViHLP3TwG/view?usp=drive_link>`_ for Exposure and Loss Calculation tutorial.
 👉 For more details about the dataset structure and use of Alternatives and Scenarios, refer to the `dataset document <https://drive.google.com/file/d/1pk6OeKmuUwA5oCiVSshZQ4y0SEZ-l0S9/view?usp=drive_link>`_.
 
 Step-by-step Walkthrough
@@ -48,7 +50,7 @@ Let’s now go through the core tasks you’ll typically perform on the RiskChan
 -----------------------------------------
 
 Start by visiting the official RiskChanges website: http://riskchanges.org/.
-Follow :doc:`this guide <userguide.rst>` to create your account and set up your profile.
+Follow `this guide <https://sdss-documentation.readthedocs.io/en/latest/userguide_inputdata.html#register-an-account-and-setup-the-profile>`_ to create your account and set up your profile.
 
 2. Create a Project
 ----------------
@@ -141,13 +143,13 @@ For visualization, RiskChanges supports different visual styles. You can adjust 
 +----------------------------------------------+----------------+-----------+---------------+---------------+---------------------------+---------------+
 | **Hazard Name**                              | **Style Mode** | **Field** | **Min Value** | **Max Value** | **Classification Method** | **Color Map** |
 +==============================================+================+===========+===============+===============+===========================+===============+
-| Debris Flow                                  | Graduated      | [VALUE]   | 0.1           | 12.5          | Quantile                  | YlOrBr        |
+| Debris Flow                                  | User Defined Classes      | [VALUE]   | 0.1           | 12.5          | Quantile                  | YlOrBr        |
 +----------------------------------------------+----------------+-----------+---------------+---------------+---------------------------+---------------+
-| Flood                                        | Graduated      | [VALUE]   | 0.1           | 5.3           | Quantile                  | Blues         |
+| Flood                                        | User Defined Classes      | [VALUE]   | 0.1           | 5.3           | Quantile                  | Blues         |
 +----------------------------------------------+----------------+-----------+---------------+---------------+---------------------------+---------------+
-| Landslide (Susceptibility Classes)           | Categorized    | [VALUE]   | 0.1           | 5.3           | Quantile                  | autumn_r      |
+| Landslide (Susceptibility Classes)           | Automated Classes    | [VALUE]   | 0.1           | 5.3           | Quantile                  | autumn_r      |
 +----------------------------------------------+----------------+-----------+---------------+---------------+---------------------------+---------------+
-| Landslide Index (Susceptibility Probability) | Graduated      | [VALUE]   | 0.1           | 5.3           | Quantile                  | Wistia        |
+| Landslide Index (Susceptibility Probability) | User Defined Classes      | [VALUE]   | 0.1           | 5.3           | Quantile                  | Wistia        |
 +----------------------------------------------+----------------+-----------+---------------+---------------+---------------------------+---------------+
 
 .. figure:: /images/tutorials/hazards.png
@@ -179,7 +181,7 @@ Go to **EaR > Add EaR** to upload buildings, roads, or land parcels. You can use
 
 Similarly, use the **Style** section to adjust the visualization. After adjusting, click **Save** to apply the changes.
 
-- Choose between Single Symbol, Graduated, Categorized.
+- Choose between Single Class, Automated Classes, User Defined Classes.
 - Define:
 
   - Field, Area, Value, Population, Units
@@ -188,13 +190,13 @@ Similarly, use the **Style** section to adjust the visualization. After adjustin
 +---------------------+----------------+--------------------------+----------------+---------------+-----------------+----------------+------------------+-----------------+----------------+
 | **EaR Name**        | **Style Mode** | **Field**                | **Area Field** | **Area Unit** | **Value Field** | **Value Unit** | **People Field** | **People Unit** | ** Color Map** |
 +---------------------+----------------+--------------------------+----------------+---------------+-----------------+----------------+------------------+-----------------+----------------+
-| Building Point      | Categorized    | [TYPE]                   | [AREA]         | sq.m          | [VALUE]         | USD            | [PEOPLE]         | (number)        | brg_r          |
+| Building Point      | Automated Classes    | [TYPE]                   | [AREA]         | sq.m          | [VALUE]         | USD            | [PEOPLE]         | (number)        | brg_r          |
 +---------------------+----------------+--------------------------+----------------+---------------+-----------------+----------------+------------------+-----------------+----------------+
-| Building Footprints | Categorized    | [USE]                    | [AREA_N]       | sq.m          | [VALUE]         | USD            | [PEOPLE]         | (number)        | brg_r          |
+| Building Footprints | Automated Classes    | [USE]                    | [AREA_N]       | sq.m          | [VALUE]         | USD            | [PEOPLE]         | (number)        | brg_r          |
 +---------------------+----------------+--------------------------+----------------+---------------+-----------------+----------------+------------------+-----------------+----------------+
-| Roads               | Graduated      | [CALCULATED_AREA_LENGTH] | –              | –             | –               | –              | –                | -               | autumn_r       |
+| Roads               | User Defined Classes      | [CALCULATED_AREA_LENGTH] | –              | –             | –               | –              | –                | -               | autumn_r       |
 +---------------------+----------------+--------------------------+----------------+---------------+-----------------+----------------+------------------+-----------------+----------------+
-| Land Parcel         | Categorized    | [TYPE]                   | [AREA_N]       | sq.m          | [VALUE]         | USD            | [PEOPLE]         | (number)        | brg            |
+| Land Parcel         | Automated Classes    | [TYPE]                   | [AREA_N]       | sq.m          | [VALUE]         | USD            | [PEOPLE]         | (number)        | brg            |
 +---------------------+----------------+--------------------------+----------------+---------------+-----------------+----------------+------------------+-----------------+----------------+
 
 .. figure:: /images/tutorials/ear.png
@@ -231,6 +233,82 @@ Before uploading, you will be asked to provide metadata like:
 
 The related vulnerability tables have been imported and available to the public. Users can use the tables for this exercise.
 
+**Vulnerability IDs for Building Materials**
+
++-----------------------------+----------------------------------------------+------------------------------------------------+
+| **ID**                      |         **Physical Vulnerability**           |         **Population Vulnerability**           |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+|                             | Debris Flow| Flood      | Landslide        | Debris Flow| Flood      | Landslide        |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Masonry 1 floor             | 86         | 78         | 94               | 162        | 170        | 182              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Masonry 2 floor             | 87         | 79         | 95               | 163        | 171        | 183              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Masonry 3 floor             | 88         | 80         | 96               | 164        | 172        | 184              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Reinforced Concrete 1 floor| 89         | 81         | 97               | 165        | 173        | 185              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Reinforced Concrete 2 floor| 90         | 82         | 98               | 166        | 174        | 186              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Reinforced Concrete 3 floor| 91         | 83         | 99               | 167        | 175        | 187              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Reinforced Concrete 4 floor| 92         | 84         | 100              | 168        | 176        | 188              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Wooden                     | 93         | 86         | 101              | 169        | 177        | 189              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+
+**Vulnerability IDs for Land Parcel Types**
+
++-----------------------------+----------------------------------------------+------------------------------------------------+
+| **ID**                      |         **Physical Vulnerability**           |         **Population Vulnerability**           |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+|                             | Debris Flow| Flood      | Landslide        | Debris Flow| Flood      | Landslide        |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Agricultural Fields         | All 1      | 132        | 135              | 190        | 212        | 234              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Animal Farm                 | 102        | 133        | 136              | 191        | 213        | 235              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Bare                        | All 0      | All 0      | 137              | 192        | 214        | 236              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Commercial                  | 103        | 134        | 138              | 193        | 215        | 237              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Cultural Heritage           | 104        | 118        | 143              | 194        | 216        | 238              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Farm                        | 105        | 119        | 144              | 195        | 217        | 239              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Forest Natural              | 106        | 120        | 145              | 196        | 218        | 240              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Forest Planted Protective   | 107        | 121        | 146              | 197        | 219        | 241              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Grassland                   | All 1      | 122        | 147              | 198        | 220        | 242              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Highway                     | 108        | 123        | 148              | 199        | 221        | 243              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Industry                    | 109        | 124        | 149              | 200        | 222        | 244              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Open Space                  | All 0      | All 0      | All 0            | 201        | 223        | 245              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Orchard                     | 110        | 125        | 150              | 202        | 224        | 246              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Parking Lot                 | 111        | 126        | 151              | 203        | 225        | 247              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Parkland                    | 112        | 127        | 152              | 204        | 226        | 248              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Quarry                      | 113        | -          | 153              | 205        | 227        | 249              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Residential                 | 114        | 128        | 154              | 206        | 228        | 250              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Shrubs                      | All 1      | 129        | 155              | 207        | 229        | 251              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Toll Area                   | 115        | -          | 178              | 208        | 230        | 252              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Tourist Resort              | 116        | 130        | 179              | 209        | 231        | 253              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Vineyard                    | All 1      | 131        | 180              | 210        | 232        | 254              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+| Water Tank                  | 117        | -          | 181              | 211        | 233        | 255              |
++-----------------------------+------------+------------+------------------+------------+------------+------------------+
+
 .. note::
    Vulnerability data is **not required** for Exposure analysis but is **essential** for Loss and Risk calculations.
 
@@ -239,34 +317,64 @@ The related vulnerability tables have been imported and available to the public.
 
 Go to **Exposure > Add Exposure**. Choose between:
 
-- **Individual** (feature-based)
-- **Aggregated** (admin unit-based)
-
-For this exercise, we will calculate Individual Exposure. The Aggregated calculation will be calculated for Risk module later.
+- **Individual** (feature-based): Exposure is calculated for each elements-at-risk feature.
+- **Aggregated** (admin unit-based): Exposure is calculated based on admnistrative boundaries.
 
 In the General section, enter:
 
-- **Layer Name**: e.g., `Flood20_Building`
+- **Layer Name**: `Flood20_Building`
 - Select the **Hazard** and **EaR** layers
 - Choose Intensity: **Minimum**, **Average**, or **Maximum**. These options will affect the layer visualization after the calculation. All intensities will still be calculated and users can change the visualization options afterwards.
+
+(This setting is used for calculating 20-years return period flood to building footprints - **Individual Exposure**)
 
 .. figure:: /images/tutorials/exposure.png
    :scale: 80%
    :align: center
 
-   *Exposure*
+   *Individual Exposure Calculation*
 
-Once calculated, a table will show metrics like:
+For **Aggregated Exposure**, we need to input several information which are based on the calculated individual exposure. Therefore, we must calculate an associatd Individual Exposure beforehand:
 
-- Exposed area, floors, length
+- **Layer Name**: `Flood20_Building_Agg`
+-  **Hazard**: `Flood20_Building`
+-  **Admin Level**: `Admin_Unit`
+-  **Intensity**: `Average Intensity`
+
+.. figure:: /images/tutorials/exposure_agg.png
+   :scale: 80%
+   :align: center
+
+   *Aggregated Exposure Calculation*
+
+Once calculated, two tables are obtained from the calculation, which are **Summary Table** and **Detail Table**. The Summary Table summarizes the number of exposed Elements-at-Risk by each defined for every hazard class. The Detail Table provides the exposure information for each Element-at-Risk feature.
+
+Both tables will show metrics like:
+
 - Exposed fraction
-- Minimum, average, maximum intensity
+- Exposed area / length: Depends on the type of elements-at-risk (polygon / line)
+- Exposed Population, Value, number of floors: Depends on the information availability in the elements-at-risk attribute data. 
+- Minimum, average, maximum intensity: Only shown in Detal Table.
 
 .. figure:: /images/tutorials/exposure_table.png
    :scale: 80%
    :align: center
 
-   *Exposure Table Result*
+   *Exposure Table Result (Summary Table)*
+
+.. figure:: /images/tutorials/exposure_table_detail.png
+   :scale: 80%
+   :align: center
+
+   *Exposure Table Result (Detail Table)*
+
+You can show the Summary Table into a chart and export the table as XLSX.
+
+.. figure:: /images/tutorials/exposure_chart.png
+   :scale: 80%
+   :align: center
+
+   *Exposure Summary Chart*
 
 You can configure how the results are visualized on the map. You can also click individual features to see their attributes.
 
@@ -278,3 +386,77 @@ You can configure how the results are visualized on the map. You can also click 
 
 .. note::
   Visualization directly affects how the calculations for Exposure, Loss, and Risk are performed. If you want to try different classes or value ranges for your analysis, you’ll need to re-run the **Exposure** module before running **Loss** or **Risk** again.
+
+6. Running a Loss Analysis
+------------------------------------
+
+Go to **Loss > Add Loss**. Choose between:
+
+- **Individual** (feature-based): Loss is calculated for each elements-at-risk feature.
+- **Aggregated** (admin unit-based): Loss is calculated based on admnistrative boundaries.
+
+In the General section, enter:
+
+- **Layer Name**: `Flood20_Building_Loss`
+- Select the **Exposure** layers: `Flood20_Building`.
+
+(This setting is used for calculating building loss to 20-year return period flood, after calculating the individual exposure - **Individual Loss**)
+
+For **Aggregated Loss**, the information needed is based on the calculated individual loss. Therefore, we must calculate an associated Individual Loss beforehand:
+
+- **Layer Name**: `Flood20_Building_Loss_Agg`
+-  **Loss**: `Flood20_Building_Loss`
+-  **Admin Level**: `Admin_Unit`
+-  **Intensity**: `Average Intensity`
+
+.. figure:: /images/tutorials/loss.png
+   :scale: 80%
+   :align: center
+
+   *Loss Calculation*
+
+A series of columns for hazard, loss, and vulnerability is presented to link the elements-at-risk classes to the vulnerability tables.
+Users need to choose the associated vulnerability table to each class. Users can choose the vulnerability from the **All Vulnerability** section. 
+After selecting the vulnerability curve, click **Save**.
+After linking each class to a particular vulnerability curve, click **Save** to store and calculate the Loss.
+
+.. figure:: /images/tutorials/loss_vul.png
+   :scale: 80%
+   :align: center
+
+   *Linking Vulnerability for Loss Calculation*
+
+Once the loss is computed, a loss map will be displayed in the map canvas on the right.
+
+Similar to te Exposure module, two Loss tables will be obtained after the calculation which are the **Summary Table** and the **Detail Table**.
+
+In addition to the information obtained from the **Exposure** calculation, the **Loss** table contains information about **Damage Ratio**, **Loss Fractions**, **Loss Area / Length**, **Loss Value**, and **Loss Population**, depending on the information availability in the elements-at-risk attribute data.
+
+.. figure:: /images/tutorials/loss_table.png
+   :scale: 80%
+   :align: center
+
+   *Loss Table Result (Summary Table)*
+
+.. figure:: /images/tutorials/loss_table_detail.png
+   :scale: 80%
+   :align: center
+
+   *Loss Table Result (Detail Table)*
+
+You can show the Summary Table into a chart and export the table as XLSX.
+
+.. figure:: /images/tutorials/loss_chart.png
+   :scale: 80%
+   :align: center
+
+   *Loss Summary Chart*
+
+You can configure how the results are visualized on the map. You can also click individual features to see their attributes.
+The visualization style can be adjusted from the **Detail** and **Classes** sections.
+
+.. figure:: /images/tutorials/loss_viz.png
+   :scale: 80%
+   :align: center
+
+   *Loss Visualization*
