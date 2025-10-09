@@ -37,8 +37,10 @@ Here’s an overview of what’s included in the dataset:
 | Vulnerability           | Buildings & Land Parcels | Includes both physical and population vulnerability for debris flow, flood, and landslide.    |
 +-------------------------+--------------------------+--------------------------------------------------------------------------------------------------------+
 
-👉 Please refer `here <https://drive.google.com/drive/folders/1akP4cml2kh0KUVrrRsdl_4VB0lTq2qcW?usp=drive_link>`_ to access the dataset for this tutorial.
+👉 Please refer `here <https://drive.google.com/file/d/17lfUpEKDHe2kHByeA4EawkUQFjgGtb7e/view?usp=drive_link>`_ to access the dataset for this tutorial.
+
 👉 Check `this document <https://drive.google.com/file/d/1IsfH36Rf8FNpH6BKvznamGa7G5lAkXqj/view?usp=drive_link>`_ for Input Data tutorial and `this document <https://drive.google.com/file/d/1uEzD2gpP1F74lgw0qXaFjzTViHLP3TwG/view?usp=drive_link>`_ for Exposure and Loss Calculation tutorial.
+
 👉 For more details about the dataset structure and use of Alternatives and Scenarios, refer to the `dataset document <https://drive.google.com/file/d/1pk6OeKmuUwA5oCiVSshZQ4y0SEZ-l0S9/view?usp=drive_link>`_.
 
 Step-by-step Walkthrough
