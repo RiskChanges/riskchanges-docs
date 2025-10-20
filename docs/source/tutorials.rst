@@ -311,7 +311,7 @@ The related vulnerability tables have been imported and available to the public.
 .. note::
    Vulnerability data is **not required** for Exposure analysis but is **essential** for Loss and Risk calculations.
 
-1. Running an Exposure Analysis
+5. Running an Exposure Analysis
 ------------------------------------
 
 Go to **Exposure > Add Exposure**. Choose between:
