@@ -367,6 +367,14 @@ Both tables will show metrics like:
 
    *Exposure Table Result (Detail Table)*
 
+For the Aggregated Exposure result, a summary table will be generated after the calculation, showing the total Exposure in metrics depending on available Elements-at-Risk attributes for each administrative boundary. For this exercise, we obtain Exposure in terms of Area, Value (USD) and Population (number of people).
+
+.. figure:: /images/tutorials/exposure_agg_table.png
+   :scale: 80%
+   :align: center
+
+   *Aggregated Exposure Table Result*
+
 You can show the Summary Table into a chart and export the table as XLSX.
 
 .. figure:: /images/tutorials/exposure_chart.png
@@ -374,6 +382,12 @@ You can show the Summary Table into a chart and export the table as XLSX.
    :align: center
 
    *Exposure Summary Chart*
+
+.. figure:: /images/tutorials/exposure_agg_chart.png
+   :scale: 80%
+   :align: center
+
+   *Aggregated Exposure Chart*
 
 You can configure how the results are visualized on the map. You can also click individual features to see their attributes.
 
@@ -443,6 +457,14 @@ In addition to the information obtained from the **Exposure** calculation, the *
 
    *Loss Table Result (Detail Table)*
 
+For the Aggregated Loss result, a summary table will be generated after the calculation, showing the total Loss in metrics depending on available Elements-at-Risk attributes for each administrative boundary. For this exercise, we obtain Loss in terms of Area, Value (USD) and Population (number of people).
+
+.. figure:: /images/tutorials/loss_agg_table.png
+   :scale: 80%
+   :align: center
+
+   *Aggregated Loss Table Result*
+
 You can show the Summary Table into a chart and export the table as XLSX.
 
 .. figure:: /images/tutorials/loss_chart.png
@@ -450,6 +472,12 @@ You can show the Summary Table into a chart and export the table as XLSX.
    :align: center
 
    *Loss Summary Chart*
+
+.. figure:: /images/tutorials/loss_agg_chart.png
+   :scale: 80%
+   :align: center
+
+   *Aggregated Loss Chart*
 
 You can configure how the results are visualized on the map. You can also click individual features to see their attributes.
 The visualization style can be adjusted from the **Detail** and **Classes** sections.
@@ -459,3 +487,62 @@ The visualization style can be adjusted from the **Detail** and **Classes** sect
    :align: center
 
    *Loss Visualization*
+
+7. Running a Risk Analysis
+------------------------------------
+
+For running a risk analysis, aggregated Loss should be calculated beforehand. Additionally, more than one return period Loss for the same Hazard - Elements at Risk combination is required.
+The calculation up to Loss can follow the steps in previous sections.
+
+Go to **Risk > Add Risk**. In the General section, enter:
+
+- **Name**: `Flood_Building_Risk`.
+- **Admin Level**: `Admin_Unit`.
+- **Hazard Type**: `Flood`.
+- **Hazard Sub Type**: `Flash Flood`.
+- **EaR**: `Building_Footprint`.
+- **Risk Reduction Alternative** and **Scenario** are optional. Users can select them if they have been defined in the project.
+- **Select Aggregated Losses**: The list will be automatically filtered according to the selected Admin Level, Hazard Type/Subtype, and EaR. Select more than one return period Loss layers to be used for Risk calculation.
+- For this tutorial, we will select `Flood20_Building_Loss_Agg`, `Flood50_Building_Loss_Agg`, `Flood100_Building_Loss_Agg`, and `Flood200_Building_Loss_Agg`, then click **Save**.
+
+(This setting is used for calculating building average annual loss to flood for each administrative boundary, after calculating the aggregated loss - **Aggrgated Risk**)
+
+.. figure:: /images/tutorials/risk.png
+   :scale: 80%
+   :align: center
+
+   *Risk Calculation*
+
+Once the risk is computed, a risk map will be displayed in the map canvas on the right. You can configure how the results are visualized on the map. You can also click individual features to see their attributes.
+The visualization style can be adjusted from the **Detail** and **Classes** sections.
+
+.. figure:: /images/tutorials/risk_viz.png
+   :scale: 80%
+   :align: center
+
+   *Risk Map and Visualization Settings*
+
+A summary table will be generated after the calculation, showing the Average Annual Loss (AAL) in metrics depending on available Elements-at-Risk attributes for each administrative boundary. For this exercise, we obtain AAL in terms of Count, Area, Value (USD) and Population (number of people).
+
+.. figure:: /images/tutorials/risk_table.png
+   :scale: 80%
+   :align: center
+
+   *Risk Table Result*
+
+You can show the Summary Table into a chart and export the table as XLSX.
+
+.. figure:: /images/tutorials/risk_chart.png
+   :scale: 80%
+   :align: center
+
+   *Risk Summary Chart*
+
+Observing the Results
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Once the analysis is complete, we can download the results into either Geopackage (.gpkg), GeoJSON (.geojson), or Shapefile (.zip) formats for further examination in GIS software. In this section, we will demonstrate how to interpret the results, as well as observing the difference in the outcomes when varying intensity selections are selected.
+
+1. Register an Account and Setup the Profile
+-----------------------------------------
+
