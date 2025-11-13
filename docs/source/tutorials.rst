@@ -543,6 +543,22 @@ Observing the Results
 
 Once the analysis is complete, we can download the results into either Geopackage (.gpkg), GeoJSON (.geojson), or Shapefile (.zip) formats for further examination in GIS software. In this section, we will demonstrate how to interpret the results, as well as observing the difference in the outcomes when varying intensity selections are selected.
 
-1. Register an Account and Setup the Profile
+1. Input Settings Influence to the Calculation
 -----------------------------------------
+
+2. Visualization Settings and Its Limitation
+-----------------------------------------
+
+3. Effect of the Intensity Choice
+-----------------------------------------
+
+4. Exposure Results Observation
+---------------------------------
+
+5. Loss Result Observation
+---------------------------------
+
+6. Risk Result Observation
+---------------------------------
+
 
