@@ -541,24 +541,121 @@ You can show the Summary Table into a chart and export the table as XLSX.
 Observing the Results
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Once the analysis is complete, we can download the results into either Geopackage (.gpkg), GeoJSON (.geojson), or Shapefile (.zip) formats for further examination in GIS software. In this section, we will demonstrate how to interpret the results, as well as observing the difference in the outcomes when varying intensity selections are selected.
+Once all analysis (Exposure, Loss, and Risk) are completed, the results can be visualized, compared, and exported for further exploration. RiskChanges provides options to exports outputs into Geopackage (.gpkg), GeoJSON (.geojson), or Shapefile (.zip) formats, which can be examined using GIS software or integrated into other workflows. 
 
-1. Input Settings Influence to the Calculation
+In this chapter, we will discuss how to interpret the results, as well as observing the difference in the outcomes when varying intensity selections are selected.
+
+1. Input Settings Influence on the Calculation
 -----------------------------------------
 
-2. Visualization Settings and Its Limitation
+The parameters configuered during data upload and setup significantly influence the computed results of Exposure, Loss, and Risk calculations. The following sections will discuss how different intensity choices affect the final outcomes.
+
++-----------------------------------+------------------------------------------+-----------------------------------+
+| **Setting**                       | **Influence on Result**                  | **Example**                       |
++===================================+==========================================+===================================+
+| Hazard Intensity (Min/Avg/Max)    | Determines the calculated exposure area  | Selecting *Max* increases exposed |
+|                                   | and value for EaR features               | buildings compared to *Avg*       |
++-----------------------------------+------------------------------------------+-----------------------------------+
+| Vulnerability Curve Selection     | Alters loss ratios and total loss values | Choosing higher vulnerability     |
+|                                   |                                          | curves raises loss and AAL        |
++-----------------------------------+------------------------------------------+-----------------------------------+
+| Aggregation Level (Admin Units)   | Defines how results are summarized       | Aggregated loss shows total USD   |
+|                                   |                                          | per district rather than per site |
++-----------------------------------+------------------------------------------+-----------------------------------+
+
+.. note::
+   Small differences in the selected hazard intensity values can lead to significant variations in the calculated Exposure, Loss, and Risk metrics. It is crucial to carefully consider the intensity selection during the analysis setup.
+
+1. Visualization Settings and Its Limitation
 -----------------------------------------
 
-3. Effect of the Intensity Choice
+Visualization plays a critical role in interpreting the results of Exposure, Loss, and Risk analyses. However, it is important to understand that visualization settings primarily affect how results are displayed on the map and do not alter the underlying calculations.
+
+RiskChanges uses a **classification-based visualization** approach, where results are grouped into classes based on user-defined or automated schemes. This method helps in quickly identifying areas of concern but may oversimplify the data.
+
+- **Style Mode** determines how values are grouped for map display.
+- **Color Map** aids visual interpretation but does not affect numeric results.
+
+When interpreting visualized results, consider the following:
+
+- The map view shows only one layer at a time. Comparing multiple hazards or scenarios may require exporting results.
+- Legend classificatoin depends on current visualization; swathing between *average* and *maximum* intensity requires recassification for accurate display.
+- For aggregated results, overlapping polygons may make small administrative units less visible.
+
+1. Effect of the Intensity Choice
 -----------------------------------------
 
-4. Exposure Results Observation
+The Intensity parameter defines which hazard intensity field (Minimum, Average, or Maximum) is visualized and analyzed. While all intensity values are computed internally, only the selected one will be represented on the map.
+
+Example comparison for Flood (20-year return period):
+
++--------------------+-------------------+-----------------------+----------------+---------------+
+| **Intensity Type** | **Avg Depth (m)** | **Exposed Area (m²)** | **Loss (USD)** | **AAL (USD)** |
++====================+===================+=======================+================+===============+
+| Minimum Intensity  | 0.4               | 12,350                | 48,200         | 9,800         |
++--------------------+-------------------+-----------------------+----------------+---------------+
+| Average Intensity  | 0.8               | 23,600                | 92,100         | 18,500        |
++--------------------+-------------------+-----------------------+----------------+---------------+
+| Maximum Intensity  | 1.5               | 41,200                | 175,600        | 34,800        |
++--------------------+-------------------+-----------------------+----------------+---------------+
+
+As seen above, higher intensity selection results in increased exposure area, loss values, and average annual loss (AAL). This is due to more severe hazard conditions affecting a larger portion of the elements-at-risk.
+
+When conducting analyses, it is essential to choose the intensity level that best represents the scenario being studied, as it directly impacts the risk assessment outcomes.
+
+1. Exposure Results Observation
 ---------------------------------
 
-5. Loss Result Observation
+The **Exposure** results show which elements are located within hazard zones and the extent of their exposure based on the selected intensity to quantify their potential impact. You can interpret results by:
+
+- **Spatial distribution**: Identify clusters of high exposure along rivers or steep slopes.
+- **Magnitude of impacts**: Observe which administrative units contain the most exposed population or building value.
+- **Return period comparison**: Longer return periods typically show higher exposure due to larger hazard extents.
+
+Example interpretation:
+
+- Buildings in the *northern floodplain* show 80% exposure at 100-year flood intensity.
+- Population exposure increases from 15% (20-year) to 45% (200-year).
+
+1. Loss Result Observation
 ---------------------------------
 
-6. Risk Result Observation
+The **Loss** results indicate the expected damage to elements-at-risk based on their exposure and vulnerability. The results integrate the exposure data with vulnerability curves to estimate potential losses.
+
+- **Physical loss** represents the expected damage to structures and infrastructure in monetary terms.
+- **Population loss** indicates estimated affected people based on population vulnerability.
+- **Damage ratio** helps understand relative loss per unit value.
+
+Key observation:
+
+- Loss concentration usually follows the exposure distribution but may differ due to vulnerability differences.
+- Reinforced concrete buildings generally show lower ratios than masonry structures under the same hazard intensity.
+- Comparing alternatives revealrs reduction in total loss values.
+
+1. Risk Result Observation
 ---------------------------------
 
+The **Risk** module provides an aggregated view of potential annual losses, combining multiple return period loss estimates to calculate the Average Annual Loss (AAL) - the expected yearly loss accounting for hazard frequency and severity.
 
+Interpretation steps:
+
+1. **Identiy hotspots**: Administrative units with highest AAL indicate priority areas for mitigation.
+2. **Compare hazards**: Overlay different hazard risks to identify multi-hazard zones.
+3. **Evaluate reduction scenarios**: Compare baseline vs alternative scenarios to measure potential benefit.
+
+Example findings:
+
+- *Admin unit 5* shows the highest flood AAL, mostly driven by residential areas.
+- Risk reduction scenario A2 reduces AAL by 30% compared to baseline.
+
+7. Exporting and Reporting the Results
+-----------------------------------------
+
+After completing the analyses, users can export the results for further examination or reporting. RiskChanges supports exporting data in various formats:
+
+- **Geopackage (.gpkg)** - recommended for GIS analysis with all attributes preserved.
+- **GeoJSON (.geojson)** - suitable for web mapping or integration with dashboards.
+- **Shapefile (.zip)** - for compatibility with legacy GIS tools.
+- **XLSX table report** - for summary statistics or reporting.
+
+**Pro Tip**: Combine exported exposure, loss, and risk layers in GIS software to create a multi-hazard impact map, overlaying administrative units with population densit to support risk-informed decision-making.
