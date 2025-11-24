@@ -37,7 +37,7 @@ Here’s an overview of what’s included in the dataset:
 | Vulnerability           | Buildings & Land Parcels | Includes both physical and population vulnerability for debris flow, flood, and landslide.    |
 +-------------------------+--------------------------+--------------------------------------------------------------------------------------------------------+
 
-👉 Please refer `here <https://drive.google.com/file/d/17lfUpEKDHe2kHByeA4EawkUQFjgGtb7e/view?usp=drive_link>`_ to access the dataset for this tutorial.
+👉 Please refer `here <https://drive.google.com/file/d/1b74u6nUtmWaxMKOtcMbxp5b22cLHvt5D/view?usp=drive_link>`_ to access the dataset for this tutorial.
 
 👉 Check `this document <https://drive.google.com/file/d/1IsfH36Rf8FNpH6BKvznamGa7G5lAkXqj/view?usp=drive_link>`_ for Input Data tutorial and `this document <https://drive.google.com/file/d/1uEzD2gpP1F74lgw0qXaFjzTViHLP3TwG/view?usp=drive_link>`_ for Exposure and Loss Calculation tutorial.
 
@@ -566,7 +566,7 @@ The parameters configuered during data upload and setup significantly influence 
 .. note::
    Small differences in the selected hazard intensity values can lead to significant variations in the calculated Exposure, Loss, and Risk metrics. It is crucial to carefully consider the intensity selection during the analysis setup.
 
-1. Visualization Settings and Its Limitation
+2. Visualization Settings and Its Limitation
 -----------------------------------------
 
 Visualization plays a critical role in interpreting the results of Exposure, Loss, and Risk analyses. However, it is important to understand that visualization settings primarily affect how results are displayed on the map and do not alter the underlying calculations.
@@ -582,7 +582,7 @@ When interpreting visualized results, consider the following:
 - Legend classificatoin depends on current visualization; swathing between *average* and *maximum* intensity requires recassification for accurate display.
 - For aggregated results, overlapping polygons may make small administrative units less visible.
 
-1. Effect of the Intensity Choice
+3. Effect of the Intensity Choice
 -----------------------------------------
 
 The Intensity parameter defines which hazard intensity field (Minimum, Average, or Maximum) is visualized and analyzed. While all intensity values are computed internally, only the selected one will be represented on the map.
@@ -603,7 +603,7 @@ As seen above, higher intensity selection results in increased exposure area, lo
 
 When conducting analyses, it is essential to choose the intensity level that best represents the scenario being studied, as it directly impacts the risk assessment outcomes.
 
-1. Exposure Results Observation
+4. Exposure Results Observation
 ---------------------------------
 
 The **Exposure** results show which elements are located within hazard zones and the extent of their exposure based on the selected intensity to quantify their potential impact. You can interpret results by:
@@ -617,7 +617,7 @@ Example interpretation:
 - Buildings in the *northern floodplain* show 80% exposure at 100-year flood intensity.
 - Population exposure increases from 15% (20-year) to 45% (200-year).
 
-1. Loss Result Observation
+5. Loss Result Observation
 ---------------------------------
 
 The **Loss** results indicate the expected damage to elements-at-risk based on their exposure and vulnerability. The results integrate the exposure data with vulnerability curves to estimate potential losses.
@@ -632,7 +632,7 @@ Key observation:
 - Reinforced concrete buildings generally show lower ratios than masonry structures under the same hazard intensity.
 - Comparing alternatives revealrs reduction in total loss values.
 
-1. Risk Result Observation
+6. Risk Result Observation
 ---------------------------------
 
 The **Risk** module provides an aggregated view of potential annual losses, combining multiple return period loss estimates to calculate the Average Annual Loss (AAL) - the expected yearly loss accounting for hazard frequency and severity.
