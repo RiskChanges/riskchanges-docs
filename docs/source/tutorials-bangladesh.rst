@@ -69,12 +69,12 @@ Follow `this guide <https://sdss-documentation.readthedocs.io/en/latest/userguid
 
    *Register to RiskChanges*
 
-a. Click the Explore RiskChanges button on the top-right corner of the website.
-b. Click Register Here on the bottom part below the Login form.
-c. Fill in the Registration form with your name, email address, and password, and click Register.
+a. Click the **Explore RiskChanges** button on the top-right corner of the website.
+b. Click **Register Here** on the bottom part below the Login form.
+c. Fill in the **Registration form** with your name, email address, and password, and click **Register**.
 d. Check your email and verify your account. In case no email comes to your inbox from RiskChanges, please check your Spam folder.
 e. Login to your new account with your email and create a password. It will take you to the main dashboard of your RiskChanges account, the Project Dashboard.
-f. Click the name and three options will be shown which are Update Profile, Change Password, and Logout. By clicking each of those, you can update your profile, change your password, and logout.
+f. Click the name and three options will be shown which are **Update Profile, Change Password, and Logout**. By clicking each of those, you can update your profile, change your password, and logout.
 
 .. figure:: /images/tutorials_inputdata/update_profile.png
    :scale: 50%
@@ -89,7 +89,7 @@ Once registered and logged in, the next step is to create or access a project. P
 
 The Project Dashboard consists of the list of projects that the users have created or have been assigned to. Aside from that, in this dashboard users can also filter and search a specific project by name, study type, hazard type, or sorting the project.
 
-a. Click New Project to be redirecte to the Add New Project page.
+a. Click **New Project** to be redirecte to the **Add New Project** page.
 b. There are four pages to be filled related to the project, which are: |General|, |Staff|, |Alternatives|, and |Scenarios|. Only the **General** section is required for now. 
 c. In the |General| page, users need to enter related details about the project. 
 
@@ -103,9 +103,9 @@ c. In the |General| page, users need to enter related details about the project.
 
    *Filling General section*
 
-d. The |Staff| page allows users to invite and design the team members in the associated project. The projects that are created or assigned to the user are displayed as cards in the Project Dashboards and can be filtered easily through the filter function.
+d. The |Staff| page allows users to invite and design the team members in the associated project. The projects that are created or assigned to the user are displayed as cards in the **Project Dashboards** and can be filtered easily through the **filter function**.
 
-.. figure:: /images/bangladesh/project_dashboard.png
+.. figure:: /images/bangladesh/projectdashboard.png
    :scale: 60%
    :align: center
 
@@ -129,73 +129,108 @@ f. The |Scenarios| page allows users to define different scenarios for the proje
 3. Upload and Visualize Datasets
 -------------------------
 
-After creating a project, users can begin populating it with data. RiskChanges follows a structured data input sequence to ensure consistency and traceability across analysis. IN general, users start by uploading adminstrative boundaries, followwed by hazard layers, elements-at-risk datasets, and finally vulnerability data. Each dataset is immediately visualized to allow verification before proceeding to the next step.
+After creating a project, users can begin populating it with data. RiskChanges follows a structured data input sequence to ensure consistency and traceability across analysis. In general, users start by uploading adminstrative boundaries, followwed by hazard layers, elements-at-risk datasets, and finally vulnerability data. Each dataset is immediately visualized to allow verification before proceeding to the next step.
 
 Administrative Boundary Data
 """"""""""""""""""""""""""""
 
-Choose the **Admin Level** option and click **Add Admin Level**. Under the **General** tab:
+Administrative boundaries provide the spatial units for aggregating exposure, loss, and risk results. Uploading these datasets early ensures that subsequent analyses can be summarized at meaningful governance or planning levels, such as districts or municipalities.
 
-   - Upload a zipped shapefile.
-   - Enter a **Name**: `Admin_Unit`
-   - Save.
+From **Project Dashboard**, choose the project you will work on and click on the project name.
 
-RiskChanges automatically displays the boundary on the map with default symbology. However, you can customize the visualization by going to the **Style** tab.
+a. Choose **Admin Level** and click Add Admin Level.
+b. In the **General** section, upload your administrative boundary shapefile in a zipped folder.
+c. Click to **Upload or Drag and Drop** the administrative boundary data to upload the file.
+d. Type in **Name** and click **Save** to apply.
 
-   - Label Field: `[ADMIN UNIT]`
-   - Color Map: `antiquewhite`
-   - Label: *Administrative Unit*
+   - **Name**: Bangladesh Division (depending on which dataset, you can name it as Bangladesh Province, Bangladesh Districts, or Bangladesh Sub-Districts).
+   - **Label Field**: [Adm1 en] for division, [Adm 2 en] for province, [Adm3 en] for districts, or [Adm4 en] for sub-districts.
+   - **Color Map**: antiquewhite.
+   - **Label**: Administrative Unit.
 
-.. figure:: /images/tutorials/admin_unit.png
+The administrative boundary will be automatically loaded in the map canvas with a single symbol styling. Users can change the visualization and symbology of the map view by going to the **Detail** tab.
+
+.. figure:: /images/bangladesh/adminsettings.png
    :scale: 80%
    :align: center
 
-   *Uploading Administrative Boundary data*
+   *Administrative Boundary Data Upload Settings*
+
+.. figure:: /images/bangladesh/adminbangladesh.png
+   :scale: 80%
+   :align: center
+
+   *Bangladesh Administrative Boundary*
 
 Hazard Data
 """""""""""""""""
-Head over to **Hazard > Add Hazard**. Upload hazard data in **GeoTIFF or zipped shapefile** format. Future support will include OGC Service and Global Dataset.
 
-Fill in required fields:
+Hazard layers define the spatial extent and intensity of natural hazards and are a critical input for exposure assessment. In the demo dataset, multiple hazard types and return periods are used to demonstrate how RiskChanges supports both single-hazard and multi-scenario analysis.
 
-   - **Layer Name**, **Hazard Type**, **Sub Type**, **Intensity Type**, **Intensity Unit**
-   - **Return Period**, **Representation Year**, optional **Alternative** and **Scenario**
-   - Click **Save** to apply.
+a. Go to **Hazard** and click **Add Hazard**.
+b. In the **General** section, upload your hazard data. The data must be in either a GeoTIFF or shapefile (in a zipped folder) format. Other options are soon to be available which are to connect to OGC Service or global datasets.
+c. Click to **upload** or **drag and drop** the hazard data to upload the data.
+d. Type in the **Layer Name**, **Hazard Type**, **Hazar Sub Type**, **Hazard Intensity Type**, **Hazard Intensity Unit**, **Return Period** (years), **Representation Year**, **Risk Reduction Alternative** (if applicablr), and **Scenario** (iff applicable).
 
-+-----------------+----------------+-----------------+---------------+--------------------+--------------------+-------------------------+
-| **Hazard Name** | **Layer Name** | **Hazard Type** | **Sub Type**  | **Intensity Type** | **Intensity Unit** | **Representation Year** |
-+=================+================+=================+===============+====================+====================+=========================+
-| Debris Flow     | DF_20          | Mass Movements  | Debris Flows  | Impact Pressure    | kPa                | 2020                    |
-+-----------------+----------------+-----------------+---------------+--------------------+--------------------+-------------------------+
-| Flood           | FL_20          | Flood           | Fluvial Flood | Height             | meters             | 2020                    |
-+-----------------+----------------+-----------------+---------------+--------------------+--------------------+-------------------------+
-| Landslide       | LS_20_Class    | Mass Movements  | Landslides    | Susceptibility     | classes            | 2020                    |
-+-----------------+----------------+-----------------+---------------+--------------------+--------------------+-------------------------+
-| Landslide Index | LS_20_Prob     | Mass Movements  | Landslides    | Susceptibility     | probability        | 2020                    |
-+-----------------+----------------+-----------------+---------------+--------------------+--------------------+-------------------------+
++----------------------------------------------+-------------------------------+-------------+------------------+-----------------------+------------------------+---------------+----------------------+-----------+
+| Hazard Name                                  | Layer Name                    | Hazard Type | Hazard Sub Type  | Hazard Intensity Type | Hazard Intensity Unit | Return Period | Representation Year | Scenario  |
++==============================================+===============================+=============+==================+=======================+========================+===============+======================+===========+
+| Coastal Flood (Baseline)                     | CoastalFlood_2020             | Flood       | Coastal flood    | Height                | meters                 | 500           | 2020                 | Baseline  |
++----------------------------------------------+-------------------------------+-------------+------------------+-----------------------+------------------------+---------------+----------------------+-----------+
+| Coastal Flood                                | CoastalFlood_2030             | Flood       | Coastal flood    | Height                | meters                 | 500           | 2030                 | SSP126    |
++----------------------------------------------+-------------------------------+-------------+------------------+-----------------------+------------------------+---------------+----------------------+-----------+
+| Fluvial Undefended Flood (5y, Baseline)      | Baseline_Fluvial_Undefended_5y| Flood       | Fluvial flood    | Height                | meters                 | 5             | 2020                 | Baseline  |
++----------------------------------------------+-------------------------------+-------------+------------------+-----------------------+------------------------+---------------+----------------------+-----------+
+| Wind Speed Gust (Baseline)                   | WindSpeed_2018                | Storm       | Cyclone          | Wind speed            | m/s                    | 100           | 2018                 | Baseline  |
++----------------------------------------------+-------------------------------+-------------+------------------+-----------------------+------------------------+---------------+----------------------+-----------+
+| Wind Speed Gust                              | WindSpeed_2030                | Storm       | Cyclone          | Wind speed            | m/s                    | 100           | 2030                 | SSP126    |
++----------------------------------------------+-------------------------------+-------------+------------------+-----------------------+------------------------+---------------+----------------------+-----------+
 
 .. note::
-   Return periods should be adjusted according to the layers uploaded.
 
-For visualization, RiskChanges supports different visual styles. You can adjust it according to your needs. Use the **Style** section to adjust the visualization. After adjusting, click **Save** to apply the changes.
+   - Representation years can be adjusted based on available layers (2030, 2050, 2080).
+   - Multiple scenarios are supported where available: SSP126, SSP245, SSP370, SSP585.
+   - Default scenario is **SSP126** unless otherwise specified.
 
-+----------------------------------------------+----------------------+-----------+---------------+---------------+---------------------------+---------------+
-| **Hazard Name**                              | **Style Mode**       | **Field** | **Min Value** | **Max Value** | **Classification Method** | **Color Map** |
-+==============================================+======================+===========+===============+===============+===========================+===============+
-| Debris Flow                                  | User Defined Classes | [VALUE]   | 0.1           | 12.5          | Quantile                  | YlOrBr        |
-+----------------------------------------------+----------------------+-----------+---------------+---------------+---------------------------+---------------+
-| Flood                                        | User Defined Classes | [VALUE]   | 0.1           | 5.3           | Quantile                  | Blues         |
-+----------------------------------------------+----------------------+-----------+---------------+---------------+---------------------------+---------------+
-| Landslide (Susceptibility Classes)           | Automated Classes    | [VALUE]   | 0.1           | 5.3           | Quantile                  | autumn_r      |
-+----------------------------------------------+----------------------+-----------+---------------+---------------+---------------------------+---------------+
-| Landslide Index (Susceptibility Probability) | User Defined Classes | [VALUE]   | 0.1           | 5.3           | Quantile                  | Wistia        |
-+----------------------------------------------+----------------------+-----------+---------------+---------------+---------------------------+---------------+
+e. Click **Save** and the hazard layer will be automatically displayed in the map canvas.
+f. The default styling is a **User Defined Classes** (graduated) for raster data. Whereas for vector (shapefile) datasets, if the hazard intensity type is **Susceptibility**, the default style is **Automatic Classes** (categorized).
 
-.. figure:: /images/tutorials/hazards.png
+.. figure:: /images/bangladesh/hazardsettings.png
    :scale: 80%
    :align: center
 
-   *Hazard Visualization*
+   *Hazard Layer Settings*
+
+The **Detail** section is used to adjust the settings for the layer's visualization. Additionally, the chosen style will also be applied as the base classes for **Exposure** calculation.
+
+a. Select the **Class Mode** whether it is **Single Class**, **User Defined Classes**, or **Automatic Classes**.
+b. For **Single Class**, users need to select the dataset's **Field** which will be used as well as the **Minimum Value** and **Maximum Value** to be displayed. Then, a **Color Map** will be selected for the visualization.
+c. For **User Defined Classes**, after selecting the dataset's **Field**, **Minimum Value**, and **Maximum Value**, **Total Class** neds to be defined as well as the ** Classification Method** (options available are equal interval, quantile, natural breaks, standard deviation, geometric interval, logarithmic scale, and percentile). A **Color Map** needs to be selected as well for visualization. 
+
++---------------------------+---------------------------+---------+---------------+-------------+------------------------+-----------+
+| Hazard Type               | Style Mode                | Field   | Minimum Value | Total Class | Classification Method | Color Map |
++===========================+===========================+=========+===============+=============+========================+===========+
+| Coastal Flood             | User Defined Classes      | [VALUE] | 0.001         | 5           | Equal Interval         | Blue      |
++---------------------------+---------------------------+---------+---------------+-------------+------------------------+-----------+
+| Fluvial Undefended Flood  | User Defined Classes      | [VALUE] | 0.1           | 5           | Equal Interval         | Blues     |
++---------------------------+---------------------------+---------+---------------+-------------+------------------------+-----------+
+| Wind Speed Gust           | User Defined Classes      | [VALUE] | 10            | 5           | Equal Interval         | afmhot_r |
++---------------------------+---------------------------+---------+---------------+-------------+------------------------+-----------+
+
+.. note::
+
+   - All layers use **User Defined Classes** with equal interval classification.
+   - The `[VALUE]` field is used for symbology across all hazard layers.
+
+d. Click **Save**.
+
+Users can also go to the **Symbology** section to adjust the layer's labels.
+
+.. figure:: /images/bangladesh/hazardviz.png
+   :scale: 80%
+   :align: center
+
+   *Bangladesh Hazard Layer Visualization*
 
 Element-at-Risk (EaR) Data
 """"""""""""""""""""""""""""""""
@@ -244,7 +279,7 @@ Similarly, use the **Style** section to adjust the visualization. After adjustin
 
    *Element-at-Risk Visualization*
 
-4. Vulnerability Table
+1. Vulnerability Table
 ---------------------------
 
 In the **Vulnerability** tab, you can add a vulnerability curve either by uploading a **CSV** or filling in data manually. Each record should include: `Hazard Intensity From`, `Hazard Intensity To`, `Vulnerability Value`
