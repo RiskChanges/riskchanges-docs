@@ -282,7 +282,7 @@ e. Click **Save** and the uploaded EaR layer will be automatically displayed in 
 +----------------------+-------------+
 
 
-**Critical Power Plants Layer **
+**Critical Power Plants Layer**
 
 +----------------------+-------------+
 | Attribute            | Value       |
@@ -371,8 +371,8 @@ Users can also go to the **Symbology section to adjust the layer's labels.
    Please note that the **Vulnerability** data is necessary for **LOss** and **Risk** calculations. The **Exposure** calculation does not require **Vulnerability** input. Therefore, if users only need to do **Exposure** assessment, entering **Vulnerability** data is not compulsory.
 
 
-1. Vulnerability Table
----------------------------
+Vulnerability Table
+"""""""""""""""""""""""""
 
 While exposure identifies what is affected, vulnerability defines how severely it is affected. Vulnerability data links hazard intensity to expected damage or population impact and is therefore a prerequisite for loss and risk calculations. In the demo dataset, pre-defined vulnerability tables are provided to streamline the workflow.
 
@@ -426,40 +426,39 @@ The related vulnerability tables have been imported and available to the public.
    - Please note that the visualization of **Hazard**, **Elements-at-Risk**, and **Exposure** will affect the calculation of the next step. For example, the classes or value ranges chosen for **Hazard** and **Elements-at-Risk** will be applied to calculate **Exposure**. The same combination which results in the **Exposure** calculation will then be applied to calculate **Loss**.
    - If users would like to calculate a different class or range value, they need to re-calculate the **Exposure** with the updated class or range value selection before calculating the **Loss**.
 
-1. Running an Exposure Analysis
-------------------------------------
+4. Exposure and Loss Calculation Module
+-------------------------
+
+With all required input data prepared, users can now proceed to analytical modules. Exposure, Loss, and Risk calculations are performed sequentially, with each module building on the results of the previous one. This structure ensures transparency and traceability in the overall risk assessment process.
+
+Exposure Calculation
+"""""""""""""""""""""""""""
+
+Exposure calculation is the first analytical step, quantifying hoe elements-at-risk intersect with hazard intensity. The results serve as the direct input for loss estimation and therefore must be carefully configured and reviewed.
 
 Go to **Exposure > Add Exposure**. Choose between:
 
 - **Individual** (feature-based): Exposure is calculated for each elements-at-risk feature.
 - **Aggregated** (admin unit-based): Exposure is calculated based on admnistrative boundaries.
 
-In the General section, enter:
+In the General section, enter the **Layer Name** and select the **Hazard** and **Elements-at-Risk** layers for which the **Exposure** will be calculated. This setting is used for calculating 5-year return period fluvial undefended flooding to power plant (**Individual Exposure**)
 
-- **Layer Name**: `Flood20_Building`
+- **Layer Name**: `FluvialFlood_Baseline_PowerPlant_5`
 - Select the **Hazard** and **EaR** layers
-- Choose Intensity: **Minimum**, **Average**, or **Maximum**. These options will affect the layer visualization after the calculation. All intensities will still be calculated and users can change the visualization options afterwards.
+- **Hazard**: `Baseline_Fluvial_Undefended_5y`
+- **EaR**: `Power Plant`
 
-(This setting is used for calculating 20-years return period flood to building footprints - **Individual Exposure**)
-
-.. figure:: /images/tutorials/exposure.png
+.. figure:: /images/tutorials/bangladesh/exposuresettings.png
    :scale: 80%
    :align: center
 
-   *Individual Exposure Calculation*
+   *Individual Exposure Calculation Settings*
 
 For **Aggregated Exposure**, we need to input several information which are based on the calculated individual exposure. Therefore, we must calculate an associatd Individual Exposure beforehand:
 
-- **Layer Name**: `Flood20_Building_Agg`
--  **Hazard**: `Flood20_Building`
+- **Layer Name**: `FluvialFlood_Baseline_PowerPlant_5_Agg`
+-  **Hazard**: `Baseline_Fluvial_Undefended_5y`
 -  **Admin Level**: `Admin_Unit`
--  **Intensity**: `Average Intensity`
-
-.. figure:: /images/tutorials/exposure_agg.png
-   :scale: 80%
-   :align: center
-
-   *Aggregated Exposure Calculation*
 
 Once calculated, two tables are obtained from the calculation, which are **Summary Table** and **Detail Table**. The Summary Table summarizes the number of exposed Elements-at-Risk by each defined for every hazard class. The Detail Table provides the exposure information for each Element-at-Risk feature.
 
@@ -468,83 +467,51 @@ Both tables will show metrics like:
 - Exposed fraction
 - Exposed area / length: Depends on the type of elements-at-risk (polygon / line)
 - Exposed Population, Value, number of floors: Depends on the information availability in the elements-at-risk attribute data. 
-- Minimum, average, maximum intensity: Only shown in Detal Table.
+- Minimum, average, maximum intensity: Only shown in Detail Table.
 
-.. figure:: /images/tutorials/exposure_table.png
+.. figure:: /images/tutorials/bangladesh/exposuretable.png
    :scale: 80%
    :align: center
 
-   *Exposure Table Result (Summary Table)*
+   *Exposure Table Results*
 
-.. figure:: /images/tutorials/exposure_table_detail.png
+Users can also show the **Summary Table** into a chart and export as XLSX.
+Additionally, users can choose which result to be displayed in the map as well as adjusting the symbology through the **Detail** and **Classes** tabs. Observation from the map is also possible by clicking on the features and checking the attributes recorded for each.
+
+.. figure:: /images/tutorials/bangladesh/exposureviz.png
    :scale: 80%
    :align: center
 
-   *Exposure Table Result (Detail Table)*
+   *Options to display exposure results*
 
-For the Aggregated Exposure result, a summary table will be generated after the calculation, showing the total Exposure in metrics depending on available Elements-at-Risk attributes for each administrative boundary. For this exercise, we obtain Exposure in terms of Area, Value (USD) and Population (number of people).
+Loss Calculation
+""""""""""""""""""""""""""""""""""""
 
-.. figure:: /images/tutorials/exposure_agg_table.png
-   :scale: 80%
-   :align: center
-
-   *Aggregated Exposure Table Result*
-
-You can show the Summary Table into a chart and export the table as XLSX.
-
-.. figure:: /images/tutorials/exposure_chart.png
-   :scale: 80%
-   :align: center
-
-   *Exposure Summary Chart*
-
-.. figure:: /images/tutorials/exposure_agg_chart.png
-   :scale: 80%
-   :align: center
-
-   *Aggregated Exposure Chart*
-
-You can configure how the results are visualized on the map. You can also click individual features to see their attributes.
-
-.. figure:: /images/tutorials/exposure_viz.png
-   :scale: 80%
-   :align: center
-
-   *Exposure Visualization*
-
-.. note::
-  Visualization directly affects how the calculations for Exposure, Loss, and Risk are performed. If you want to try different classes or value ranges for your analysis, you’ll need to re-run the **Exposure** module before running **Loss** or **Risk** again.
-
-6. Running a Loss Analysis
-------------------------------------
+Loss calculation translates exposure into tangible impacts by applying vulnerability functions and asset attributes. This step estimates physical, economic, or population losses for each element-at-risk and aggregated administrative unit.
 
 Go to **Loss > Add Loss**. Choose between:
 
 - **Individual** (feature-based): Loss is calculated for each elements-at-risk feature.
 - **Aggregated** (admin unit-based): Loss is calculated based on admnistrative boundaries.
 
-In the General section, enter:
+In the General section, enter the **Layer Name** and select the calculated **Exposure** layer for which the **Loss** will be calculated. This setting is used for calculating power plant for 5-year return period fluvial undefended flood for baseline scenario, after calculating the individual exposure (**Individual Loss**).
 
-- **Layer Name**: `Flood20_Building_Loss`
-- Select the **Exposure** layers: `Flood20_Building`.
-
-(This setting is used for calculating building loss to 20-year return period flood, after calculating the individual exposure - **Individual Loss**)
+- **Layer Name**: `Loss_Baseline_PowerPlant_5`
+- Select the **Exposure** layers: `FluvialFlood_Baseline_PowerPlant_5`.
 
 For **Aggregated Loss**, the information needed is based on the calculated individual loss. Therefore, we must calculate an associated Individual Loss beforehand:
 
-- **Layer Name**: `Flood20_Building_Loss_Agg`
--  **Loss**: `Flood20_Building_Loss`
+- **Layer Name**: `Loss_Baseline_PowerPlant_5_Agg`
+-  **Loss**: `Loss_Baseline_PowerPlant_5`
 -  **Admin Level**: `Admin_Unit`
--  **Intensity**: `Average Intensity`
 
-.. figure:: /images/tutorials/loss.png
+.. figure:: /images/tutorials/bangladesh/losssettings.png
    :scale: 80%
    :align: center
 
-   *Loss Calculation*
+   *Loss Calculation Settings*
 
-A series of columns for hazard, loss, and vulnerability is presented to link the elements-at-risk classes to the vulnerability tables.
-Users need to choose the associated vulnerability table to each class. Users can choose the vulnerability from the **All Vulnerability** section. 
+A series of columns for hazard, loss, and vulnerability is presented to link the elements-at-risk classes to the vulnerability tables. Users need to choose the associated vulnerability table to each class. Users can choose the vulnerability from the **All Vulnerability** section. 
 After selecting the vulnerability curve, click **Save**.
 After linking each class to a particular vulnerability curve, click **Save** to store and calculate the Loss.
 
@@ -560,94 +527,67 @@ Similar to te Exposure module, two Loss tables will be obtained after the calcul
 
 In addition to the information obtained from the **Exposure** calculation, the **Loss** table contains information about **Damage Ratio**, **Loss Fractions**, **Loss Area / Length**, **Loss Value**, and **Loss Population**, depending on the information availability in the elements-at-risk attribute data.
 
-.. figure:: /images/tutorials/loss_table.png
+.. figure:: /images/tutorials/bangladesh/losstable.png
    :scale: 80%
    :align: center
 
-   *Loss Table Result (Summary Table)*
+   *Loss Table Result*
 
-.. figure:: /images/tutorials/loss_table_detail.png
-   :scale: 80%
-   :align: center
+Users can show the Summary Table into a chart and export the table as XLSX. Additionally, users can also adjust the visualization of the loss map from the **Detail** and **Classes** section. 
 
-   *Loss Table Result (Detail Table)*
-
-For the Aggregated Loss result, a summary table will be generated after the calculation, showing the total Loss in metrics depending on available Elements-at-Risk attributes for each administrative boundary. For this exercise, we obtain Loss in terms of Area, Value (USD) and Population (number of people).
-
-.. figure:: /images/tutorials/loss_agg_table.png
-   :scale: 80%
-   :align: center
-
-   *Aggregated Loss Table Result*
-
-You can show the Summary Table into a chart and export the table as XLSX.
-
-.. figure:: /images/tutorials/loss_chart.png
+.. figure:: /images/tutorials/bangladesh/losschart.png
    :scale: 80%
    :align: center
 
    *Loss Summary Chart*
 
-.. figure:: /images/tutorials/loss_agg_chart.png
-   :scale: 80%
-   :align: center
+Risk Calculation
+"""""""""""""""""""""""""""""""""""""
 
-   *Aggregated Loss Chart*
-
-You can configure how the results are visualized on the map. You can also click individual features to see their attributes.
-The visualization style can be adjusted from the **Detail** and **Classes** sections.
-
-.. figure:: /images/tutorials/loss_viz.png
-   :scale: 80%
-   :align: center
-
-   *Loss Visualization*
-
-7. Running a Risk Analysis
-------------------------------------
+Risk calculation integrates losses across multiple return periods to estimate long-term risk metrics, such as *Average Annual Loss*. This step enables comparison across areas, hazards, and scenarios and forms the basis for decision-making and risk reduction planning.
 
 For running a risk analysis, aggregated Loss should be calculated beforehand. Additionally, more than one return period Loss for the same Hazard - Elements at Risk combination is required.
 The calculation up to Loss can follow the steps in previous sections.
 
 Go to **Risk > Add Risk**. In the General section, enter:
 
-- **Name**: `Flood_Building_Risk`.
+- **Name**: `Risk_Fluvial_Baseline_PowerPlant`.
 - **Admin Level**: `Admin_Unit`.
 - **Hazard Type**: `Flood`.
-- **Hazard Sub Type**: `Flash Flood`.
-- **EaR**: `Building_Footprint`.
+- **Hazard Sub Type**: `Fluvial Flood`.
+- **EaR**: `Power Plant`.
 - **Risk Reduction Alternative** and **Scenario** are optional. Users can select them if they have been defined in the project.
-- **Select Aggregated Losses**: The list will be automatically filtered according to the selected Admin Level, Hazard Type/Subtype, and EaR. Select more than one return period Loss layers to be used for Risk calculation.
-- For this tutorial, we will select `Flood20_Building_Loss_Agg`, `Flood50_Building_Loss_Agg`, `Flood100_Building_Loss_Agg`, and `Flood200_Building_Loss_Agg`, then click **Save**.
+- **Select Aggregated Losses**: The list will be automatically filtered according to the selected **Admin Level**, **Hazard Type/Subtype**, and **EaR**. Select more than one return period Loss layers to be used for Risk calculation.
+- For this tutorial, we will select `Loss_FluvialBaseline_PowerPlant_5_Agg`, `Loss_FluvialBaseline_PowerPlant_10_Agg`, `Loss_FluvialBaseline_PowerPlant_50_Agg`, `Loss_FluvialBaseline_PowerPlant_100_Agg`, and `Loss_FluvialBaseline_PowerPlant_500_Agg` then click **Save**.
 
-(This setting is used for calculating building average annual loss to flood for each administrative boundary, after calculating the aggregated loss - **Aggrgated Risk**)
+(This setting is used for calculating building average annual loss to fluvial undefended flood for each administrative boundary, after calculating the aggregated loss - **Aggrgated Risk**)
 
-.. figure:: /images/tutorials/risk.png
+.. figure:: /images/tutorials/bangladesh/risksettings.png
    :scale: 80%
    :align: center
 
-   *Risk Calculation*
+   *Risk Calculation Settings*
 
-Once the risk is computed, a risk map will be displayed in the map canvas on the right. You can configure how the results are visualized on the map. You can also click individual features to see their attributes.
-The visualization style can be adjusted from the **Detail** and **Classes** sections.
+Once the risk is computed, a risk map will be displayed in the map canvas on the right. You can configure how the results are visualized on the map. You can also click individual features to see their attributes. The visualization style can be adjusted from the **Detail** and **Classes** sections.
 
-.. figure:: /images/tutorials/risk_viz.png
+.. figure:: /images/tutorials/bangladesh/riskmap.png
    :scale: 80%
    :align: center
 
-   *Risk Map and Visualization Settings*
+   *Risk Map*
 
-A summary table will be generated after the calculation, showing the Average Annual Loss (AAL) in metrics depending on available Elements-at-Risk attributes for each administrative boundary. For this exercise, we obtain AAL in terms of Count, Area, Value (USD) and Population (number of people).
+A summary table will be generated after the calculation, showing the **Average Annual Loss (AAL)** in metrics depending on available **Elements-at-Risk** attributes for each administrative boundary. For this exercise, the system calculates AAL in terms of **Count**, **Area**, **Value** (USD) and **Population** (number of people).
 
-.. figure:: /images/tutorials/risk_table.png
+You can show the Summary Table into a chart and export the table as XLSX.
+
+.. figure:: /images/tutorials/bangladesh/risktable.png
    :scale: 80%
    :align: center
 
    *Risk Table Result*
 
-You can show the Summary Table into a chart and export the table as XLSX.
 
-.. figure:: /images/tutorials/risk_chart.png
+.. figure:: /images/tutorials/bangladesh/riskchart.png
    :scale: 80%
    :align: center
 
