@@ -242,8 +242,7 @@ c. Click to **upload** or **drag and drop** the EaR data to upload the data.
 d. Type in the **Layer Name**, **Elements-at-Risk Type**, **Element-at-Risk Subtype**, **Representation Year**, **Risk Reduction Alternative** (if applicable), and **Scenario** (if applicable).
 e. Click **Save** and the uploaded EaR layer will be automatically displayed in the map canvas. The default styling is single symbol.
 
-Population
-==========
+**Population Layer**
 
 +----------------------+------------------------------+
 | Attribute            | Value                        |
@@ -266,8 +265,7 @@ Population
 +----------------------+------------------------------+
 
 
-Substations
-===========
+**Substations Layer**
 
 +----------------------+-------------+
 | Attribute            | Value       |
@@ -284,8 +282,7 @@ Substations
 +----------------------+-------------+
 
 
-Critical Power Plants
-=====================
+**Critical Power Plants Layer **
 
 +----------------------+-------------+
 | Attribute            | Value       |
@@ -315,8 +312,7 @@ b. For **Single Class** on shapefile dataset, users need to select the **Nolor M
 c. For ** Automatic Classes** and **User Defined Classes** on shapefile datasets, users select the dataset's **field** to be used for visualization, **Area Field**, **Area Field Unit**, **Value Field**, **Value Field Unit**, **Population Field**, **Population Field Unit**, and **Other Field** as well as **Other Field Unit**. These fields are important and need to be selected in order to calculate the **Loss**. 
 d. A **Color Map** needs to be selected as well for visualization. An additional option to **Enable STroke** is also available.
 
-Population
-==========
+**Population Layer**
 
 +------------------------+-----------------------+
 | Attribute              | Value                 |
@@ -335,8 +331,7 @@ Population
 +------------------------+-----------------------+
 
 
-Substations
-===========
+**Substations Layer**
 
 +----------------+-------------+
 | Attribute      | Value       |
@@ -347,8 +342,7 @@ Substations
 +----------------+-------------+
 
 
-Building Footprints
-===================
+**Building Footprints Layer**
 
 +----------------+--------------+
 | Attribute      | Value        |
