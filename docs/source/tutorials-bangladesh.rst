@@ -218,7 +218,6 @@ c. For **User Defined Classes**, after selecting the dataset's **Field**, **Mini
 +---------------------------+---------------------------+---------+---------------+-------------+------------------------+-----------+
 
 .. note::
-
    - All layers use **User Defined Classes** with equal interval classification.
    - The `[VALUE]` field is used for symbology across all hazard layers.
 
@@ -235,63 +234,173 @@ Users can also go to the **Symbology** section to adjust the layer's labels.
 Element-at-Risk (EaR) Data
 """"""""""""""""""""""""""""""""
 
-Go to **EaR > Add EaR** to upload buildings, roads, or land parcels. You can use either **GeoTIFF** or **shapefiles**. Then, define the following fields:
+Elements-at-risk represent the assets, population, and infrastructure that may be affected by hazards. Uploading these datasets allows RiskChanges to spatially link hazards with exposed features and, later, to estimate potential losses. Careful definition of attributes at this stage is essential, as these fields are directly used in exposure and loss calculations.
 
-   - **Layer Name**
-   - **EaR Type / Subtype**
-   - **Year**, optional: **Alternative**, **Scenario**
- 
-+---------------------+-----------------------+------------------------+------------------------------------------+------------------------+
-| **EaR Name**        | **Layer Name**        | **EaR Type**           | **EaR Sub Type**                         | **Representation Year** |
-+=====================+=======================+========================+==========================================+========================+
-| Building Point      | Building_Points       | Points                 | Buildings                                | 2020                   |
-+---------------------+-----------------------+------------------------+------------------------------------------+------------------------+
-| Building Footprints | Building_Footprint    | Buildings              | Classified by Occupancy Class            | 2020                   |
-+---------------------+-----------------------+------------------------+------------------------------------------+------------------------+
-| Roads               | Roads                 | Lines                  | Roads                                    | 2020                   |
-+---------------------+-----------------------+------------------------+------------------------------------------+------------------------+
-| Land Parcel         | Land_Parcel           | Polygons               | Land use                                 | 2020                   |
-+---------------------+-----------------------+------------------------+------------------------------------------+------------------------+
+a. Go to **EaR** and click **Add EaR**.
+b. In the **General** section, upload your EaR data. The data must be in either GeoTIFF or shapefile (in a zipped file) format. Other options are soon to be available which are to connect OGC Service or global datasets.
+c. Click to **upload** or **drag and drop** the EaR data to upload the data.
+d. Type in the **Layer Name**, **Elements-at-Risk Type**, **Element-at-Risk Subtype**, **Representation Year**, **Risk Reduction Alternative** (if applicable), and **Scenario** (if applicable).
+e. Click **Save** and the uploaded EaR layer will be automatically displayed in the map canvas. The default styling is single symbol.
 
-Similarly, use the **Style** section to adjust the visualization. After adjusting, click **Save** to apply the changes.
+Population
+==========
 
-- Choose between Single Class, Automated Classes, User Defined Classes.
-- Define:
++----------------------+------------------------------+
+| Attribute            | Value                        |
++======================+==============================+
+| Baseline Year        | 2020                         |
++----------------------+------------------------------+
+| Scenarios            | SSP126, SSP245, SSP585       |
++----------------------+------------------------------+
+| Representation Years | 2030, 2050, 2080             |
++----------------------+------------------------------+
+| Population Types     | Urban, Rural, Total          |
++----------------------+------------------------------+
+| Layer Name           | TotalPopulation_Baseline_2020|
++----------------------+------------------------------+
+| Element at Risk Type | Grid                         |
++----------------------+------------------------------+
+| Element at Risk Sub  | Population                   |
++----------------------+------------------------------+
+| Representation Year  | 2020                         |
++----------------------+------------------------------+
 
-  - Field, Area, Value, Population, Units
-  - Color Map
 
-+---------------------+----------------------+--------------------------+----------------+---------------+-----------------+----------------+------------------+-----------------+----------------+
-| **EaR Name**        | **Style Mode**       | **Field**                | **Area Field** | **Area Unit** | **Value Field** | **Value Unit** | **People Field** | **People Unit** | ** Color Map** |
-+---------------------+----------------------+--------------------------+----------------+---------------+-----------------+----------------+------------------+-----------------+----------------+
-| Building Point      | Automated Classes    | [TYPE]                   | [AREA]         | sq.m          | [VALUE]         | USD            | [PEOPLE]         | (number)        | brg_r          |
-+---------------------+----------------------+--------------------------+----------------+---------------+-----------------+----------------+------------------+-----------------+----------------+
-| Building Footprints | Automated Classes    | [USE]                    | [AREA_N]       | sq.m          | [VALUE]         | USD            | [PEOPLE]         | (number)        | brg_r          |
-+---------------------+----------------------+--------------------------+----------------+---------------+-----------------+----------------+------------------+-----------------+----------------+
-| Roads               | User Defined Classes | [CALCULATED_AREA_LENGTH] | –              | –             | –               | –              | –                | -               | autumn_r       |
-+---------------------+----------------------+--------------------------+----------------+---------------+-----------------+----------------+------------------+-----------------+----------------+
-| Land Parcel         | Automated Classes    | [TYPE]                   | [AREA_N]       | sq.m          | [VALUE]         | USD            | [PEOPLE]         | (number)        | brg            |
-+---------------------+----------------------+--------------------------+----------------+---------------+-----------------+----------------+------------------+-----------------+----------------+
+Substations
+===========
 
-.. figure:: /images/tutorials/ear.png
++----------------------+-------------+
+| Attribute            | Value       |
++======================+=============+
+| Layer Name           | Substations |
++----------------------+-------------+
+| Element at Risk Type | Polygons    |
++----------------------+-------------+
+| Element at Risk Sub  | Other       |
++----------------------+-------------+
+| Other Sub Type       | Substation  |
++----------------------+-------------+
+| Representation Year  | 2020        |
++----------------------+-------------+
+
+
+Critical Power Plants
+=====================
+
++----------------------+-------------+
+| Attribute            | Value       |
++======================+=============+
+| Layer Name           | Power Plant |
++----------------------+-------------+
+| Element at Risk Type | Polygons    |
++----------------------+-------------+
+| Element at Risk Sub  | Other       |
++----------------------+-------------+
+| Other Sub Type       | Power Plant |
++----------------------+-------------+
+| Representation Year  | 2020        |
++----------------------+-------------+
+
+
+.. figure:: /images/bangladesh/earsettings.png
    :scale: 80%
    :align: center
 
-   *Element-at-Risk Visualization*
+   *Bangladesh Elements-at-Risk Upload Settings*
+
+The **Detail** section is used to adjust the settings for the layer's visualization. Additionally, the chosen style will also be applied as the base classes for Exposure assessment.
+
+a. Select the **Class Mode** whther it is **Single Class**, **User Defined Classes**, or **Automated Classes**.
+b. For **Single Class** on shapefile dataset, users need to select the **Nolor Map** for the visualization. An additional option t **Enable Stroke** is also available.
+c. For ** Automatic Classes** and **User Defined Classes** on shapefile datasets, users select the dataset's **field** to be used for visualization, **Area Field**, **Area Field Unit**, **Value Field**, **Value Field Unit**, **Population Field**, **Population Field Unit**, and **Other Field** as well as **Other Field Unit**. These fields are important and need to be selected in order to calculate the **Loss**. 
+d. A **Color Map** needs to be selected as well for visualization. An additional option to **Enable STroke** is also available.
+
+Population
+==========
+
++------------------------+-----------------------+
+| Attribute              | Value                 |
++========================+=======================+
+| Class Mode             | User Defined Classes  |
++------------------------+-----------------------+
+| Field                  | [VALUE]               |
++------------------------+-----------------------+
+| Minimum Value          | 0.001                 |
++------------------------+-----------------------+
+| Classification Method  | Equal Interval        |
++------------------------+-----------------------+
+| Total Classes          | 5                     |
++------------------------+-----------------------+
+| Color Scale            | OrRd                  |
++------------------------+-----------------------+
+
+
+Substations
+===========
+
++----------------+-------------+
+| Attribute      | Value       |
++================+=============+
+| Class Mode     | Single Class|
++----------------+-------------+
+| Color Scale    | blue        |
++----------------+-------------+
+
+
+Building Footprints
+===================
+
++----------------+--------------+
+| Attribute      | Value        |
++================+==============+
+| Class Mode     | Single Class |
++----------------+--------------+
+| Color Scale    | darkmagenta  |
++----------------+--------------+
+
+
+Users can also go to the **Symbology section to adjust the layer's labels.
+
+.. figure:: /images/bangladesh/earsymbology.png
+   :scale: 80%
+   :align: center
+
+   *Bangladesh Elements-at-Risk Layer Symbology Settings*
+
+.. figure:: /images/bangladesh/earviz.png
+   :scale: 80%
+   :align: center
+
+   *Bangladesh Elements-at-Risk Layer*
+
+..note::
+   Please note that the **Vulnerability** data is necessary for **LOss** and **Risk** calculations. The **Exposure** calculation does not require **Vulnerability** input. Therefore, if users only need to do **Exposure** assessment, entering **Vulnerability** data is not compulsory.
+
 
 1. Vulnerability Table
 ---------------------------
 
-In the **Vulnerability** tab, you can add a vulnerability curve either by uploading a **CSV** or filling in data manually. Each record should include: `Hazard Intensity From`, `Hazard Intensity To`, `Vulnerability Value`
+While exposure identifies what is affected, vulnerability defines how severely it is affected. Vulnerability data links hazard intensity to expected damage or population impact and is therefore a prerequisite for loss and risk calculations. In the demo dataset, pre-defined vulnerability tables are provided to streamline the workflow.
 
-Before uploading, you will be asked to provide metadata like:
+a. Go to **Vulnerability** and click **Add Vulnerability**.
+b. Users can upload a CSV file under the **General** section to add a record automatically or input the values directly under the **Data** section.
+c. The uploaded CSV file needs to have information of **Hazard Intensity Form**, **Hazard Intensity To**, and **Vulnerability Value** (written exactly as is on the header).
+d. After uploading, this information will be stored under the **Data** section as well.
 
-- Vulnerability Region and Type
-- Hazard Type/Subtype
-- Intensity Mode and Unit
-- EaR Type, Subtype, and Class
-- Source, Description
-- Public/Private visibility: If marked **Public**, others can use the record. Otherwise, it will stay under **My Vulnerability**.
++------------------------+----------------------+----------------------+
+| Hazard Intensity From  | Hazard Intensity To  | Vulnerability Value  |
++------------------------+----------------------+----------------------+
+
+Before uploading the recors, users need to fill out some details regarding the data, which are: 
+**Vulnerability Region**, **Vulnerability Type**, **Hazard Type**, Hazard Sub Type**, Hazard Intensity Mode**, **Hazard Intensity**, Hazard Intensity Unit**, **Ear Type**, **EaR Subtype**, **EaR Class**, **Source**, **Describe**, and **Is Public**.
+
+The **Is Public** column defines whether the **Vulnerability** record will be available to all the users of RiskChanges or whether it will be kept under the user's personal project.
+
+Below images are the example of filling vulnerbility details to RiskChanges.
+
+Notice that there are two categories of **My Vulnerability** and **All Vulnerability**. If users chose **Yes** as a public vulnerability, the record will be stored under **All Vulnerability** after valdated by the administrator. On the other hand, the record wil be stored in **My Vulnerability** if the user chose **No** as a public vulnerability.
+
+The related vulnerability tables for this tutorial have been imported and available to the public.
 
 .. figure:: /images/tutorials/vul_input.png
    :scale: 80%
@@ -307,83 +416,23 @@ Before uploading, you will be asked to provide metadata like:
 
 The related vulnerability tables have been imported and available to the public. Users can use the tables for this exercise.
 
-**Vulnerability IDs for Building Materials**
+**Vulnerability IDs for Power Sector**
 
-+-----------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| **ID**                      | **Debris Flow (Physical)** | **Flood (Physical)** | **Landslide (Physical)** | **Debris Flow (Population)** | **Flood (Population)** | **Landslide (Population)** |
-+=============================+============================+======================+==========================+==============================+========================+============================+
-| Masonry 1 floor             | 86                         | 78                   | 94                       | 162                          | 170                    | 182                        |
-+-----------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Masonry 2 floor             | 87                         | 79                   | 95                       | 163                          | 171                    | 183                        |
-+-----------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Masonry 3 floor             | 88                         | 80                   | 96                       | 164                          | 172                    | 184                        |
-+-----------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Reinforced Concrete 1 floor | 89                         | 81                   | 97                       | 165                          | 173                    | 185                        |
-+-----------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Reinforced Concrete 2 floor | 90                         | 82                   | 98                       | 166                          | 174                    | 186                        |
-+-----------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Reinforced Concrete 3 floor | 91                         | 83                   | 99                       | 167                          | 175                    | 187                        |
-+-----------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Reinforced Concrete 4 floor | 92                         | 84                   | 100                      | 168                          | 176                    | 188                        |
-+-----------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Wooden                      | 93                         | 86                   | 101                      | 169                          | 177                    | 189                        |
-+-----------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-
-
-**Vulnerability IDs for Land Parcel Types**
-
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| **ID**                    | **Debris Flow (Physical)** | **Flood (Physical)** | **Landslide (Physical)** | **Debris Flow (Population)** | **Flood (Population)** | **Landslide (Population)** |
-+===========================+============================+======================+==========================+==============================+========================+============================+
-| Agricultural Fields       | All 1                      | 132                  | 135                      | 190                          | 212                    | 234                        |
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Animal Farm               | 102                        | 133                  | 136                      | 191                          | 213                    | 235                        |
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Bare                      | All 0                      | All 0                | 137                      | 192                          | 214                    | 236                        |
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Commercial                | 103                        | 134                  | 138                      | 193                          | 215                    | 237                        |
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Cultural Heritage         | 104                        | 118                  | 143                      | 194                          | 216                    | 238                        |
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Farm                      | 105                        | 119                  | 144                      | 195                          | 217                    | 239                        |
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Forest Natural            | 106                        | 120                  | 145                      | 196                          | 218                    | 240                        |
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Forest Planted Protective | 107                        | 121                  | 146                      | 197                          | 219                    | 241                        |
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Grassland                 | All 1                      | 122                  | 147                      | 198                          | 220                    | 242                        |
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Highway                   | 108                        | 123                  | 148                      | 199                          | 221                    | 243                        |
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Industry                  | 109                        | 124                  | 149                      | 200                          | 222                    | 244                        |
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Open Space                | All 0                      | All 0                | All 0                    | 201                          | 223                    | 245                        |
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Orchard                   | 110                        | 125                  | 150                      | 202                          | 224                    | 246                        |
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Parking Lot               | 111                        | 126                  | 151                      | 203                          | 225                    | 247                        |
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Parkland                  | 112                        | 127                  | 152                      | 204                          | 226                    | 248                        |
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Quarry                    | 113                        | -                    | 153                      | 205                          | 227                    | 249                        |
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Residential               | 114                        | 128                  | 154                      | 206                          | 228                    | 250                        |
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Shrubs                    | All 1                      | 129                  | 155                      | 207                          | 229                    | 251                        |
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Toll Area                 | 115                        | -                    | 178                      | 208                          | 230                    | 252                        |
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Tourist Resort            | 116                        | 130                  | 179                      | 209                          | 231                    | 253                        |
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Vineyard                  | All 1                      | 131                  | 180                      | 210                          | 232                    | 254                        |
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
-| Water Tank                | 117                        | -                    | 181                      | 211                          | 233                    | 255                        |
-+---------------------------+----------------------------+----------------------+--------------------------+------------------------------+------------------------+----------------------------+
++-------------------------------+----------------------------+----------------------+
+| **Hazard - EAR**               | **Vulnerability Type**     | **Vulnerability ID** |
++===============================+============================+======================+
+| Flood - Power Cable (Line)           | Cable Line                 | 310                  |
++-------------------------------+----------------------------+----------------------+
+| Flood - Substation (Polygon)   | Substation                 | 358                  |
++-------------------------------+----------------------------+----------------------+
+| Flood - Power Plant (Polygon)  | Power Plant                | 356                  |
++-------------------------------+----------------------------+----------------------+
 
 .. note::
-   Vulnerability data is **not required** for Exposure analysis but is **essential** for Loss and Risk calculations.
+   - Please note that the visualization of **Hazard**, **Elements-at-Risk**, and **Exposure** will affect the calculation of the next step. For example, the classes or value ranges chosen for **Hazard** and **Elements-at-Risk** will be applied to calculate **Exposure**. The same combination which results in the **Exposure** calculation will then be applied to calculate **Loss**.
+   - If users would like to calculate a different class or range value, they need to re-calculate the **Exposure** with the updated class or range value selection before calculating the **Loss**.
 
-5. Running an Exposure Analysis
+1. Running an Exposure Analysis
 ------------------------------------
 
 Go to **Exposure > Add Exposure**. Choose between:
