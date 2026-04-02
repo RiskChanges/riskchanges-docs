@@ -538,6 +538,256 @@ You can show the Summary Table into a chart and export the table as XLSX.
 
    *Risk Summary Chart*
 
+Scenario, Alternative, and Cost-Benefit Analysis
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This section introduces the **Scenario**, **Alternative**, and **Cost-Benefit Analysis (CBA)** modules in RiskChanges.
+
+.. note::
+   This tutorial assumes that all hazards, elements-at-risk (EAR), and vulnerability data have already been uploaded. 
+   Please refer to steps above before proceeding.
+
+- **Scenarios** represent possible future developments (e.g., climate change, land use, population growth).
+- **Alternatives** represent risk reduction measures (e.g., engineering solution, nature-based solution, relocation).
+- **CBA** compares alternatives to identify the most optimal solution.
+
+Scenario Module
+---------------
+
+The Scenario module allows users to define future conditions and assess their impact on hazard, exposure, and risk.
+In this tutorial, we will be using the following scenarios:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Land Use Change
+     - Climate Change
+   * - Scenario 1 (Business as Usual)
+     - Rapid growth without risk consideration
+     - Limited change
+   * - Scenario 2 (Risk Informed Planning)
+     - Growth considering risk and planning alternatives
+     - Limited change
+   * - Scenario 3 (Worst Case)
+     - Rapid growth without risk consideration
+     - Increased extreme events
+   * - Scenario 4 (Climate Change Adaptation)
+     - Risk-informed growth
+     - Increased extreme events
+
+.. note::
+   Only two land parcel maps and two hazard maps are required:
+   
+   - Scenario 1 & 2 share the same hazard map
+   - Scenario 2 & 4 share the same land parcel map
+
+To add a new scenario, follow the steps below:
+
+1. Go to **Project Dashboard → Project Settings**
+2. Select **Scenarios**
+3. Click **Add Scenario**
+4. Fill in:
+   
+   - Scenario Name
+   - Risk components affected
+   - Description (optional)
+   - Upload supporting files (optional)
+
+.. image:: /images/tutorials/scenario_add.png
+   :alt: Add Scenario Interface
+
+You may refer to the following table for the scenario settings used in this tutorial.
+
+.. list-table::
+   :header-rows: 1
+
+   * - Scenario
+     - Hazard Intensity
+     - Hazard Frequency
+     - EaR Type
+     - EaR Location
+     - EaR Value
+     - EaR Population
+   * - Current
+     - No
+     - No
+     - No
+     - No
+     - No
+     - No
+   * - Business as Usual
+     - No
+     - No
+     - Yes
+     - Yes
+     - Yes
+     - Yes
+   * - Risk Informed Planning
+     - No
+     - No
+     - Yes
+     - Yes
+     - Yes
+     - Yes
+   * - Worst Case
+     - Yes
+     - Yes
+     - Yes
+     - Yes
+     - Yes
+     - Yes
+   * - Climate Change Adaptation
+     - Yes
+     - Yes
+     - Yes
+     - Yes
+     - Yes
+     - Yes
+
+Alternative Module
+-----------------
+
+Alternative represent risk reduction strategies evaluated in the system.
+The following alternatives are used in this tutorial:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Alternative
+     - Description
+   * - Engineering Solutions
+     - Structural measures such as basins, slope stabilization, and monitoring systems
+   * - Ecological Solutions
+     - Nature-based solutions such as trees, water tanks, and natural parks
+   * - Relocation
+     - Moving exposed population to safer areas
+
+.. warning::
+   Alternatives 1 and 2 require **new hazard and land parcel maps**, while Alternative 3 uses the existing hazard data.
+
+To add a new alternative, follow the steps below:
+
+1. Go to **Project Dashboard → Project Settings**
+2. Select **Alternatives**
+3. Click **Add Alternative**
+4. Fill in:
+
+   - Name
+   - Risk components affected
+   - Description
+   - **Project Lifetime**: Duration of evaluation
+   - **Total Investment Cost**: Initial cost
+   - **Investment Period**: Time before benefits start
+   - **Maintenance Cost**: Annual cost
+
+.. image:: /images/tutorials/alternative_add.png
+   :alt: Add Alternative Interface
+
+.. note::
+   Investment costs can be estimated by:
+   
+   - Calculating affected areas or assets
+   - Applying unit costs (e.g., per m² or per building)
+
+The table below summarizes the cost parameters for the alternatives used in this tutorial.
+
+.. list-table::
+   :header-rows: 1
+
+   * - Parameter
+     - Engineering
+     - Ecological
+     - Relocation
+   * - Benefit Start Year
+     - 4
+     - 6
+     - 3
+   * - Total Investment Cost (USD)
+     - 9,801,016
+     - 17,158,442
+     - 4,493,700
+   * - Annual Maintenance (USD)
+     - 294,030
+     - 343,168
+     - 0
+   * - Discount Rate
+     - 3%
+     - 3%
+     - 3%
+   * - Project Lifetime
+     - 40 years
+     - 40 years
+     - 40 years
+
+Uploading Data for Scenarios and Alternatives
+------------------------------------------
+
+When uploading Hazard or EAR datasets:
+
+- Select the corresponding **Scenario**
+- Select the corresponding **Alternative**
+
+.. image:: /images/tutorials/upload_selection.png
+   :alt: Dataset Upload Selection
+
+.. note::
+   Vulnerability only requires assigning the appropriate curve.
+
+Exposure, Loss, and Risk Calculation
+------------------------------------
+
+For each alternative or scenario combinations, repeat the same steps from the above sections to calculate Exposure, Loss, and Risk. This allows you to compare the outcomes of different scenarios and alternatives.
+
+.. warning::
+   Ensure correct combinations of Scenario and Alternative are selected.
+
+Cost-Benefit Analysis (CBA)
+---------------------------
+
+1. Go to **CBA Module**
+2. Click **Add CBA**
+3. Fill in:
+
+   - Name: LP_Current_Engineering
+   - Admin Level: Admin_Unit
+   - Baseline Risk: FL_LP_Current_NoDRR
+   - Alternative Risk: FL_LP_Current_Engineering
+   - CBA Region: Entire Region / Admin Unit
+
+   The ‘Entire Region’ option is used for calculating cost-benefit analysis for the entire region of the administrative unit. For ‘Each Admin Unit’, if users choose this option, the CBA will be calculated only on the selected administrative unit chosen by the user. Users can also select the option to apply the whole CBA form to all administrative units.
+
+4. For the CBA form, the users need to fill in the following columns: 
+
+   - Base Year: 2020
+   - Project Start Year: 2020
+   - Project Lifetime: 40 years
+   - Currency: USD
+   - Investment Cost: 9,801,016
+   - Investment Period: 4 years
+   - Maintenance Cost: 294,030
+   - Discount Rate: 5%
+
+.. image:: /images/tutorials/cba_form.png
+   :alt: CBA Form Interface
+
+Once the CBA is computed, a CBA map will be displayed in the map canvas on the right. Similar to previous modules, users can modify the visualization and choose the relevant attributes to be shown on the map.
+
+A Summary table and chart will be obtained after the calculation. This table contains information about NPV, BCR and IRR. The administrative level shown depends on the chosen CBA Region. This table is downloadable into XLSX format.
+
+A Detail table and chart are also available, showing the annual benefit calculations. This table contains information on annual cost, present value of cost. Benefit, present value of benefit, net benefit, and discounted net benefit. This table is downloadable into XLSX format.
+
+.. image:: /images/tutorials/cba_results.png
+   :alt: CBA Results
+
+.. note::
+   Tables can be exported as XLSX.
+
+When multiple CBA result layers are activated, users can compare the results using the Compare button. This feature allows users to compare different alternatives by IRR, NPV, and BCR to identify the most optimal alternative. The comparison is available in both table and charts.
+
+.. image:: /images/tutorials/cba_compare.png
+   :alt: CBA Comparison
+
 Observing the Results
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
