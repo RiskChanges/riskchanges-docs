@@ -645,6 +645,11 @@ You may refer to the following table for the scenario settings used in this tuto
      - Yes
      - Yes
 
+The submitted **Scenario** records will be displayed in the **Scenario table** and can be chosen when uploding the **Hazard** or **Elements-at-Risk** datasets representing the Scenario.
+
+.. image:: /images/tutorials/scenario_added.png
+   :alt: Add Scenario Interface
+
 Alternative Module
 -----------------
 
@@ -720,6 +725,11 @@ The table below summarizes the cost parameters for the alternatives used in this
      - 40 years
      - 40 years
 
+The submitted **Alternative** records will be displayed in the **Alternative table** and can be chosen when uploding the **Hazard** or **Elements-at-Risk** datasets representing the Alternative.
+
+.. image:: /images/tutorials/alternative_added.png
+   :alt: Add Alternative Interface
+
 Uploading Data for Scenarios and Alternatives
 ------------------------------------------
 
@@ -727,9 +737,6 @@ When uploading Hazard or EAR datasets:
 
 - Select the corresponding **Scenario**
 - Select the corresponding **Alternative**
-
-.. image:: /images/tutorials/upload_selection.png
-   :alt: Dataset Upload Selection
 
 .. note::
    Vulnerability only requires assigning the appropriate curve.
@@ -773,11 +780,17 @@ Cost-Benefit Analysis (CBA)
 
 Once the CBA is computed, a CBA map will be displayed in the map canvas on the right. Similar to previous modules, users can modify the visualization and choose the relevant attributes to be shown on the map.
 
+.. image:: /images/tutorials/cba_map.png
+   :alt: CBA Results
+
 A Summary table and chart will be obtained after the calculation. This table contains information about NPV, BCR and IRR. The administrative level shown depends on the chosen CBA Region. This table is downloadable into XLSX format.
+
+.. image:: /images/tutorials/cba_summarytable.png
+   :alt: CBA Results
 
 A Detail table and chart are also available, showing the annual benefit calculations. This table contains information on annual cost, present value of cost. Benefit, present value of benefit, net benefit, and discounted net benefit. This table is downloadable into XLSX format.
 
-.. image:: /images/tutorials/cba_results.png
+.. image:: /images/tutorials/cba_detailtable.png
    :alt: CBA Results
 
 .. note::
