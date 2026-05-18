@@ -12,7 +12,6 @@ This page provides the methodology used and modules provided in RiskChanges.
    methodology_loss
    methodology_risk
    methodology_aggregated
-   methodology_alternative
-   methodology_scenario
+   methodology_alternative-scenario
    methodology_cba
    methodology_visualization
