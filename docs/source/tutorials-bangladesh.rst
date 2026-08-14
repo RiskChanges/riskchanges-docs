@@ -426,7 +426,7 @@ The related vulnerability tables have been imported and available to the public.
    - Please note that the visualization of **Hazard**, **Elements-at-Risk**, and **Exposure** will affect the calculation of the next step. For example, the classes or value ranges chosen for **Hazard** and **Elements-at-Risk** will be applied to calculate **Exposure**. The same combination which results in the **Exposure** calculation will then be applied to calculate **Loss**.
    - If users would like to calculate a different class or range value, they need to re-calculate the **Exposure** with the updated class or range value selection before calculating the **Loss**.
 
-4. Exposure and Loss Calculation Module
+4. Exposure, Loss, and Risk Calculation Modules
 -------------------------
 
 With all required input data prepared, users can now proceed to analytical modules. Exposure, Loss, and Risk calculations are performed sequentially, with each module building on the results of the previous one. This structure ensures transparency and traceability in the overall risk assessment process.
@@ -448,7 +448,7 @@ In the General section, enter the **Layer Name** and select the **Hazard** and *
 - **Hazard**: `Baseline_Fluvial_Undefended_5y`
 - **EaR**: `Power Plant`
 
-.. figure:: /images/tutorials/bangladesh/exposuresettings.png
+.. figure:: /images/bangladesh/exposuresettings.png
    :scale: 80%
    :align: center
 
@@ -469,7 +469,7 @@ Both tables will show metrics like:
 - Exposed Population, Value, number of floors: Depends on the information availability in the elements-at-risk attribute data. 
 - Minimum, average, maximum intensity: Only shown in Detail Table.
 
-.. figure:: /images/tutorials/bangladesh/exposuretable.png
+.. figure:: /images/bangladesh/exposuretable.png
    :scale: 80%
    :align: center
 
@@ -478,7 +478,7 @@ Both tables will show metrics like:
 Users can also show the **Summary Table** into a chart and export as XLSX.
 Additionally, users can choose which result to be displayed in the map as well as adjusting the symbology through the **Detail** and **Classes** tabs. Observation from the map is also possible by clicking on the features and checking the attributes recorded for each.
 
-.. figure:: /images/tutorials/bangladesh/exposureviz.png
+.. figure:: /images/bangladesh/exposureviz.png
    :scale: 80%
    :align: center
 
@@ -505,7 +505,7 @@ For **Aggregated Loss**, the information needed is based on the calculated indiv
 -  **Loss**: `Loss_Baseline_PowerPlant_5`
 -  **Admin Level**: `Admin_Unit`
 
-.. figure:: /images/tutorials/bangladesh/losssettings.png
+.. figure:: /images/bangladesh/losssettings.png
    :scale: 80%
    :align: center
 
@@ -527,7 +527,7 @@ Similar to te Exposure module, two Loss tables will be obtained after the calcul
 
 In addition to the information obtained from the **Exposure** calculation, the **Loss** table contains information about **Damage Ratio**, **Loss Fractions**, **Loss Area / Length**, **Loss Value**, and **Loss Population**, depending on the information availability in the elements-at-risk attribute data.
 
-.. figure:: /images/tutorials/bangladesh/losstable.png
+.. figure:: /images/bangladesh/losstable.png
    :scale: 80%
    :align: center
 
@@ -535,7 +535,7 @@ In addition to the information obtained from the **Exposure** calculation, the *
 
 Users can show the Summary Table into a chart and export the table as XLSX. Additionally, users can also adjust the visualization of the loss map from the **Detail** and **Classes** section. 
 
-.. figure:: /images/tutorials/bangladesh/losschart.png
+.. figure:: /images/bangladesh/losschart.png
    :scale: 80%
    :align: center
 
@@ -562,7 +562,7 @@ Go to **Risk > Add Risk**. In the General section, enter:
 
 (This setting is used for calculating building average annual loss to fluvial undefended flood for each administrative boundary, after calculating the aggregated loss - **Aggrgated Risk**)
 
-.. figure:: /images/tutorials/bangladesh/risksettings.png
+.. figure:: /images/bangladesh/risksettings.png
    :scale: 80%
    :align: center
 
@@ -570,7 +570,7 @@ Go to **Risk > Add Risk**. In the General section, enter:
 
 Once the risk is computed, a risk map will be displayed in the map canvas on the right. You can configure how the results are visualized on the map. You can also click individual features to see their attributes. The visualization style can be adjusted from the **Detail** and **Classes** sections.
 
-.. figure:: /images/tutorials/bangladesh/riskmap.png
+.. figure:: /images/bangladesh/riskmap.png
    :scale: 80%
    :align: center
 
@@ -580,18 +580,109 @@ A summary table will be generated after the calculation, showing the **Average A
 
 You can show the Summary Table into a chart and export the table as XLSX.
 
-.. figure:: /images/tutorials/bangladesh/risktable.png
+.. figure:: /images/bangladesh/risktable.png
    :scale: 80%
    :align: center
 
    *Risk Table Result*
 
 
-.. figure:: /images/tutorials/bangladesh/riskchart.png
+.. figure:: /images/bangladesh/riskchart.png
    :scale: 80%
    :align: center
 
    *Risk Summary Chart*
+
+5. Cost-Benefit Analysis
+-------------------------
+
+The Bangladesh case study demonstrates how the RiskChanges Cost-Benefit Analysis (CBA) module can be used to evaluate alternative flood risk reduction measures for electrical substations in the Sylhet Region.
+
+The objective is to compare the existing flood risk (Baseline) with different intervention alternatives and determine whether the reduction in expected losses justifies the implementation cost.
+
+This page will explain the tutorial in conducting the Bangladesh case study for CBA. For further details on the CBA methodology applied in RiskChanges, please refer to `this page <https://drive.google.com/file/d/1b74u6nUtmWaxMKOtcMbxp5b22cLHvt5D/view?usp=drive_link>`_.
+
+Tutorial Overview
+""""""""""""""""""""""""""""""""""""
+
+This tutorial compares three scenarios:
+
+* Baseline (existing conditions)
+* Alternative 1 – Engineering Solutions
+* Alternative 2 – Nature-based Solutions
+
+The alternative scenario represents a modified condition intended to reduce hazard impacts or vulnerability. The comparison is performed using the Average Annual Loss (AAL) calculated from the Risk module. The reduction in AAL between the alternatives is considered the annual economic benefit of the intervention.
+
+Required Data
+""""""""""""""""""""""""""""""""""""
+
+The CBA module requires severla primary inputs. Before starting the CBA workflow, the following datasets should already be available:
+
+* Flood hazard maps for all return periods
+* Exposure layer (Electrical substations)
+* Vulnerability information
+* Administrative boundary level
+* Selected CBA region
+* Baseline Risk results
+* Alternative Risk results
+
+The Bangladesh example uses the Sylhet Region (Surma River Basin) demonstration dataset. The Risk layers used in the CBA calculation must represent comparable hazard and elements-at-risk combinations.
+
+👉 Please refer `here <https://drive.google.com/file/d/1b74u6nUtmWaxMKOtcMbxp5b22cLHvt5D/view?usp=drive_link>`_ to access the dataset for this tutorial.
+
+Alternative 1 – Engineering Solutions
+""""""""""""""""""""""""""""""""""""
+
+This alternative represents structural flood protection measures around critical substations.
+
+The example includes:
+
+* Concrete floodwalls
+* Earth-fill levees
+* Detention basins
+
+Each intervention has an estimated implementation cost which is entered into the CBA module as the Total Investment Cost.
+
+Alternative 2 – Nature-based Solutions
+""""""""""""""""""""""""""""""""""""
+
+The second alternative evaluates ecosystem-based flood mitigation measures.
+
+Examples include:
+
+* Wetland restoration
+* Floodplain rehabilitation
+* Natural water retention
+
+The resulting flood hazard maps are imported as a separate Alternative Risk scenario.
+
+Economic Parameters
+""""""""""""""""""""""""""""""""""""
+
+The Bangladesh example requires the following economic inputs:
+
+* Base Year
+* Project Starting Year
+* Project Lifetime
+* Currency (USD)
+* Total Investment Cost
+* Initial Investment Period
+* Annual Maintenance Cost
+* Discount Rate Percentage
+
+Running the Cost-Benefit Analysis
+""""""""""""""""""""""""""""""""""""
+
+1. Open the CBA module.
+2. Select the Bangladesh project.
+3. Choose the administrative level.
+4. Select the Baseline Risk result.
+5. Select the Alternative Risk result.
+6. Choose either:
+   * Engineering Solutions
+   * Nature-based Solutions
+7. Enter the economic parameters.
+8. Click **Run Analysis**.
 
 Observing the Results
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -703,7 +794,42 @@ Example findings:
 - *Admin unit 5* shows the highest flood AAL, mostly driven by residential areas.
 - Risk reduction scenario A2 reduces AAL by 30% compared to baseline.
 
-7. Exporting and Reporting the Results
+7. CBA Result Observation
+---------------------------------
+
+After the calculation completes, RiskChanges generates:
+
+* Detail Table
+* Summary Table
+
+The Detail Table shows yearly:
+
+* Investment cost
+* Maintenance cost
+* Avoided losses
+* Net benefit
+* Discounted net benefit
+
+The Summary Table reports:
+
+* Total Cost
+* Total Benefit
+* NPV
+* BCR
+* IRR
+* Payback Period
+
+Comparing Alternatives
+""""""""""""""""""""""""""""""""""""
+
+Repeat the workflow for both:
+
+* Engineering Solutions
+* Nature-based Solutions
+
+The resulting NPV, BCR and IRR values can be compared to determine which alternative provides the greatest economic return while achieving the largest reduction in flood risk.
+
+8. Exporting and Reporting the Results
 -----------------------------------------
 
 After completing the analyses, users can export the results for further examination or reporting. RiskChanges supports exporting data in various formats:

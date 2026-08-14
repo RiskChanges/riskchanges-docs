@@ -30,8 +30,42 @@ Each alternative scenario should have its own Risk calculation result, allowing 
 
 The reduction in Average Annual Loss (AAL) between the two scenarios is considered the annual economic benefit of the intervention.
 
+.. figure:: /images/method-cba/alt-scen.png
+   :scale: 80%
+   :align: center
+
+   *Differentiation between Alternatives and Scenarios*
+
+There are two types of workflow in which the stakeholders are interested in with the CBA module: (1) Knowing the current level of risk in their municipality, (2) Analysing the best risk reduction alternative, or combination of alternatives.
+
+.. figure:: /images/method-cba/analysing-benefit.png
+   :scale: 80%
+   :align: center
+
+   *Concept of Analysing the Benefit of a Risk Reduction Alternative*
+
+With the current condition datasets, the stakeholders will start with analysis of existing risk. After that, they will perform risk evlauation where the values and judgements enter the decision process, explicitly or implicitly, by including consideration of the importance of the estimated risks and the associated social, environmental, and economic consequences, in order to identify a range of alternatives for managing the risks. This is called the baseline scenario.
+Once the stakeholders have defined the alternatives and update the relevant information (hazards, elements-at-risk, vulnerability), they will perform another risk analysis. This is called the alternative scenario.
+The two scenarios are then compared and perform a cost-benefit analysis.
+
+Examples of alternative scenarios may include flood protection infrastructure, building retrofitting, nature-based solutions, land-use planning interventions, early warning systems, and climate adaptation measures.
+
+.. figure:: /images/method-cba/important-aspects.png
+   :scale: 80%
+   :align: center
+
+   *Example: Important Aspects of Risk Reduction Alternatives*
+
 CBA Workflow
 ---------------
+
+RiskChanges follows a scenario-based assessment approach in which users comppare a baseline scenario, representing existing conditions, against one or multiple alternative scenarios representing mitigation, adaptation, or risk reduction interventions. Within the CBA workflow, the definition of alternatives is a key component, as each alternative scenario represents a modified condition intended to reduce hazard impacts, exposure, or vulnerability.
+
+.. figure:: /images/method-cba/cba-char.png
+   :scale: 80%
+   :align: center
+
+   *Characteristics of Risk Reduction Alternatives Input in RiskChanges*
 
 The CBA module requires the following primary inputs:
 
@@ -45,7 +79,21 @@ Users may perform the analysis for:
 - All administrative units;
 - Selected administrative units only.
 
-The Risk layers used in the CBA calculation must represent comparable hazard and elements-at-risk combinations.
+To ensure consistency in the comparison, the Risk layers used in the CBA calculation must represent comparable hazard and elements-at-risk combinations.
+
+The workflow of the CBA module consists of four main components:
+
+1. Definition of Alternatives and Scenario
+   Users define the mitigation or adaptation measures to be evaluated together with the future scenarios under consideration. Each alternative can include implementation cost, operational costs, maintenance costs, and implementation timeline.
+2. Risk Estimation and Loss Calculation
+3. Economic evaluation
+4. Comparison and Decision Support
+
+.. figure:: /images/method-cba/rc-steps.png
+   :scale: 80%
+   :align: center
+
+   *Steps in RiskChanges for Cost-Benefit Analysis*
 
 Economic Input Parameters
 ---------------------------
