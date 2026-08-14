@@ -541,6 +541,7 @@ Users can show the Summary Table into a chart and export the table as XLSX. Addi
 
    *Loss Summary Chart*
 
+.. _risk:
 Risk Calculation
 """""""""""""""""""""""""""""""""""""
 
@@ -596,7 +597,7 @@ You can show the Summary Table into a chart and export the table as XLSX.
 5. Cost-Benefit Analysis
 -------------------------
 
-The Bangladesh case study demonstrates how the RiskChanges Cost-Benefit Analysis (CBA) module can be used to evaluate alternative flood risk reduction measures for electrical substations in the Sylhet Region.
+The Bangladesh case study demonstrates how the RiskChanges Cost-Benefit Analysis (CBA) module can be used to evaluate alternative flood risk reduction measures for electrical substations in the Manikganj Region.
 
 The objective is to compare the existing flood risk (Baseline) with different intervention alternatives and determine whether the reduction in expected losses justifies the implementation cost.
 
@@ -613,10 +614,33 @@ This tutorial compares three scenarios:
 
 The alternative scenario represents a modified condition intended to reduce hazard impacts or vulnerability. The comparison is performed using the Average Annual Loss (AAL) calculated from the Risk module. The reduction in AAL between the alternatives is considered the annual economic benefit of the intervention.
 
+The table below explains the overall risk components of each alternatives used in this study case.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 40 20 40
+
+   * - Alternative
+     - Hazard
+     - Return Period
+     - Elements-at-Risk (Sub-stations polygons)
+   * - Baseline Alternative
+     - `Baseline Hazard Data <https://drive.google.com/drive/folders/1mMtXwMk324YAgDajwuZl3qt9b2tk2LTE>`_
+     - 5, 10, 20, 50, 100, 200
+     - `Sub-stations polygons <https://drive.google.com/file/d/1d_f1PFTEfHPiro3fr0FGAwCF521-i4kq/view?usp=drive_link>`_
+   * - Engineering Solutions
+     - Flood maps applying dam formation (use FastFlood?)
+     - 5, 10, 20, 50, 100, 200
+     -
+   * - Nature-based Solutions
+     - Flood maps applying wetland restoration (use FastFlood?)
+     - 5, 10, 20, 50, 100, 200
+     -
+
 Required Data
 """"""""""""""""""""""""""""""""""""
 
-The CBA module requires severla primary inputs. Before starting the CBA workflow, the following datasets should already be available:
+The CBA module requires several primary inputs. Before starting the CBA workflow, the following datasets should already be available:
 
 * Flood hazard maps for all return periods
 * Exposure layer (Electrical substations)
@@ -626,7 +650,7 @@ The CBA module requires severla primary inputs. Before starting the CBA workflow
 * Baseline Risk results
 * Alternative Risk results
 
-The Bangladesh example uses the Sylhet Region (Surma River Basin) demonstration dataset. The Risk layers used in the CBA calculation must represent comparable hazard and elements-at-risk combinations.
+The Bangladesh example uses the Manikganj Region demonstration dataset. The Risk layers used in the CBA calculation must represent comparable hazard and elements-at-risk combinations.
 
 👉 Please refer `here <https://drive.google.com/file/d/1b74u6nUtmWaxMKOtcMbxp5b22cLHvt5D/view?usp=drive_link>`_ to access the dataset for this tutorial.
 
@@ -643,6 +667,37 @@ The example includes:
 
 Each intervention has an estimated implementation cost which is entered into the CBA module as the Total Investment Cost.
 
+The table below explains on the alternative parameters used in this study case. The value references are stated in the table as well and used as assumption and basis of the cost evaluation.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 35 15 30 25
+
+   * - Activities
+     - Cost (USD)
+     - Details
+     - Source
+   * - Construct concrete floodwalls around substations
+     - 1,500,000
+     - For a 500m perimeter wall (average $3,000/m)
+     - FEMA P-259 / USACE Cost Engineering Estimates
+   * - Construct earth-fill levees to divert flash floods
+     - 2,000,000
+     - For a 2000m earth levee system
+     - The International Levee Handbook (CIRIA)
+   * - Create concrete storage/detention basins to retain peak runoff
+     - 5,500,000
+     - For 100,000 m³ water volume capacity
+     - Cost estimation for SuDS
+   * - Install flash flood telemetry and early warning monitoring system
+     - 56,640
+     - For upper catchment sensor network
+     - NHESS Early Warning Systems
+   * - **Total**
+     - **9,056,640**
+     -
+     -
+
 Alternative 2 – Nature-based Solutions
 """"""""""""""""""""""""""""""""""""
 
@@ -655,6 +710,37 @@ Examples include:
 * Natural water retention
 
 The resulting flood hazard maps are imported as a separate Alternative Risk scenario.
+
+The table below explains on the alternative parameters used in this study case. The value references are stated in the table as well and used as assumption and basis of the cost evaluation.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 35 15 30 25
+
+   * - Activities
+     - Cost (USD)
+     - Details
+     - Source
+   * - Restore inland wetlands in the upstream catchment to absorb floodwaters
+     - 660,000
+     - For 20 hectares (approx $33,000/ha)
+     - World Bank GFDRR: NBS for River Flood Control
+   * - Reforest riparian buffers along the channels to slow runoff
+     - 69,000
+     - For 20 hectares (approx $3,450/ha)
+     - World Bank GFDRR: NBS for River Flood Control
+   * - Install leaky barriers (engineered log jams) in upstream channels
+     - 150,000
+     - For 30 natural structures to trap debris & slow flow
+     - UK Environment Agency Natural Flood Management
+   * - Create a natural floodplain park to infiltrate water and prevent development
+     - 37,080
+     - For a 5000 m² park
+     - Metro Council Development Costs
+   * - **Total**
+     - **916,080**
+     -
+     -
 
 Economic Parameters
 """"""""""""""""""""""""""""""""""""
@@ -670,19 +756,133 @@ The Bangladesh example requires the following economic inputs:
 * Annual Maintenance Cost
 * Discount Rate Percentage
 
+The table below explains on the alternative parameters used in this study case. The value references are stated in the table as well and used as assumption and basis of the cost evaluation.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 25 35
+
+   * - Parameter
+     - Alternative 1: Engineering Solutions
+     - Alternative 2: Nature-based Solutions (NbS)
+     - Rationale / Source Reference
+   * - Base Year
+     - 2026
+     - 2026
+     - Reference year of baseline Risk results (current year).
+   * - Project Starting Year
+     - 2027
+     - 2027
+     - Assumes a standard 1-year planning, design, and approval phase.
+   * - Project Lifetime (Years)
+     - 30 Years
+     - 30 Years
+     - Standard evaluation lifetime for major flood risk and coastal resilience projects in Bangladesh (Mancheño / World Bank).
+   * - Currency
+     - USD
+     - USD
+     - Kept in USD to match the baseline intervention cost estimations.
+   * - Total Investment Cost
+     - $9,056,640
+     - $916,080
+     - Aggregated capital expenditures (CAPEX) from the previously defined activity sheets.
+   * - Initial Investment Period
+     - 3 years
+     - 5 years
+     - Standard multi-year deployment/construction phase for structural and ecosystem interventions before full benefits are realized.
+   * - Annual Maintenance Cost
+     - $181,133
+     - $27,482
+     - **Alternative 1:** Calculated at 2% of CAPEX (FEMA P-259 / USACE). **Alternative 2:** Calculated at 3% of CAPEX for active ecosystem management (World Bank GFDRR).
+   * - Discount Rate Percentage
+     - 6% (or 10%)
+     - 6% (or 10%)
+     - **6%:** Recommended by the World Bank for long-term triple-dividend NbS projects in Bangladesh (Mancheño). **10%:** Standard local rate used by the Bangladesh Planning Commission for economic evaluations.
+
 Running the Cost-Benefit Analysis
 """"""""""""""""""""""""""""""""""""
 
-1. Open the CBA module.
-2. Select the Bangladesh project.
-3. Choose the administrative level.
-4. Select the Baseline Risk result.
-5. Select the Alternative Risk result.
-6. Choose either:
-   * Engineering Solutions
-   * Nature-based Solutions
-7. Enter the economic parameters.
-8. Click **Run Analysis**.
+For this analysis, we will only compare the Baseline Alternative with the Engineering Alternative due to data limitations for Nature-based Solutions Alternative.
+
+First, the aggregated risk for all three alternatives should be calculated (please follow `Risk Calculation section <risk>`_ for the detailed tutorials). 
+
+Go to CBA module and click **Add CBA**. In the General section, enter the **Name**, and select the relevant **Admin Level**, **Baseline Risk**, **Alternative Risk**, and **CBA Region** used in this study case below:
+
+- **Name**: `CBA_Manikganj`
+- Select the **Admin Level** layers: `manikganj_bound`.
+- Select the **Baseline Risk** layers: `Risk_Baseline_Manikganj`.
+- Select the **Alternative Risk** layers: `Risk_Barrier_Manikganj`.
+- Select the **CBA Region** layers: `Entire Admin Region`.
+
+Another option for **CBA Region** is `Each Admin Unit`. This can be used if there are multiple admin units in the **Admin Level** layer and the CBA calculation would be performed on one of the units in the layer.
+
+.. figure:: /images/bangladesh/cba-input.png
+   :scale: 80%
+   :align: center
+
+   *General Form for Input Layers to CBA Calculation*
+
+Then, fill the economic indicators below as stated in the table above:
+
+.. figure:: /images/bangladesh/economic-indicators.png
+   :scale: 80%
+   :align: center
+
+   *Economic Indicator Settings*
+
+Click **Save & Next**.
+
+After the calculation completes, RiskChanges generates:
+
+* Detail Table
+* Summary Table
+
+The Detail Table shows yearly:
+
+* Investment cost
+* Maintenance cost
+* Avoided losses
+* Net benefit
+* Discounted net benefit
+
+.. figure:: /images/bangladesh/detail-table.png
+   :scale: 80%
+   :align: center
+
+   *Detail Table Result*
+
+The Summary Table reports:
+
+* Total Cost
+* Total Benefit
+* NPV
+* BCR
+* IRR
+* Payback Period
+
+.. figure:: /images/bangladesh/summary-table.png
+   :scale: 80%
+   :align: center
+
+   *Summary Table Result*
+
+Comparing Alternatives
+""""""""""""""""""""""""""""""""""""
+
+Repeat the workflow for both:
+
+* Engineering Solutions
+* Nature-based Solutions
+
+The resulting NPV, BCR and IRR values can be compared to determine which alternative provides the greatest economic return while achieving the largest reduction in flood risk.
+
+The image below is an example of the alternatives comparison from another study case. Please refer `here <https://sdss-documentation.readthedocs.io/en/latest/tutorials.html>`_  to try the tutorials. 
+
+.. figure:: /images/tutorials/cba-compare.png
+   :scale: 80%
+   :align: center
+
+   *Comparing CBA Alternatives*
 
 Observing the Results
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -797,37 +997,85 @@ Example findings:
 7. CBA Result Observation
 ---------------------------------
 
-After the calculation completes, RiskChanges generates:
+7. CBA Result Observation
+--------------------------
 
-* Detail Table
-* Summary Table
+The **Cost-Benefit Analysis (CBA)** results show whether the expected
+economic benefits from reducing flood risk justify the costs of
+implementing and maintaining the proposed intervention.
 
-The Detail Table shows yearly:
+The results can be interpreted using both the **Detail Table** and
+**Summary Table**.
 
-* Investment cost
-* Maintenance cost
-* Avoided losses
-* Net benefit
-* Discounted net benefit
+Detail Table Observation
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Summary Table reports:
+The **Detail Table** provides the year-by-year development of costs and
+benefits throughout the project lifetime. You can interpret the results
+by observing:
 
-* Total Cost
-* Total Benefit
-* NPV
-* BCR
-* IRR
-* Payback Period
+* **Annual costs**: Identify when the main investment costs occur and how
+  maintenance costs continue throughout the project lifetime.
+* **Annual benefits**: Observe the avoided losses generated by the
+  reduction in risk compared with the Baseline scenario.
+* **Net benefit**: Compare annual benefits against annual costs to identify
+  when the intervention begins to generate a positive economic return.
+* **Discounted net benefit**: Consider how the value of future costs and
+  benefits changes after applying the discount rate.
 
-Comparing Alternatives
-""""""""""""""""""""""""""""""""""""
+Example interpretation:
 
-Repeat the workflow for both:
+* The **Engineering Solutions** alternative has higher costs during the
+  initial implementation period due to the construction of floodwalls,
+  levees, detention basins, and monitoring systems.
+* After implementation, annual benefits are generated through the
+  **avoided flood losses** compared with the Baseline scenario.
+* As the intervention continues to reduce expected losses, the cumulative
+  economic benefit can eventually exceed the initial investment and
+  maintenance costs.
 
-* Engineering Solutions
-* Nature-based Solutions
+Summary Table Observation
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The resulting NPV, BCR and IRR values can be compared to determine which alternative provides the greatest economic return while achieving the largest reduction in flood risk.
+The **Summary Table** provides aggregated indicators for evaluating the
+overall economic performance of the intervention.
+
+Key indicators include:
+
+* **Total Cost**: The combined investment and maintenance costs over the
+  project lifetime.
+* **Total Benefit**: The total avoided loss resulting from the reduction
+  in flood risk.
+* **NPV (Net Present Value)**: Indicates the overall economic value of the
+  intervention after discounting future costs and benefits. A **positive
+  NPV** indicates that the intervention is economically beneficial.
+* **BCR (Benefit-Cost Ratio)**: Compares discounted benefits with
+  discounted costs. A **BCR greater than 1** indicates that the benefits
+  exceed the costs.
+* **IRR (Internal Rate of Return)**: Indicates the discount rate at which
+  the NPV becomes zero. Higher values generally indicate greater economic
+  attractiveness.
+* **Payback Period**: Indicates how long it takes for the accumulated
+  benefits to recover the initial investment.
+
+Comparing CBA Alternatives
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When multiple alternatives are available, compare their economic indicators together with their risk reduction performance.
+
+Key observations include:
+
+* An alternative with a **higher NPV** generally provides greater overall economic value.
+* An alternative with a **BCR greater than 1** indicates that its discounted benefits exceed its discounted costs.
+* A **shorter payback period** indicates that the initial investment is recovered more quickly.
+* A higher **IRR** generally indicates a more economically attractive intervention.
+* The alternative with the lowest cost is not necessarily the best option; the **magnitude of avoided losses and the resulting economic benefits should also be considered**.
+
+For the Bangladesh case study, the **Engineering Solutions** alternative is compared with the Baseline scenario to assess whether the investment in structural flood protection and monitoring measures is justified by the resulting reduction in expected flood losses.
+
+.. note::
+
+   CBA indicators should be interpreted together rather than using a single indicator alone. A measure may have a high BCR but a relatively small absolute benefit, while another may require a larger investment but produce substantially greater risk reduction.
 
 8. Exporting and Reporting the Results
 -----------------------------------------
