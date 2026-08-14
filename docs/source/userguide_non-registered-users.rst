@@ -9,26 +9,49 @@ This page explains how non-registered users can access and explore public RiskCh
 
 The functions available to public users depend on what the project owner has made publicly available.
 
+Make Projects Publicly Available
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To make existing projects publicly available, the registered user (the owner of the project) can activate it in the **Project Settings**. Go to the **Share to Public** section and activate the `Public Project` button. 
+The registered user must also define which layers can be available to public. Otherwise, the public will be available without any layers in it. This includes the analysis results (e.g., Exposure, Loss, Risk, CBA). As for the Vulnerability, only the `Public Vulnerability` will be available to public.
+
+.. figure:: /images/non-regis/project-settings.png
+   :scale: 80%
+   :align: center
+
+   *Project Settings to Activate Public Share*
+
+Once this settings is applied, any visitors (non-registered users) of RiskChanges can view the project and the layers, as described in below sections.
+
 Accessing Public Projects
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Public projects can be explored without creating a RiskChanges account.
+Public projects can be explored without creating a RiskChanges account. Users can access available projects through the public project interface. 
 
-Users can access available projects through the public project interface. Projects can be viewed either as **cards** or through a **map view**, allowing users to find projects based on their location or topic.
+Go to the RiskChanges landing page and click the top-right button **Explore RiskChanges**.
 
-Project Cards
+Projects can be viewed either as **cards** or through a **map view**, allowing users to find projects based on their location or topic.
 
-```
+.. figure:: /images/non-regis/card-view.png
+   :scale: 80%
+   :align: center
+
+   *Public Projects in Card View*
 
 The project card view provides an overview of available public projects.
 
 A project card may provide information such as:
 
 - Project name.
-- Project description.
-- Location or geographic extent.
-- Available datasets or visualizations.
-- Other information provided by the project owner.
+- Project location.
+- Hazards included in this project.
+- Project members (only the initials are shown).
+
+.. figure:: /images/non-regis/project-card.png
+   :scale: 80%
+   :align: center
+
+   *Public Card*
 
 Select a project card to open the project and explore its publicly available datasets.
 
@@ -47,11 +70,11 @@ Users can:
 
 This provides a convenient way to find projects based on their geographic location.
 
-.. figure:: /images/userguide/public-projects.png
-   :scale: 60%
+.. figure:: /images/non-regis/map-view.png
+   :scale: 80%
    :align: center
 
-   *Public project interface showing available projects.*
+   *Public Projects in Map View*
 
 Exploring a Public Project
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -67,31 +90,18 @@ Depending on the project configuration, users can use the following visualizatio
 - Split-screen map comparison.
 - Location-based exploration.
 
+.. figure:: /images/non-regis/explore.png
+   :scale: 80%
+   :align: center
+
+   *Exploring Public Project*
+
 3D Visualization
 ^^^^^^^^^^^^^^^^
 
-RiskChanges provides a **3D visualization** option for exploring spatial datasets in three dimensions.
+RiskChanges provides a **3D visualization** option for exploring spatial datasets in three dimensions. The 3D view can help users understand the relationship between datasets and the surrounding terrain.
 
-The 3D view can help users understand the relationship between datasets and the surrounding terrain.
-
-Opening the 3D View
-```
-
-To explore a dataset in 3D:
-
-1. Open a public project.
-2. Select the dataset to be visualized.
-3. Open the **3D visualization** option.
-4. Configure the available visualization settings.
-5. Navigate around the 3D scene to explore the dataset.
-
-3D Visualization Settings
-
-```
-
-The available settings can be used to control how the dataset is displayed in the 3D environment.
-
-Depending on the dataset and available options, users can configure the visualization to improve the interpretation of the data.
+To explore a dataset in 3D, users can activate the **3D** button at the top of the map canvas. Then, users can navigate around the 3D scene to explore the dataset.
 
 Users can navigate the 3D scene by:
 
@@ -101,8 +111,8 @@ Users can navigate the 3D scene by:
 - Changing the viewing angle.
 - Exploring different areas of the dataset.
 
-.. figure:: /images/userguide/3d-visualization.png
-   :scale: 60%
+.. figure:: /images/non-regis/3d-viz.png
+   :scale: 80%
    :align: center
 
    *3D visualization of a public dataset.*
@@ -110,7 +120,7 @@ Users can navigate the 3D scene by:
 Comparing Two Maps
 ^^^^^^^^^^^^^^^^^^
 
-RiskChanges provides a **split-screen visualization** that allows users to compare two maps or datasets side by side.
+RiskChanges provides a **split-screen visualization** that allows users to compare two maps or datasets side by side. The two map views can be explored together, allowing users to identify differences in the same geographic area.
 
 This can be useful for identifying spatial differences between two datasets, such as:
 
@@ -120,51 +130,44 @@ This can be useful for identifying spatial differences between two datasets, suc
 - Different hazard datasets.
 - Other comparable spatial datasets.
 
-Using Split-Screen Comparison
-```
+To compare two maps, users must activate the **Compare** button at the top of the map canvas. Then on the map layer list on the left panel, users will see options to make each layer to be either on `left`, `right`, or `both` sides of the screen. This would define the map layers to be compared.
 
-To compare two maps:
+After both maps are settled, users can adjust the map view as needed, and navigate across the map to compare the two datasets spatially.
 
-1. Open a public project.
-2. Select the **split-screen** or map comparison option.
-3. Select the first dataset to display.
-4. Select the second dataset for comparison.
-5. Adjust the map view as needed.
-6. Navigate across the map to compare the two datasets spatially.
-
-The two map views can be explored together, allowing users to identify differences in the same geographic area.
-
-.. figure:: /images/userguide/split-screen.png
-:scale: 60%
-:align: center
+.. figure:: /images/non-regis/compare.png
+   :scale: 80%
+   :align: center
 
 *Split-screen visualization for comparing two maps.*
+
+Users can also do the comparison in **3D Visualization**.
+
+.. figure:: /images/non-regis/compare-3d.png
+   :scale: 80%
+   :align: center
+
+*Split-screen visualization for comparing two maps (in 3D Visualization).*
 
 Using My Location
 ^^^^^^^^^^^^^^^^^
 
-The **Use My Location** function allows users to navigate directly to their current geographic location and explore the available RiskChanges data in the surrounding area.
+The **Use My Location** function allows users to navigate directly to their current geographic location and explore the available RiskChanges data in the surrounding area. This function can be particularly useful when exploring a public project from a smartphone or tablet while in the field. However, users must allow the browser to access your location if prompted.
 
-This function can be particularly useful when exploring a public project from a smartphone or tablet while in the field.
-
-Using the Location Function
-
-```
-
-To explore data around your current location:
-
-1. Open a public project.
-2. Open the map view.
-3. Click the **Use My Location** button.
-4. Allow the browser to access your location if prompted.
-5. The map will zoom to your current location.
-6. Explore the available datasets and information around your location.
-
-.. figure:: /images/userguide/my-location.png
-   :scale: 60%
+.. figure:: /images/non-regis/my-loc.png
+   :scale: 80%
    :align: center
 
    *Using My Location to explore nearby data.*
+
+Additionally, users can also input a coordinate location (longitude and latitude) to the platform so it will navigate to a designated location of your choice.
+
+Once set, the map will zoom to the defined location. Explore the available datasets and information around the location.
+
+.. figure:: /images/non-regis/input-coord.png
+   :scale: 80%
+   :align: center
+
+   *Using a defined coordinate set to explore nearby data.*
 
 .. note::
 
@@ -203,7 +206,7 @@ Video Tutorial
 
 A short video tutorial can be provided to demonstrate how non-registered users can explore public RiskChanges projects.
 
-The video should demonstrate:
+The video demonstrates:
 
 1. Opening a public RiskChanges project.
 2. Browsing available projects using cards and the map view.
@@ -220,9 +223,3 @@ The video should demonstrate:
          Your browser does not support the video tag.
       </video>
    </div>
-
-.. note::
-
-   The video link should be updated once the final tutorial video is
-   available.
-```
