@@ -995,9 +995,6 @@ Example findings:
 - Risk reduction scenario A2 reduces AAL by 30% compared to baseline.
 
 7. CBA Result Observation
----------------------------------
-
-7. CBA Result Observation
 --------------------------
 
 The **Cost-Benefit Analysis (CBA)** results show whether the expected
