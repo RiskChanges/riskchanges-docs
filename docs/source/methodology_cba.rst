@@ -83,11 +83,10 @@ To ensure consistency in the comparison, the Risk layers used in the CBA calcula
 
 The workflow of the CBA module consists of four main components:
 
-1. Definition of Alternatives and Scenario
-   Users define the mitigation or adaptation measures to be evaluated together with the future scenarios under consideration. Each alternative can include implementation cost, operational costs, maintenance costs, and implementation timeline.
-2. Risk Estimation and Loss Calculation
-3. Economic evaluation
-4. Comparison and Decision Support
+1. **Definition of Alternatives and Scenario**: Users define the mitigation or adaptation measures to be evaluated together with the future scenarios under consideration. Each alternative can include implementation cost, operational costs, maintenance costs, and implementation timeline.
+2. **Risk Estimation and Loss Calculation**: The platform estimates expected impacts and losses for both baseline and intervention conditions using the integrated risk assessment framework. Risk calculations are performed separately for each scenario, enabling comparison between baseline and alternative conditions and supporting the estimation of avoided losses resulting from the intervention.
+3. **Economic evaluation**: The tool compares avoided losses against intervention costs over the selected analysis period. The framework supports standard economic indicators commonly used in disaster risk reduction and climate adaptation studies, including Net Present Value (NPV), Benefit-Cost Ratio (BCR), and Internal Rate of Return (IRR). Discount rates and temporal assumptions can be configured by users to align with national guidelines or project-requirements.
+4. **Comparison and Decision Support**: Results are presented through comparative tables, spatial outputs, and summary indicators that allow users to evaluate the relative effectiveness of different strategies and identify the most economically efficient interventions under varying future conditions.
 
 .. figure:: /images/method-cba/rc-steps.png
    :scale: 80%
@@ -206,6 +205,12 @@ The Summary table presents the final economic indicators for the selected admini
 
 If users select all administrative units, the indicators are calculated separately for each administrative region.
 
+.. figure:: /images/method-cba/cba-tables.png
+   :scale: 80%
+   :align: center
+
+   *Results of CBA shown in Tables*
+
 Calculated Economic Indicators
 --------------------------------
 
@@ -266,6 +271,12 @@ Internal Rate of Return (IRR)
 The Internal Rate of Return (IRR) represents the discount rate at which the Net Present Value becomes zero.
 
 Higher IRR values generally indicate more economically attractive interventions.
+
+.. figure:: /images/method-cba/calculated-indicators.png
+   :scale: 80%
+   :align: center
+
+   *Comparison of Alternative through the Indicators of NPV, BCR, and IRR*
 
 Comparison of Alternatives
 ----------------------------
