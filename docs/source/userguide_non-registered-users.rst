@@ -1,4 +1,4 @@
-Exploring RiskChanges as a Public User
+Beginner's Guide
 =====================
 
 RiskChanges can be accessed by users without registering or logging in. Registered users can make selected parts of their projects publicly available, allowing other users to explore the data without requiring an account.
