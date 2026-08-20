@@ -27,16 +27,15 @@ release = '1.0.0'
 # These folders are copied to the documentation's HTML output
 html_static_path = ['_static']
 
-html_css_files = [
-    'css/style.css',
-]
-
 # These paths are either relative to html_static_path
 # or fully qualified paths (eg. https://...)
 html_css_files = [
     'css/style.css',
 ]
 
+html_js_files = [
+    'js/sidebar.js',
+]
 
 # -- General configuration ---------------------------------------------------
 

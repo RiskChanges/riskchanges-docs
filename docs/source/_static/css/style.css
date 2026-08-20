@@ -36,3 +36,52 @@ html, body {
     max-width: 100%;
     height: auto;
 }
+
+/* =========================================================
+   Adjustable Sidebar
+   ========================================================= */
+
+.wy-nav-side {
+    width: 280px;
+    min-width: 220px;
+    max-width: 450px;
+
+    resize: horizontal;
+    overflow: auto;
+}
+
+/* =========================================================
+   Collapsible Sidebar
+   ========================================================= */
+
+#sidebar-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    background: white;
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+/* Sidebar hidden */
+body.sidebar-hidden .wy-nav-side {
+    transform: translateX(-100%);
+}
+
+/* Expand content when sidebar is hidden */
+body.sidebar-hidden .wy-nav-content-wrap {
+    margin-left: 0;
+}
+
+/* Smooth transition */
+.wy-nav-side,
+.wy-nav-content-wrap {
+    transition: all 0.25s ease;
+}
