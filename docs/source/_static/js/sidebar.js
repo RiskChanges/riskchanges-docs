@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const button = document.createElement("button");
 
     button.id = "sidebar-toggle";
-    button.textContent = "Hide navigation";
+    button.textContent = "☰";
 
     document.body.appendChild(button);
 
@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.toggle("sidebar-hidden");
 
         if (document.body.classList.contains("sidebar-hidden")) {
-            button.textContent = "Show navigation";
+            button.textContent = "☰";
         } else {
-            button.textContent = "Hide navigation";
+            button.textContent = "☰";
         }
 
     });

@@ -13,7 +13,7 @@ html, body {
 
 /* Sidebar */
 .wy-nav-side {
-    width: 280px;
+    width: 400px;
 }
 
 /* Keep images proportional */
@@ -42,7 +42,7 @@ html, body {
    ========================================================= */
 
 .wy-nav-side {
-    width: 280px;
+    width: 400px;
     min-width: 220px;
     max-width: 450px;
 
