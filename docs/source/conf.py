@@ -28,7 +28,7 @@ release = '1.0.0'
 html_static_path = ['_static']
 
 html_css_files = [
-    'custom.css',
+    'css/style.css',
 ]
 
 # These paths are either relative to html_static_path

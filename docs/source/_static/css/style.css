@@ -2,3 +2,33 @@ html, body {
     text-align: justify;
 }
 
+/* =========================================================
+   RiskChanges Documentation Layout
+   ========================================================= */
+
+/* Make the main documentation area wider */
+.wy-nav-content {
+    max-width: none !important;
+}
+
+/* Sidebar */
+.wy-nav-side {
+    width: 280px;
+}
+
+/* Keep images proportional */
+.rst-content img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+/* Keep figures within the content area */
+.rst-content .figure {
+    max-width: 100%;
+}
+
+.rst-content .figure img {
+    max-width: 100%;
+    height: auto;
+}
