@@ -20,6 +20,7 @@ Concept of the Platform
 RiskChanges is built upon the concept of SDSS (Spatial Decision Support System). Stakeholders are the central component of RiskChanges. The envisaged users of the platform are organizations involved in planning of risk reduction measures. 
 
 .. figure:: /images/conceptual-design.png
+   :width: 100%
    :align: center
 
    *Conceptual design of RiskChanges (adapted from: CHANGES platform)*
@@ -35,7 +36,7 @@ RiskChanges can be used in different ways:
 * Analyze the effect of different alternatives in risk reduction for different scenarios through time
 
 .. figure:: /images/analysis-riskchanges.jpg
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *The various types of analysis that could be carried out with the platform*
@@ -56,7 +57,7 @@ RiskChanges system is composed of a number of modules, which can be subdivided i
 10. **Visualization:** this module is integrated in almost all the components above, as visualization is required in most of those.
 
 .. figure:: /images/components-users.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *RiskChanges system components and the envisaged users*
@@ -64,7 +65,7 @@ RiskChanges system is composed of a number of modules, which can be subdivided i
 The following figure illustrates on the workflow of the system.
 
 .. figure:: /images/workflow.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *RiskChanges workflow illustration*

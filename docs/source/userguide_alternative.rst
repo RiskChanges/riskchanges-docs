@@ -19,7 +19,7 @@ To begin using the Alternative module:
    - Click **Add Alternatives**.
 
 .. figure:: /images/tutorials_alternative/createalternative.png
-   :scale: 60%
+   :width: 100%
    :align: center
 
    *Create alternative settings*
@@ -31,7 +31,7 @@ To begin using the Alternative module:
    - **Upload Files** *(optional)*: Attach related documents (e.g., design files, reports, or planning documents).
 
 .. figure:: /images/tutorials_alternative/alternativedetails.png
-   :scale: 60%
+   :width: 100%
    :align: center
 
    *Fill in alternative details*

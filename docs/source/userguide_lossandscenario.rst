@@ -15,7 +15,7 @@ The Loss module computes the **economic or physical losses** resulting from haza
 - Value of the exposed elements
 
 .. figure:: /images/tutorials_lossandscenario/losscalculation.png
-   :scale: 60%
+   :width: 100%
    :align: center
 
    *Loss calculation settings*
@@ -63,7 +63,7 @@ The Loss module computes the **economic or physical losses** resulting from haza
      - Loss Number of Floors
 
 .. figure:: /images/tutorials_lossandscenario/resulttable.png
-   :scale: 60%
+   :width: 100%
    :align: center
 
    *Loss calculation result table*
@@ -71,7 +71,7 @@ The Loss module computes the **economic or physical losses** resulting from haza
 Similarly, results summary and chart are also provided in RiskChanges.
 
 .. figure:: /images/tutorials_lossandscenario/summarychart.png
-   :scale: 60%
+   :width: 100%
    :align: center
 
    *Loss result summary and chart*
@@ -82,7 +82,7 @@ Similarly, results summary and chart are also provided in RiskChanges.
    - Users can set classification methods, color ramps, and labels to enhance interpretation.
 
 .. figure:: /images/tutorials_lossandscenario/mapvis.png
-   :scale: 60%
+   :width: 100%
    :align: center
 
    *Loss result visualized in a map*
@@ -108,7 +108,7 @@ Scenarios are used to model **how risk evolves over time**.
    - Click **Add Scenario**.
 
 .. figure:: /images/tutorials_lossandscenario/newscenario.png
-   :scale: 60%
+   :width: 100%
    :align: center
 
    *Create a scenario*
@@ -120,7 +120,7 @@ Scenarios are used to model **how risk evolves over time**.
    - **Upload File(s)**: Attach supporting documents (if any).
 
 .. figure:: /images/tutorials_lossandscenario/scenariodetails.png
-   :scale: 60%
+   :width: 100%
    :align: center
 
    *Fill scenario details*
@@ -139,7 +139,7 @@ Repeat the steps from:
 - :ref:`Loss Calculation <loss-calculation>` (this section) for loss calculation
 
 .. figure:: /images/tutorials_lossandscenario/applyscenario.png
-   :scale: 60%
+   :width: 100%
    :align: center
 
    *Applying scenario into calculation*

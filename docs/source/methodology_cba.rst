@@ -31,7 +31,7 @@ Each alternative scenario should have its own Risk calculation result, allowing 
 The reduction in Average Annual Loss (AAL) between the two scenarios is considered the annual economic benefit of the intervention.
 
 .. figure:: /images/method-cba/alt-scen.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Differentiation between Alternatives and Scenarios*
@@ -39,7 +39,7 @@ The reduction in Average Annual Loss (AAL) between the two scenarios is consider
 There are two types of workflow in which the stakeholders are interested in with the CBA module: (1) Knowing the current level of risk in their municipality, (2) Analysing the best risk reduction alternative, or combination of alternatives.
 
 .. figure:: /images/method-cba/analysing-benefit.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Concept of Analysing the Benefit of a Risk Reduction Alternative*
@@ -51,7 +51,7 @@ The two scenarios are then compared and perform a cost-benefit analysis.
 Examples of alternative scenarios may include flood protection infrastructure, building retrofitting, nature-based solutions, land-use planning interventions, early warning systems, and climate adaptation measures.
 
 .. figure:: /images/method-cba/important-aspects.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Example: Important Aspects of Risk Reduction Alternatives*
@@ -62,7 +62,7 @@ CBA Workflow
 RiskChanges follows a scenario-based assessment approach in which users comppare a baseline scenario, representing existing conditions, against one or multiple alternative scenarios representing mitigation, adaptation, or risk reduction interventions. Within the CBA workflow, the definition of alternatives is a key component, as each alternative scenario represents a modified condition intended to reduce hazard impacts, exposure, or vulnerability.
 
 .. figure:: /images/method-cba/cba-char.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Characteristics of Risk Reduction Alternatives Input in RiskChanges*
@@ -89,7 +89,7 @@ The workflow of the CBA module consists of four main components:
 4. **Comparison and Decision Support**: Results are presented through comparative tables, spatial outputs, and summary indicators that allow users to evaluate the relative effectiveness of different strategies and identify the most economically efficient interventions under varying future conditions.
 
 .. figure:: /images/method-cba/rc-steps.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Steps in RiskChanges for Cost-Benefit Analysis*
@@ -206,7 +206,7 @@ The Summary table presents the final economic indicators for the selected admini
 If users select all administrative units, the indicators are calculated separately for each administrative region.
 
 .. figure:: /images/method-cba/cba-tables.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Results of CBA shown in Tables*
@@ -273,7 +273,7 @@ The Internal Rate of Return (IRR) represents the discount rate at which the Net 
 Higher IRR values generally indicate more economically attractive interventions.
 
 .. figure:: /images/method-cba/calculated-indicators.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Comparison of Alternative through the Indicators of NPV, BCR, and IRR*

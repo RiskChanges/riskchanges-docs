@@ -66,7 +66,7 @@ Only the **General** section is required. Let's fill the required fields with ou
    - **Description**: This is a demonstration dataset based on Nocera Inferiore, Italy.
 
 .. figure:: /images/tutorials/new_project.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Filling General section*
@@ -110,7 +110,7 @@ RiskChanges automatically displays the boundary on the map with default symbolog
    - Label: *Administrative Unit*
 
 .. figure:: /images/tutorials/admin_unit.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Uploading Administrative Boundary data*
@@ -155,7 +155,7 @@ For visualization, RiskChanges supports different visual styles. You can adjust 
 +----------------------------------------------+----------------------+-----------+---------------+---------------+---------------------------+---------------+
 
 .. figure:: /images/tutorials/hazards.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Hazard Visualization*
@@ -202,7 +202,7 @@ Similarly, use the **Style** section to adjust the visualization. After adjustin
 +---------------------+----------------------+--------------------------+----------------+---------------+-----------------+----------------+------------------+-----------------+----------------+
 
 .. figure:: /images/tutorials/ear.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Element-at-Risk Visualization*
@@ -222,13 +222,13 @@ Before uploading, you will be asked to provide metadata like:
 - Public/Private visibility: If marked **Public**, others can use the record. Otherwise, it will stay under **My Vulnerability**.
 
 .. figure:: /images/tutorials/vul_input.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Vulnerability Table Input*
 
 .. figure:: /images/tutorials/vul_curve.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Vulnerability Curve*
@@ -328,7 +328,7 @@ In the General section, enter:
 (This setting is used for calculating 20-years return period flood to building footprints - **Individual Exposure**)
 
 .. figure:: /images/tutorials/exposure.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Individual Exposure Calculation*
@@ -341,7 +341,7 @@ For **Aggregated Exposure**, we need to input several information which are base
 -  **Intensity**: `Average Intensity`
 
 .. figure:: /images/tutorials/exposure_agg.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Aggregated Exposure Calculation*
@@ -356,13 +356,13 @@ Both tables will show metrics like:
 - Minimum, average, maximum intensity: Only shown in Detal Table.
 
 .. figure:: /images/tutorials/exposure_table.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Exposure Table Result (Summary Table)*
 
 .. figure:: /images/tutorials/exposure_table_detail.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Exposure Table Result (Detail Table)*
@@ -370,7 +370,7 @@ Both tables will show metrics like:
 For the Aggregated Exposure result, a summary table will be generated after the calculation, showing the total Exposure in metrics depending on available Elements-at-Risk attributes for each administrative boundary. For this exercise, we obtain Exposure in terms of Area, Value (USD) and Population (number of people).
 
 .. figure:: /images/tutorials/exposure_agg_table.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Aggregated Exposure Table Result*
@@ -378,13 +378,13 @@ For the Aggregated Exposure result, a summary table will be generated after the 
 You can show the Summary Table into a chart and export the table as XLSX.
 
 .. figure:: /images/tutorials/exposure_chart.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Exposure Summary Chart*
 
 .. figure:: /images/tutorials/exposure_agg_chart.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Aggregated Exposure Chart*
@@ -392,7 +392,7 @@ You can show the Summary Table into a chart and export the table as XLSX.
 You can configure how the results are visualized on the map. You can also click individual features to see their attributes.
 
 .. figure:: /images/tutorials/exposure_viz.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Exposure Visualization*
@@ -423,7 +423,7 @@ For **Aggregated Loss**, the information needed is based on the calculated indiv
 -  **Intensity**: `Average Intensity`
 
 .. figure:: /images/tutorials/loss.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Loss Calculation*
@@ -434,7 +434,7 @@ After selecting the vulnerability curve, click **Save**.
 After linking each class to a particular vulnerability curve, click **Save** to store and calculate the Loss.
 
 .. figure:: /images/tutorials/loss_vul.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Linking Vulnerability for Loss Calculation*
@@ -446,13 +446,13 @@ Similar to te Exposure module, two Loss tables will be obtained after the calcul
 In addition to the information obtained from the **Exposure** calculation, the **Loss** table contains information about **Damage Ratio**, **Loss Fractions**, **Loss Area / Length**, **Loss Value**, and **Loss Population**, depending on the information availability in the elements-at-risk attribute data.
 
 .. figure:: /images/tutorials/loss_table.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Loss Table Result (Summary Table)*
 
 .. figure:: /images/tutorials/loss_table_detail.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Loss Table Result (Detail Table)*
@@ -460,7 +460,7 @@ In addition to the information obtained from the **Exposure** calculation, the *
 For the Aggregated Loss result, a summary table will be generated after the calculation, showing the total Loss in metrics depending on available Elements-at-Risk attributes for each administrative boundary. For this exercise, we obtain Loss in terms of Area, Value (USD) and Population (number of people).
 
 .. figure:: /images/tutorials/loss_agg_table.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Aggregated Loss Table Result*
@@ -468,13 +468,13 @@ For the Aggregated Loss result, a summary table will be generated after the calc
 You can show the Summary Table into a chart and export the table as XLSX.
 
 .. figure:: /images/tutorials/loss_chart.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Loss Summary Chart*
 
 .. figure:: /images/tutorials/loss_agg_chart.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Aggregated Loss Chart*
@@ -483,7 +483,7 @@ You can configure how the results are visualized on the map. You can also click 
 The visualization style can be adjusted from the **Detail** and **Classes** sections.
 
 .. figure:: /images/tutorials/loss_viz.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Loss Visualization*
@@ -508,7 +508,7 @@ Go to **Risk > Add Risk**. In the General section, enter:
 (This setting is used for calculating building average annual loss to flood for each administrative boundary, after calculating the aggregated loss - **Aggrgated Risk**)
 
 .. figure:: /images/tutorials/risk.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Risk Calculation*
@@ -517,7 +517,7 @@ Once the risk is computed, a risk map will be displayed in the map canvas on the
 The visualization style can be adjusted from the **Detail** and **Classes** sections.
 
 .. figure:: /images/tutorials/risk_viz.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Risk Map and Visualization Settings*
@@ -525,7 +525,7 @@ The visualization style can be adjusted from the **Detail** and **Classes** sect
 A summary table will be generated after the calculation, showing the Average Annual Loss (AAL) in metrics depending on available Elements-at-Risk attributes for each administrative boundary. For this exercise, we obtain AAL in terms of Count, Area, Value (USD) and Population (number of people).
 
 .. figure:: /images/tutorials/risk_table.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Risk Table Result*
@@ -533,7 +533,7 @@ A summary table will be generated after the calculation, showing the Average Ann
 You can show the Summary Table into a chart and export the table as XLSX.
 
 .. figure:: /images/tutorials/risk_chart.png
-   :scale: 80%
+   :width: 100%
    :align: center
 
    *Risk Summary Chart*
@@ -594,7 +594,9 @@ To add a new scenario, follow the steps below:
    - Description (optional)
    - Upload supporting files (optional)
 
-.. image:: /images/tutorials/scenario_add.png
+.. figure:: /images/tutorials/scenario_add.png
+   :width: 100%
+   :align: center
    :alt: Add Scenario Interface
 
 You may refer to the following table for the scenario settings used in this tutorial.
@@ -647,7 +649,9 @@ You may refer to the following table for the scenario settings used in this tuto
 
 The submitted **Scenario** records will be displayed in the **Scenario table** and can be chosen when uploding the **Hazard** or **Elements-at-Risk** datasets representing the Scenario.
 
-.. image:: /images/tutorials/scenario_added.png
+.. figure:: /images/tutorials/scenario_added.png
+   :width: 100%
+   :align: center
    :alt: Add Scenario Interface
 
 Alternative Module
@@ -686,7 +690,9 @@ To add a new alternative, follow the steps below:
    - **Investment Period**: Time before benefits start
    - **Maintenance Cost**: Annual cost
 
-.. image:: /images/tutorials/alternative_add.png
+.. figure:: /images/tutorials/alternative_add.png
+   :width: 100%
+   :align: center
    :alt: Add Alternative Interface
 
 .. note::
@@ -727,7 +733,9 @@ The table below summarizes the cost parameters for the alternatives used in this
 
 The submitted **Alternative** records will be displayed in the **Alternative table** and can be chosen when uploding the **Hazard** or **Elements-at-Risk** datasets representing the Alternative.
 
-.. image:: /images/tutorials/alternative_added.png
+.. figure:: /images/tutorials/alternative_added.png
+   :width: 100%
+   :align: center
    :alt: Add Alternative Interface
 
 Uploading Data for Scenarios and Alternatives
@@ -775,22 +783,30 @@ Cost-Benefit Analysis (CBA)
    - Maintenance Cost: 294,030
    - Discount Rate: 5%
 
-.. image:: /images/tutorials/cba_form.png
+.. figure:: /images/tutorials/cba_form.png
+   :width: 100%
+   :align: center
    :alt: CBA Form Interface
 
 Once the CBA is computed, a CBA map will be displayed in the map canvas on the right. Similar to previous modules, users can modify the visualization and choose the relevant attributes to be shown on the map.
 
-.. image:: /images/tutorials/cba_map.png
+.. figure:: /images/tutorials/cba_map.png
+   :width: 100%
+   :align: center
    :alt: CBA Results
 
 A Summary table and chart will be obtained after the calculation. This table contains information about NPV, BCR and IRR. The administrative level shown depends on the chosen CBA Region. This table is downloadable into XLSX format.
 
-.. image:: /images/tutorials/cba_summarytable.png
+.. figure:: /images/tutorials/cba_summarytable.png
+   :width: 100%
+   :align: center
    :alt: CBA Results
 
 A Detail table and chart are also available, showing the annual benefit calculations. This table contains information on annual cost, present value of cost. Benefit, present value of benefit, net benefit, and discounted net benefit. This table is downloadable into XLSX format.
 
-.. image:: /images/tutorials/cba_detailtable.png
+.. figure:: /images/tutorials/cba_detailtable.png
+   :width: 100%
+   :align: center
    :alt: CBA Results
 
 .. note::
@@ -798,7 +814,9 @@ A Detail table and chart are also available, showing the annual benefit calculat
 
 When multiple CBA result layers are activated, users can compare the results using the Compare button. This feature allows users to compare different alternatives by IRR, NPV, and BCR to identify the most optimal alternative. The comparison is available in both table and charts.
 
-.. image:: /images/tutorials/cba_compare.png
+.. figure:: /images/tutorials/cba_compare.png
+   :width: 100%
+   :align: center
    :alt: CBA Comparison
 
 Observing the Results
