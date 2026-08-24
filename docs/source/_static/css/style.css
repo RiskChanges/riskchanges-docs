@@ -34,7 +34,7 @@ html, body {
 /* Keep figures within the content area */
 .rst-content .figure {
     width: 50% !important;
-    max-width: 500px !important;
+    max-width: 350px !important;
     margin-left: auto;
     margin-right: auto;
 }
