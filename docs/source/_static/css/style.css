@@ -51,8 +51,8 @@ html, body {
 
 .wy-nav-side {
     width: 350px;
-    min-width: 220px;
-    max-width: 450px;
+    min-width: 300px;
+    max-width: 350px;
 
     resize: horizontal;
     overflow: auto;
