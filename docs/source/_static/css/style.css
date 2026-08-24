@@ -16,6 +16,14 @@ html, body {
     width: 350px;
 }
 
+.wy-side-scroll {
+    width: 350px;
+}
+
+.wy-nav-content-wrap {
+    margin-left: 350px;
+}
+
 /* Keep images proportional */
 .rst-content img {
     max-width: 100%;
@@ -42,7 +50,7 @@ html, body {
    ========================================================= */
 
 .wy-nav-side {
-    width: 400px;
+    width: 350px;
     min-width: 220px;
     max-width: 450px;
 
