@@ -6,44 +6,28 @@ html, body {
    RiskChanges Documentation Layout
    ========================================================= */
 
-/* Make the main documentation area wider */
+/* Main documentation area */
 .wy-nav-content {
     max-width: none !important;
 }
 
-/* Sidebar */
+
+/* =========================================================
+   Sidebar
+   ========================================================= */
+
 .wy-nav-side {
-    width: 350px;
+    width: 300px;
 }
 
 .wy-side-scroll {
-    width: 350px;
+    width: 300px;
 }
 
 .wy-nav-content-wrap {
-    margin-left: 350px;
+    margin-left: 300px;
 }
 
-/* Keep images proportional */
-.rst-content img {
-    max-width: 100%;
-    width: auto;
-    height: auto;
-}
-
-/* Keep figures within the content area */
-.rst-content .figure {
-    width: 50% !important;
-    max-width: 350px !important;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.rst-content .figure img {
-    width: 50% !important;
-    max-width: 100%;
-    height: auto;
-}
 
 /* =========================================================
    Collapsible Sidebar
@@ -65,18 +49,46 @@ html, body {
     font-size: 14px;
 }
 
-/* Sidebar hidden */
+   /* Hide sidebar */
 body.sidebar-hidden .wy-nav-side {
     transform: translateX(-100%);
 }
 
-/* Expand content when sidebar is hidden */
+/* Expand documentation when sidebar is hidden */
 body.sidebar-hidden .wy-nav-content-wrap {
     margin-left: 0;
 }
 
-/* Smooth transition */
+
+/* Smooth collapse animation */
 .wy-nav-side,
 .wy-nav-content-wrap {
     transition: all 0.25s ease;
+}
+
+
+/* =========================================================
+   Images
+   ========================================================= */
+
+.rst-content img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+
+/* Keep figures within the content area */
+
+.rst-content .figure {
+    width: 50% !important;
+    max-width: 350px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rst-content .figure img {
+    width: 100% !important;
+    max-width: 100%;
+    height: auto;
 }
