@@ -14,6 +14,7 @@ Welcome to RiskChanges documentation!
 
    general_intro
    methodology
+   beginners-guide
    userguide
    tutorials
    tutorials-bangladesh
