@@ -477,6 +477,11 @@ Using RiskChanges on Different Devices
 
 The public RiskChanges interface can be accessed from different types of devices.
 
+Computers
+~~~~~~~~~
+
+On computers, users can use the full available screen area to explore public projects, datasets, 3D visualizations, and split-screen comparisons.
+
 Smartphones
 ~~~~~~~~~~~
 
@@ -488,15 +493,22 @@ On smartphones, the interface can be used to:
 - Navigate 3D visualizations.
 - Compare maps using split-screen visualization.
 
+.. figure:: /images/non-regis/smartphone-view.png
+   :width: 100%
+   :align: center
+
+   *Smartphone view of RiskChanges.*
+
 Tablets
 ~~~~~~~
 
 On tablets, users can explore public projects and datasets using the larger screen to interact with maps, 3D scenes, and comparison views.
 
-Computers
-~~~~~~~~~
+.. figure:: /images/non-regis/tablet-view.png
+   :width: 100%
+   :align: center
 
-On computers, users can use the full available screen area to explore public projects, datasets, 3D visualizations, and split-screen comparisons.
+   *Tablet view of RiskChanges.*
 
 Video Tutorial
 ^^^^^^^^^^^^^^
@@ -516,7 +528,7 @@ The video demonstrates:
 
    <div style="text-align: center; margin: 20px 0;">
       <video controls width="80%">
-         <source src="/videos/public-user-guide.mp4" type="video/mp4">
+         <source src="https://youtu.be/kj-P_ksL77Q?si=QCPOKq9to4ux0PSt" type="video/mp4">
          Your browser does not support the video tag.
       </video>
    </div>
