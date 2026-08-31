@@ -527,8 +527,13 @@ The video demonstrates:
 .. raw:: html
 
    <div style="text-align: center; margin: 20px 0;">
-      <video controls width="80%">
-         <source src="https://youtu.be/kj-P_ksL77Q?si=QCPOKq9to4ux0PSt" type="video/mp4">
-         Your browser does not support the video tag.
-      </video>
+      <iframe
+         width="80%"
+         height="450"
+         src="https://www.youtube.com/embed/kj-P_ksL77Q"
+         title="Beginner's Guide to RiskChanges"
+         frameborder="0"
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+         allowfullscreen>
+      </iframe>
    </div>
