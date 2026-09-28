@@ -120,7 +120,7 @@ Typical summary outputs include:
 - Total exposed population
 - Total exposed asset value
 
-.. figure:: /images/method_exposure_raster.png
+.. figure:: /images/method_exposure_raster.jpg
    :width: 100%
    :align: center
 
@@ -153,7 +153,7 @@ The exposure workflow is similar for all EaR geometry types (point, line, polygo
 - Exposure results use the ``Automatic Classes`` mode by default.
 - Numerical hazard reclassification methods (e.g., Equal Interval, Quantile) are generally not applicable.
 
-.. figure:: /images/method_exposure_vector.png
+.. figure:: /images/method_exposure_vector.jpg
    :width: 100%
    :align: center
 
@@ -340,6 +340,6 @@ Then:
 
 This approach allows RiskChanges to estimate proportional exposure without modifying the original EaR dataset.
 
-.. figure:: /images/method_exposure_settings.png
+.. figure:: /images/method_exposure_settings.jpg
    :width: 100%
    :align: center
