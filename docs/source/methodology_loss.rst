@@ -31,6 +31,10 @@ This structure enables users to link appropriate vulnerability functions to spec
 
    The quality and appropriateness of the selected vulnerability tables strongly influence the reliability of the Loss results. Users are encouraged to use locally calibrated vulnerability functions whenever available.
 
+.. figure:: /images/method_vulnerability_1.png
+   :width: 100%
+   :align: center
+
 Loss Calculation Workflow
 ----------------------------
 
@@ -41,6 +45,10 @@ If a previous Loss calculation already exists for the same hazard and elements-a
 After the initial Loss calculation is created, the platform automatically assigns the default **All Zero** vulnerability table to all EaR classes. This default vulnerability contains only zero values and therefore produces zero damage results. It serves as a placeholder until users assign appropriate vulnerability tables.
 
 To generate meaningful Loss results, users must link suitable vulnerability tables to each elements-at-risk class from the **General** tab.
+
+.. figure:: /images/method_vulnerability_2.png
+   :width: 100%
+   :align: center
 
 Linking Vulnerabilities to Elements-at-Risk
 ---------------------------------------------
@@ -60,6 +68,10 @@ Users can additionally:
 - Inspect the vulnerability curve graph before assigning the record.
 
 This verification process helps ensure that the selected vulnerability function appropriately represents the expected damage behavior for the selected asset type and hazard.
+
+.. figure:: /images/method_vulnerability_3.png
+   :width: 100%
+   :align: center
 
 Loss Calculation Method
 -------------------------
@@ -89,6 +101,10 @@ Additionally, the Loss result includes damage ratio fields for each feature, suc
 
 These fields store the vulnerability values applied during the calculation and allow users to inspect the assigned damage ratios spatially.
 
+.. figure:: /images/method_vulnerability_4.png
+   :width: 100%
+   :align: center
+
 Result Visualization and Field Selection
 ------------------------------------------
 
@@ -99,6 +115,10 @@ In the **Detail** tab, users can visualize specific Loss result fields on the ma
 - Color schemes and visualization settings.
 
 The selected field is important because subsequent Risk calculations will use this chosen Loss field as the primary input.
+
+.. figure:: /images/method_vulnerability_5.png
+   :width: 100%
+   :align: center
 
 Aggregated Loss Calculation
 -----------------------------
@@ -114,3 +134,7 @@ The aggregation process enables:
 - Generation of regional Risk indicators.
 
 Further explanation regarding aggregation procedures is provided in the dedicated **Aggregated Calculations** section below.
+
+.. figure:: /images/method_vulnerability_6.png
+   :width: 100%
+   :align: center
