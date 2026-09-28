@@ -1,9 +1,9 @@
-Alternative and Scenario
+Alternative Module
 ==========================
 
-The Alternative and Scenario modules in RiskChanges provide a structured framework for defining future conditions, interventions, and planning assumptions used throughout the risk assessment workflow.
+The Alternative module in RiskChanges provides a structured framework for defining future conditions, interventions, and planning assumptions used throughout the risk assessment workflow.
 
-These modules support the organization and documentation of different project configurations that may influence hazard, exposure, vulnerability, loss, and risk calculations.
+Together with the Scenario module, these modules support the organization and documentation of different project configurations that may influence hazard, exposure, vulnerability, loss, and risk calculations.
 
 Users can define Alternatives and Scenarios from the **Project Settings** section available on the Dashboard page.
 
@@ -25,41 +25,22 @@ Alternatives typically represent actions intended to reduce disaster impacts, vu
 
 The Alternative definition provides descriptive and economic information that can later be used within the Cost-Benefit Analysis (CBA) module.
 
-Scenario Concept
-------------------
+.. figure:: /images/method_alternative.png
+   :width: 100%
+   :align: center
 
-The Scenario module represents possible future conditions that may influence hazard, exposure, or risk within the study area.
-
-Scenarios are generally used to assess how changing environmental, social, or development conditions may affect future disaster risk.
-
-Examples of scenarios include:
-
-- Climate change projections;
-- Population growth;
-- Land-use change;
-- Urban expansion;
-- Risk-informed spatial planning;
-- Socioeconomic development pathways;
-- Future infrastructure development.
-
-Scenarios allow users to organize and compare different future assumptions within the RiskChanges workflow.
-
-Alternative and Scenario Configuration
+Alternative Configuration
 ----------------------------------------
 
-Users can define multiple Alternatives and Scenarios for a single project.
-
-For both Alternatives and Scenarios, users are required to specify which risk components are expected to change under the defined condition.
+Users can define multiple Alternatives for a single project. Users are required to specify which risk components are expected to change under the defined condition.
 
 These components may include changes related to:
 
-- Hazard characteristics;
-- Exposure distribution;
-- Vulnerability conditions;
-- Risk reduction measures;
-- Administrative planning assumptions.
+- Hazard characteristics (including type, intensity, and frequency);
+- Elements-at-risk distribution (including type, location, value, and population);
+- Vulnerability conditions (including physical and population);
 
-This information helps document the intended purpose and scope of each Alternative or Scenario within the project.
+This information helps document the intended purpose and scope of each Alternative within the project.
 
 Alternative Economic Parameters
 ---------------------------------
@@ -105,13 +86,6 @@ Users may upload supporting project documents related to the defined alternative
 - Supporting datasets.
 
 These uploaded files serve as project references and documentation within the platform.
-
-Scenario Parameters
----------------------
-
-Unlike Alternatives, Scenarios do not require economic parameters because they are intended to represent future conditions rather than direct investment interventions.
-
-Scenario definitions primarily focus on describing the expected changes in risk-related components and planning assumptions.
 
 Relationship with Calculations
 --------------------------------
