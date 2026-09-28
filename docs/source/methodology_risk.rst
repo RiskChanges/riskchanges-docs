@@ -13,7 +13,7 @@ The resulting calculation produces the **Average Annual Loss (AAL)**, which repr
 Risk Assessment Concept
 -------------------------
 
-RiskChanges calculates risk using multiple hazard scenarios with different return periods. Each return period represents a different probability of occurrence for the hazard event.
+RiskChanges calculates risk using multiple hazard layers with different return periods (minimum three). Each return period represents a different probability of occurrence for the hazard event.
 
 For example:
 
@@ -30,6 +30,10 @@ The area under the probability-loss curve is then calculated to estimate the Ave
 .. note::
 
    At least two different return period scenarios are required to perform Risk calculation. However, using more return periods generally improves the reliability and smoothness of the resulting risk curve.
+
+.. figure:: /images/method_risk_1.png
+   :width: 100%
+   :align: center
 
 Risk Calculation Workflow
 ---------------------------
@@ -52,6 +56,10 @@ Users then select the Loss results corresponding to different hazard return peri
 
 The selected Loss datasets are then combined to generate the probability-loss relationship required for Risk calculation.
 
+.. figure:: /images/method_risk_2.png
+   :width: 100%
+   :align: center
+
 Risk Calculation Method
 -------------------------
 
@@ -70,6 +78,10 @@ Where:
 
 The resulting value represents the **Average Annual Loss (AAL)**.
 
+.. figure:: /images/method_risk_3.png
+   :width: 100%
+   :align: center
+
 Risk Result Outputs
 ---------------------
 
@@ -85,6 +97,10 @@ The output is generated at the selected administrative boundary level and can be
 
 Similar to the Loss module, the Risk module inherits the elements-at-risk categories from the Loss calculation results. This ensures consistency between Exposure, Loss, and Risk workflows.
 
+.. figure:: /images/method_risk_4.png
+   :width: 100%
+   :align: center
+
 Result Visualization
 ----------------------
 
@@ -98,9 +114,17 @@ Users may configure:
 
 These outputs support spatial comparison of expected annual impacts across administrative regions.
 
+.. figure:: /images/method_risk_5.png
+   :width: 100%
+   :align: center
+
 Integration with Cost-Benefit Analysis
 ----------------------------------------
 
 The Risk results generated in this module can be further used within the Cost-Benefit Analysis (CBA) module.
 
 To enable subsequent CBA calculations, users must define the appropriate Risk elements-at-risk type within the Risk module configuration.
+
+.. figure:: /images/method_risk_6.png
+   :width: 100%
+   :align: center
