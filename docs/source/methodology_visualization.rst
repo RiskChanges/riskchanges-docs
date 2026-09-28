@@ -27,6 +27,10 @@ Visualization tools are tailored to different user groups. Each user interacts w
      - Authorities or organizations making risk-related decisions.
      - Compare outputs, define and review alternatives, use multi-criteria tools.
 
+.. figure:: /images/method_viz_1.png
+   :width: 100%
+   :align: center
+
 Map Visualizaton Options
 ---------------------------
 RiskChanges provides a set of map tools to explore and compare spatial data. Users can view and and overlay multiple layers, including hazard, vulnerability, and exposure maps.
@@ -90,6 +94,10 @@ Users can download maps for offline use or reports. Options include:
 * Default download
 * Custom settings: page size, resolution, orientation, format.
 
+.. figure:: /images/method_viz_2.png
+   :width: 100%
+   :align: center
+
 Visualization for Vulnerability Data
 ---------------------------------------
 Vulnerability data can be visualized through the same module used to enter it. Users can:
@@ -100,6 +108,10 @@ Vulnerability data can be visualized through the same module used to enter it. U
 
 This simplifies data validation and supports continnuous refinement
 
+.. figure:: /images/method_viz_3.png
+   :width: 100%
+   :align: center
+
 Visualization for Exposure, Loss, and Risk Results
 -----------------------------------------------------
 After running calculations in Exposure, Loss, or Risk modules, users can:
@@ -107,8 +119,16 @@ After running calculations in Exposure, Loss, or Risk modules, users can:
 * View values in filterable tables (e.g., exposed population, loss area, damage ratio)
 * See automatically generated charts for comparisons
 
+.. figure:: /images/method_viz_4.png
+   :width: 100%
+   :align: center
+
 Exporting Results
 --------------------
 Results from exposure, loss, and risk modules can be exported for further use. 
 Supported formats are GeoPackage (.gpkg), GeoJSON (.geojson), and Shapefile (.shp).
 Both spatial layers and attribute data are included, allowing offline analysis or sharing.
+
+.. figure:: /images/method_viz_5.png
+   :width: 100%
+   :align: center
