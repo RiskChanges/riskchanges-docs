@@ -24,6 +24,10 @@ This allows users to:
 - Support regional planning and decision making;
 - Produce inputs for Risk Assessment calculations.
 
+.. figure:: /images/method_agg_1.png
+   :width: 100%
+   :align: center
+
 Aggregated Exposure Calculation
 ---------------------------------
 
@@ -51,6 +55,10 @@ Depending on the Exposure calculation type, aggregated outputs may include:
 
    The selected hazard intensity determines which Exposure values are included in the aggregation process.
 
+.. figure:: /images/method_agg_2.png
+   :width: 100%
+   :align: center
+
 Aggregated Loss Calculation
 -----------------------------
 
@@ -74,6 +82,10 @@ The resulting aggregated Loss outputs may include:
 
 These aggregated Loss results are required for subsequent Risk Assessment calculations because the Risk module operates at the administrative boundary level rather than the individual feature level.
 
+.. figure:: /images/method_agg_3.png
+   :width: 100%
+   :align: center
+
 Result Outputs and Visualization
 ----------------------------------
 
@@ -87,3 +99,7 @@ Users can:
 - Compare results across administrative regions.
 
 The aggregated datasets can also be exported for external analysis and reporting workflows.
+
+.. figure:: /images/method_agg_4.png
+   :width: 100%
+   :align: center
