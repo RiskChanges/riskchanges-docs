@@ -40,6 +40,9 @@ The system supports various types of input data required for risk assessment. Th
      - Yes
      - Contains alternative construction costs and performance scoring.
 
+.. figure:: /images/method_inputdata.png
+   :width: 100%
+   :align: center
 
 Hazard Maps
 --------------
