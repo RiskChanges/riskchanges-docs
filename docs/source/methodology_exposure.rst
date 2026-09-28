@@ -120,6 +120,10 @@ Typical summary outputs include:
 - Total exposed population
 - Total exposed asset value
 
+.. figure:: /images/method_exposure_raster.png
+   :width: 100%
+   :align: center
+
 Vector Hazard Layer with Elements-at-Risk
 ------------------------------------------
 
@@ -148,6 +152,10 @@ The exposure workflow is similar for all EaR geometry types (point, line, polygo
 - The hazard classification shown in the results follows the original vector hazard categories.
 - Exposure results use the ``Automatic Classes`` mode by default.
 - Numerical hazard reclassification methods (e.g., Equal Interval, Quantile) are generally not applicable.
+
+.. figure:: /images/method_exposure_vector.png
+   :width: 100%
+   :align: center
 
 The Effect of Layer Settings on Exposure Calculation
 -----------------------------------------------------
@@ -216,7 +224,7 @@ The selected classification method strongly influences how hazard severity is in
 | Quantile             | Places an equal number of pixels/features into each class    | Useful when balanced class sizes or relative ranking are desired         |
 +----------------------+--------------------------------------------------------------+--------------------------------------------------------------------------+
 | Natural Breaks       | Minimizes variance within classes and maximizes variance     | Best for skewed or naturally clustered datasets                          |
-| (Jenks)              | between classes                                              |                                                                          |
+|                      | between classes                                              |                                                                          |
 +----------------------+--------------------------------------------------------------+--------------------------------------------------------------------------+
 | Standard Deviation   | Classes are based on deviation from the mean                 | Useful for identifying anomalies or areas above/below average hazard     |
 +----------------------+--------------------------------------------------------------+--------------------------------------------------------------------------+
@@ -331,3 +339,7 @@ Then:
 - Exposed Value = USD 30,000
 
 This approach allows RiskChanges to estimate proportional exposure without modifying the original EaR dataset.
+
+.. figure:: /images/method_exposure_settings.png
+   :width: 100%
+   :align: center
