@@ -49,6 +49,12 @@ Instructions
    - Click **Save** to start the Risk calculation.
    - Once the calculation is completed, the Risk results will be available for visualization and analysis.
 
+.. figure:: /images/tutorials_lossandscenario/riskcalculation.png
+   :width: 100%
+   :align: center
+
+   *Risk Calculation Settings*
+
 Results and Output
 ^^^^^^^^^^^^^^^^^
 
@@ -61,6 +67,14 @@ Key outputs may include:
 - **Summary statistics:** aggregated information describing the calculated Risk.
 
 The Risk results can be used as inputs for further analysis, including **Cost-Benefit Analysis (CBA)**.
+
+For Risk results, the output only consists of the Summary Table which includes the AAL and other relevant statistics. The results can be visualized on the map, table, chart, and exported for further analysis.
+
+.. figure:: /images/tutorials_lossandscenario/risktableandchart.png
+   :width: 100%
+   :align: center
+
+   *Risk Result as Table and Chart*
 
 Map Visualization
 ^^^^^^^^^^^^^^^^^
@@ -88,3 +102,9 @@ Risk results can be interpreted by:
 - **Comparing areas:** identify areas with relatively higher expected annual losses.
 - **Comparing scenarios:** compare Risk results generated under different hazard, exposure, or vulnerability conditions.
 - **Supporting mitigation decisions:** use Risk results to identify areas where risk reduction measures may provide the greatest benefit.
+
+.. figure:: /images/tutorials_lossandscenario/riskmap.png
+   :width: 100%
+   :align: center
+
+   *Risk Map*

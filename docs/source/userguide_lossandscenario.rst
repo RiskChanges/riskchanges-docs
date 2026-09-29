@@ -31,6 +31,7 @@ The Loss module computes the **economic or physical losses** resulting from haza
 2. **Choose Calculation Type**
 
    As in the Exposure module, you can choose:
+
    - **Individual**: Calculate loss per feature.
    - **Aggregated**: Calculate loss based on administrative units.
 
@@ -51,12 +52,13 @@ The Loss module computes the **economic or physical losses** resulting from haza
 
    After assigning all classes, click **Save**.
 
-1. **View Results**
+5. **View Results**
 
    Once calculated:
    
    - A **Loss Layer** will be displayed on the map.
-   - The results table will show extended details, including:
+   - The results table will show extended details, including (depending on the available columns of the uploaded layer):
+
      - Damage Ratio
      - Loss Fraction
      - Loss Area or Length
@@ -91,6 +93,7 @@ Create Scenario
 ^^^^^^^^^^^^^^^^^^
 
 The **Scenario Module** in RiskChanges allows you to simulate future changes that affect risk levels—such as:
+
 - **Climate change**
 - **Population growth**
 - **Land-use changes**
@@ -100,10 +103,12 @@ Scenarios are used to model **how risk evolves over time**.
 **Steps to Create a Scenario:**
 
 1. **Open Project Settings**
+
    - Go to the **Project Dashboard**.
    - Select your project and click **Settings** (gear icon).
 
 2. **Add a New Scenario**
+
    - Go to the **Scenarios** tab.
    - Click **Add Scenario**.
 
@@ -114,6 +119,7 @@ Scenarios are used to model **how risk evolves over time**.
    *Create a scenario*
 
 3. **Fill Scenario Details**
+
    - **Scenario Name**: Provide a meaningful name (e.g., "2050 Climate Change").
    - **Risk Component Affected**: Select which component changes (Hazard, EaR, Vulnerability).
    - **Description** (optional): Brief explanation of the scenario.
@@ -126,6 +132,7 @@ Scenarios are used to model **how risk evolves over time**.
    *Fill scenario details*
 
 4. **Save the Scenario**
+
    - The scenario will appear in the **Scenario Table**.
    - When uploading hazard or EaR layers, you can now assign this scenario to them.
 
@@ -135,6 +142,7 @@ Calculate Loss for Different Scenarios
 Once a scenario is created, you can calculate Exposure and Loss under that scenario by uploading the appropriate **Hazard** or **EaR** datasets marked with the scenario name.
 
 Repeat the steps from:
+
 - :ref:`Calculate Exposure <calculate-exposure>` for exposure calculation
 - :ref:`Loss Calculation <loss-calculation>` (this section) for loss calculation
 

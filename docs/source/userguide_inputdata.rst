@@ -61,9 +61,13 @@ Click the name and three options will be shown which are Update profile, Change 
 
 Create a Project
 ^^^^^^^^^^^^^^^^^^^
-The Project Dashboard consists of the list of projects that the users have created or have been assigned to. Aside from that, in this dashboard users can also flter and search a specific project by name, study type, hazard type, or sorting the project.
+The Project Dashboard consists of the list of projects that the users have created or have been assigned to. Aside from that, in this dashboard users can also filter and search a specific project by name, hazard type, implemented country, or sorting the project.
 
-To create a project, click |New Project| to be redirected to the Add New Project page. There are four pages to be filled related to the project, which are |General|, |Staff|, |Alternatives|, and |Scenarios|. Ony the |General| page is compulsory to be filled in order to create a project. In the |General| page, users need to enter related details about the project. The |Staff| page allows users to invite and assign the team members in the associated project.
+To create a project, click |New Project| to be redirected to the Add New Project page. There are four pages to be filled related to the project, which are |General|, |Staff|, |Alternatives|, and |Scenarios|. Ony the |General| page is compulsory to be filled in order to create a project. 
+
+In the |General| page, users need to enter related details about the project. This includes **Project Name**, **Study Area**, **Description**, **Project Image**, and **Project Documents**.
+
+The |Staff| page allows users to invite and assign the team members in the associated project. However, the Staff page can be filled after creating a project through the Project Settings. The |Alternatives| and |Scenarios| pages are optional to be filled. The sections for Alternatives and Scenarios are explained separately.
 
 .. |New Project| image:: /images/tutorials_inputdata/new_project.png
            :scale: 65% 
@@ -86,7 +90,14 @@ To create a project, click |New Project| to be redirected to the Add New Project
 
    *Create a New Project*
 
-The project that are created or assigned to the user are displayed as cards in the Project Dashboard and can be filtered easily through the filter functions.
+.. figure:: /images/tutorials_inputdata/staff_input.png
+   :width: 100%
+   :align: center
+
+   *Add Staff Members*
+
+The project that are created or assigned to the user are displayed as cards in the Project Dashboard and can be filtered easily through the filter functions. Additionally, users can view the projects as map as well. The projects are also grouped into four categories which are **Your Private Projects**, **Your Public Projects**, **Demo Projects**, and **Community Public Projects**. 
+
 
 .. figure:: /images/tutorials_inputdata/project_dashboard.png
    :width: 100%
@@ -181,7 +192,9 @@ Upload Vulnerability Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Go to Vulnerability and click Add Vulnerability.
 
-Users can upload a CSV file under the General section to add a record automatically or input the values directly under the Data section. The uploaded CSV file needs to have information of Hazard Intensity From, Hazard Intensity To, and Vulnerability Data. After uploading, this information will be stored under the Data section as well.
+Users can upload a CSV file under the General section to add a record automatically or input the values directly under the Data section.
+
+The uploaded CSV file needs to have information of Hazard Intensity From, Hazard Intensity To, and Vulnerability Data. After uploading, this information will be stored under the Data section as well. There are two format types for the CSV file and both are availabe at the bottom of the **Add Vulnerability** form. Users may download those template files and use it accordingly as input.
 
 Before uploading the record, users need to fill out some details regarding the data which are the Vulnerability Region, Vulnerability Type, Hazard Type, Hazard Subtype, Hazard Intensity Mode, Hazard Intensity, Hazard Intensity Unit, EaR Type, EaR Subtype, EaR Class, Source, Description, and Is Public. The Is Public column defines whether the Vulnerability record will be available to all users of RiskChanges or whether it will be kept under the user's personal project.
 

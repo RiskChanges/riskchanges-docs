@@ -56,26 +56,24 @@ Results and Output
 The exposure calculation produces:
 
 * A spatial map layer showing the exposed features or areas.
-* A table dispplaying detailed exposure statistics, including:
+* A table dispplaying detailed exposure statistics, including (depending on the available columns of the uploaded layer):
 
    - Minimum, average, and maximum hazard intensity affecting each feature.
    - Exposed area, length, or fraction.
 
-Users can inspect and download this data or use it in further modules.
+Users can inspect and download this results or use it in further modules. The tables are available as a detail or summary table that provides an overview of the exposure results. This feature provides both table and chart views for better understanding, and exportable into XLSX format.
 
 .. figure:: /images/tutorials_exposure/resulttable.png
    :width: 100%
    :align: center
 
-   *Exposure calculation result in a table*
-
-There is also a feature summary table that provides an overview of the exposure results. This feature provides both table and chart views for better understanding.
+   *Exposure calculation result in a Detail Table*
 
 .. figure:: /images/tutorials_exposure/resultsummary.png
    :width: 100%
    :align: center
 
-   *Exposure calculation result summary*
+   *Exposure calculation result in a Summary Table*
 
 .. figure:: /images/tutorials_exposure/resultchart.png
    :width: 100%
@@ -94,7 +92,11 @@ Once exposure is calculated, the results appear on the **Map Panel** on the righ
 * Reset Map View
 * Full-screen Mode
 * Center on Current Location
-* Layer Options (for switching basemaps: OpenStreetMap or Satellite)
+* Basemap Options (for switching basemaps: OpenStreetMap or Satellite)
+* Compare Mode (map slider)
+* 3D View
+* Longitude-Latitude location search
+* Download Map
 
 .. figure:: /images/tutorials_exposure/mapdisplay.png
    :width: 100%

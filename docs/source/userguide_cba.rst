@@ -80,6 +80,12 @@ Instructions
    - Complete the calculation.
    - Once the calculation is finished, the CBA results will be available for review.
 
+.. figure:: /images/tutorials_lossandscenario/cbainput.png
+   :width: 100%
+   :align: center
+
+   *CBA Calculation Settings*
+
 CBA Calculation
 ^^^^^^^^^^^^^^^
 
@@ -121,7 +127,13 @@ It allows users to observe:
 - Net benefits.
 - Discounted values.
 
-The Detail Table can be used to understand how the costs and benefits develop over time.
+The Detail Table can be used to understand how the costs and benefits develop over time. For individual administrative units, the Detail Table provides a separate set of calculations for each unit.
+
+.. figure:: /images/tutorials_lossandscenario/cbadetailtable.png
+   :width: 100%
+   :align: center
+
+   *CBA Detail Table*
 
 Summary Table
 ~~~~~~~~~~~~
@@ -138,6 +150,14 @@ Key indicators include:
 - **BCR:** Benefit-Cost Ratio.
 - **IRR:** Internal Rate of Return.
 - **Payback Period:** time required to recover the initial investment through accumulated benefits.
+
+The summarize information depends on the selected administrative regions. For entire region, the summary table provides a single set of indicators. For individual administrative units, the summary table provides a set of indicators for each unit.
+
+.. figure:: /images/tutorials_lossandscenario/cbasummarytable.png
+   :width: 100%
+   :align: center
+
+   *CBA Summary Table*
 
 CBA Result Observation
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -162,7 +182,7 @@ When comparing multiple alternatives, users should consider both **economic perf
 Comparing Alternatives
 ^^^^^^^^^^^^^^^^^^^^^^
 
-RiskChanges can be used to compare multiple CBA alternatives.
+RiskChanges can be used to compare multiple CBA alternatives. Users can select multiple CBA calculation results and compare them from the **Compare** button.
 
 Users can compare alternatives based on:
 
@@ -175,3 +195,17 @@ Users can compare alternatives based on:
 - Overall risk reduction.
 
 This comparison supports evidence-based decision-making when selecting risk reduction and climate adaptation measures.
+
+.. figure:: /images/tutorials_lossandscenario/cbacompare.png
+   :width: 100%
+   :align: center
+
+   *CBA Comparison using Table and Chart*
+
+This would be the ideal use of the Compare function to display different CBA results side by side, allowing users to evaluate the economic performance of multiple interventions and make informed decisions.
+
+.. figure:: /images/tutorials_lossandscenario/cbamapcompare.png
+   :width: 100%
+   :align: center
+
+   *CBA Comparison using Map View*
