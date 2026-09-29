@@ -44,6 +44,18 @@ Here’s an overview of what’s included in the dataset:
 
 👉 For more details about the dataset structure and use of Alternatives and Scenarios, refer to the `dataset document <https://drive.google.com/file/d/1pk6OeKmuUwA5oCiVSshZQ4y0SEZ-l0S9/view?usp=drive_link>`_.
 
+👉 You may also go to these links to access the public project of this tutorial and clone the project to your account from the Project Settings.
+
+1. `Demo Dataset 1 - Basis Risk Assessment <https://riskchanges.org/project/230d80e0-fd46-4790-a0a2-b7c595f03551>`_
+2. `Demo Dataset 2 - Future Scenario Risk Assessment <https://riskchanges.org/project/714ddca6-6f85-48b1-ac74-43fb6cea644a>`_
+3. `Demo Dataset 3 - Alternative Risk and Cost-Benefit Analysis <hhttps://riskchanges.org/project/dd070d43-c996-49b9-a940-611591dd37b6>`_
+
+.. figure:: /images/tutorials/cloneproject.png
+   :scale: 60%
+   :align: center
+
+   *Clone Public Project*
+
 Step-by-step Walkthrough
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

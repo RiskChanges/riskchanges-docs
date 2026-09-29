@@ -48,7 +48,15 @@ The table below summarizes the contents of the demo dataset and their respective
 .. note::
    The data provided in this tutorial is intended solely for demonstration and training purposes. While it reflects realistic structures and plausible values, it should not be interpreted as an official risk assessment for Bangladesh.
 
-👉 Please refer `here <https://drive.google.com/file/d/1b74u6nUtmWaxMKOtcMbxp5b22cLHvt5D/view?usp=drive_link>`_ to access the dataset for this tutorial.
+👉 Please refer `here <https://drive.google.com/file/d/1L8v_UWrrgCQOB4ygjozSHAj5GKiLMvo9/view?usp=drive_link>`_ to access the dataset for this tutorial.
+
+👉 You may also go to this `link <https://riskchanges.org/project/ecab9e3b-3570-4bd3-8ed9-cc3f9080ee10>`_ to access the public project of this tutorial and clone the project to your account from the Project Settings.
+
+.. figure:: /images/tutorials/cloneproject-bangladesh.png
+   :scale: 60%
+   :align: center
+
+   *Clone Public Project*
 
 Step-by-step Walkthrough
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
