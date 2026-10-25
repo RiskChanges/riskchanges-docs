@@ -12,5 +12,6 @@ This section provides detailed step-by-step tutorials to guide users through the
    userguide_lossandscenario
    userguide_alternative
    userguide_risk
+   userguide_qualitative
    userguide_cba
    userguide_non-registered-users

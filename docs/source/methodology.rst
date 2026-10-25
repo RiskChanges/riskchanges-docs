@@ -11,6 +11,7 @@ This page provides the methodology used and modules provided in RiskChanges.
    methodology_exposure
    methodology_loss
    methodology_risk
+   methodology_qualitative
    methodology_aggregated
    methodology_scenario
    methodology_alternative

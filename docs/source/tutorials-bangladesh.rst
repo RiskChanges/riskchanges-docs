@@ -58,6 +58,17 @@ The table below summarizes the contents of the demo dataset and their respective
 
    *Clone Public Project*
 
+Qualitative Risk Assessment (Indicator-based Assessment)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A separate Bangladesh district-level walkthrough is available in :doc:`tutorials-bangladesh-qualitative`. It demonstrates the INFORM-inspired indicator network, district data linkage, scoring, calculation, and result interpretation.
+
+.. toctree::
+   :maxdepth: 10
+   :caption: Qualitative Risk Assessment:
+
+   tutorial-bangladesh-qualitative
+
 Step-by-step Walkthrough
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
